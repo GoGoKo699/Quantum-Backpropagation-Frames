@@ -2,7 +2,7 @@
 
 **ID:** PF-01  
 **Title:** Independent parity-frame proof, novelty, and matched-cost audit  
-**Status:** READY; not executed by repository initialization.
+**Status:** COMPLETE WITH FINDINGS on `audit/PF-01`; see `results/PF-01/REPORT.md` and `results/PF-01/DECISION.md`. No merge to main. Initialization did not execute this audit.
 
 ## Goal
 
