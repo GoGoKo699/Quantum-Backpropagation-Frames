@@ -1,0 +1,38 @@
+{
+  "baseline_commit": "da0d8c771350b695206b6f06194277538833adb4",
+  "audit_branch": "audit/PF-01",
+  "checkpoint_commit": "2a5d77cac017a4e2e330ed1d5b7c12ba8e492476",
+  "remote_branch_state_at_start": "only main at baseline; audit/PF-01 did not exist",
+  "local_workspace": "extracted uploaded starter, not an authenticated Git checkout",
+  "archives": [
+    {"name":"parity_frame_compiler_20260915.zip","bytes":24098,"sha256":"d0bc3a0b837d5f41190b525de361af4f345e2caf5dae19d026720052f452d99f","git_blob_sha":"fd9426c9a2fcb6a08bda662b6b8dd40eb6c1540f","remote_blob_agreement":true},
+    {"name":"frame_readout_matched_audit_20260915.zip","bytes":23512,"sha256":"1cc59bc0d3497bf535f4e1eb742433c1f85376e7473fa4969e4e884bcef036a2","git_blob_sha":"631fe265083f051ebd4dbd04209acc9d7b0ed540","remote_blob_agreement":true}
+  ],
+  "scientific_source_sha256": {
+    "research/parity_frames/PROOF.md":"4695401ea73306c69c6850d4700f9e128023b4a34a5f2d3a9d1cc66cbd8f04af",
+    "research/parity_frames/PROVENANCE.json":"376871b3826fdf659383f0f128ae05be9e8a61ccc59baad958595e02e4ac124f",
+    "research/parity_frames/README.md":"2d6ec9d1bbe8eb57b2c7acbf521a87b5a3e436f2a3fba0897a1943bbf66db21e",
+    "research/parity_frames/SHA256.json":"88cdc2460090f92f4d8cf497bb2e674ffc5270070ada0e20cbbe7312c26ba0d6",
+    "research/parity_frames/SOURCES.md":"6e9b45d5290532fe6af083e6144163796aaf4ce126025294be34c2732fb4e0d2",
+    "research/parity_frames/core.py":"168d7022dde985ae9373c08cc4dcbce9c2445c24f4fffd875d8366567b86f1f7",
+    "research/parity_frames/reference_circuit.py":"d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01",
+    "research/parity_frames/requirements.txt":"a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac",
+    "research/parity_frames/validate.py":"d409b88d93ec6dd468b4c307179affabc7513c457d998a49cd34d86d5b3a6e31",
+    "research/parity_frames/validation.json":"f249d36beeaa206960192b6d208e34e680190ada566784fc7739fd6172615b57",
+    "research/matched_readout/README.md":"f326a60bde39a020b6d41a27d4025dda7260d3cb7321fda05dfd8647f92c59af",
+    "research/matched_readout/SHA256.json":"7cf7d282568034cda3fb17e26d6ced011ae792a98fd1b752d0a6f417b9a8faa4",
+    "research/matched_readout/comparison.json":"808a5035038826b61881ebb0399257b0cc632beb10411908f0333de19a90c956",
+    "research/matched_readout/core.py":"d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01",
+    "research/matched_readout/cost_certificates.json":"620177c643e65a20efed7b74d80a4cc32f0c5f56326b747df1950efd8ff4260e",
+    "research/matched_readout/cost_certificates.py":"70b15ebc605595aebd64496a4c3b9cba84f3acaf1abd6ed36e7d664beff7fc4b",
+    "research/matched_readout/requirements.txt":"7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "research/matched_readout/run_comparison.py":"a555b3e7ef71a6ea3a95e79d299375a052b82a68be2af023493312315122cd08",
+    "research/matched_readout/uniform_comparison.json":"4e4d089004b06fa97bfe346709f37e6e1264e34559ee9c22ec9d9761b9a90df1",
+    "research/matched_readout/uniform_comparison.py":"8d5b6ac773f25b04730cad7752f5a9a059016e6a6bef3f27c0d4a475c2137188",
+    "research/matched_readout/validate.py":"496e76cbbf19e4338bb036bb2beb9c137cae9a4b81b57ea2308d9e5926f7a6a7",
+    "research/matched_readout/validation.json":"e583521330d7b92e361210a423127c5beafe11fa073d06450f61fe018909a4db"
+  },
+  "environment":{"python":"3.13.5","numpy":"2.3.5","BLAS_threads_for_diagnostics":1},
+  "source_documents":"Read remote README,AGENTS,SCOPE,CLAIMS,STATUS,CURRENT,INPUTS at pinned baseline; primary paper versions in SOURCE_AUDIT.md",
+  "not_audited":"Absent earlier spectral/coherent-minimax proof packets; full matched table regeneration; hardware and routing"
+}

@@ -1,0 +1,98 @@
+{
+  "status": "completed_with_findings",
+  "source_commit": "ebcbc8f1e378df05920c560229ba20c9dfa5916d",
+  "workflow_run_id": "34956367799",
+  "workflow_run_attempt": "1",
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "run_directory": "results/PF-02/remote_validation/34956367799-1",
+  "repository_tests": 30,
+  "new_test_methods": 18,
+  "archives_verified": 2,
+  "extracted_files_verified": 22,
+  "scientific_sources_unchanged": true,
+  "parity_validator": "passed",
+  "matched_validator": "passed",
+  "acceptance_scenarios": 144,
+  "candidate_rows": 4320,
+  "winners": {
+    "full_direct": 96,
+    "no_mask": 24,
+    "full_greedy": 24
+  },
+  "parity_wins": 0,
+  "input_repair": "accepted for maintained qbp_frames.parity API; preserved archive remains unchanged",
+  "advantage_acceptance": "not established by this bounded test",
+  "source_sha256": {
+    "qbp_frames/__init__.py": "fb0eb3ee0342556bed52eb3d9a3006500ff80d3f773cfcb36b3ed9f5c89b5563",
+    "qbp_frames/parity.py": "f138485e22eec48c09ef5d82ccee8554d6eeac20b70f9539e3c861a1725d44a9",
+    "qbp_frames/readout.py": "6da6ad635d4cfa5b825ccd6c7c41a53856bfb720573de5004cb09f7cf1a297cd",
+    "tests/test_pf02.py": "c1f1405ca3115e925770b4f0ee415bfafb18e66f3b19d2195c2fe097bf82a3fa",
+    "results/PF-02/acceptance.py": "5b4064aedefde81539e88a6374593aa0913cd41d128ddc5662b56d70b87dcb01",
+    "results/PF-02/record_run.py": "ba123396f13aee0a0900cce46080e02d5f7434619b3c8e0e23c06cb469c53924"
+  },
+  "commands": [
+    {
+      "args": [
+        "tools/verify_inputs.py",
+        "--json",
+        "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/results/PF-02/remote_validation/34956367799-1/before.json"
+      ],
+      "log": "integrity-before.log",
+      "returncode": 0
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log": "tests.log",
+      "returncode": 0
+    },
+    {
+      "args": [
+        "tools/reproduce.py",
+        "parity",
+        "--output",
+        "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/results/PF-02/remote_validation/34956367799-1/parity"
+      ],
+      "log": "parity.log",
+      "returncode": 0
+    },
+    {
+      "args": [
+        "tools/reproduce.py",
+        "matched",
+        "--output",
+        "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/results/PF-02/remote_validation/34956367799-1/matched"
+      ],
+      "log": "matched.log",
+      "returncode": 0
+    },
+    {
+      "args": [
+        "results/PF-02/acceptance.py",
+        "--output",
+        "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/results/PF-02/remote_validation/34956367799-1/acceptance"
+      ],
+      "log": "acceptance.log",
+      "returncode": 0
+    },
+    {
+      "args": [
+        "tools/verify_inputs.py",
+        "--json",
+        "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/results/PF-02/remote_validation/34956367799-1/after.json"
+      ],
+      "log": "integrity-after.log",
+      "returncode": 0
+    }
+  ],
+  "scope": "Finite exact-logical tests and declared expected-work prescriptions, not hardware timing, independent peer review or unrestricted optimality."
+}

@@ -1,58 +1,40 @@
 # Current status
 
-**Date:** 2026-09-15.  
-**Stage:** Private repository initialization from preserved source packets.  
-**Research status:** Working derived result with reproduced finite diagnostics;
-no external proof review, exhaustive novelty clearance, or established
-end-to-end advantage over the strongest comparator.
+## Integration candidate
 
-## Available baseline
+PF-01 is complete with findings on audit/PF-01; PF-02 is complete with findings
+on repair/PF-02. PF-03 is the integration review on review/PF-03-integration.
+Its source baseline is `8781c8fad5de5742b743178268b8e4f0e4b4f089`.
+Main remains unchanged until an explicitly authorized merge.
 
-The exact bytes of two supplied ZIP files and their 22 extracted files are
-preserved. Their 20 supplied content-hash entries and inherited circuit-fixture
-identity were checked. Source identities are in `provenance/INPUTS.json`.
+| Layer | Accepted evidence | Limitation |
+|---|---|---|
+| Algebra | PF-01 retained the restricted reference-frame claims | Not universal POVM, gate, or hardware optimality; novelty open |
+| Maintained implementation | PF-02 real/finite API and exact terminal compilers | Historical direct imports retain their original defects |
+| Cost acceptance | 144 scenarios, 4320 candidate rows; parity wins 0 | Fixed small-instance model and sufficient budgets, not global optimality |
+| Integration corrections | Exact round thresholds and scalar error normalization | Helper correctness, not a new estimator or advantage |
+| Reproducibility | Read-only gate reruns tests, validators and the same PF-02 grid | No new parameter sweep or scientific extension |
 
-The parity packet is the current candidate theorem and implementation. The
-matched-readout audit is a comparator fixture, not a performance claim for a
-hard application. Both use dense calculations for small diagnostic cases;
-this import does not reconstruct absent large-system compiler experiments.
+The historical winners are full_direct: 96, full_greedy: 24, no_mask: 24.
+Read results/PF-03/REPORT.md and DECISION.md for the integration disposition.
+Actual execution evidence is tied to a source commit in the validation artifact;
+results/PF-03/REMOTE_VALIDATION.json records the reviewed run once verified.
 
-## Original starter validation
+## Source and record policy
 
-See `validation/bootstrap/REPORT.md` for the actual run scope and artifacts.
+Both scientific input ZIPs and all 22 extracted files remain unchanged. PF-01,
+PF-02 and the bootstrap/initialization records are frozen. Their past wording
+and run environments are not rewritten to impersonate current runs.
 
-| Item | Status |
-|---|---|
-| Archive and extracted-file integrity | Passed |
-| New repository/wrapper tests | 9 passed |
-| Supplied parity validate.py | Passed; 8 check groups |
-| Supplied matched validate.py | Passed; 6 residual groups |
-| Regeneration of all matched comparison and cost tables | Not executed in bootstrap |
-| Remote GitHub CI | Configured, not executed |
-| Remote state during original starter preparation | Not created at that earlier stage |
-| New literature search or scientific extension | Not performed in bootstrap |
+PACKAGE_MANIFEST.json remains the initialization snapshot. The read-only gate
+verifies frozen file identities against the exact PF-02 commit. New run logs,
+results, source hashes and environment go to a fresh ignored runs/ directory,
+not into existing evidence paths. Retired write-enabled workflows are retained
+as text under results/PF-03/retired_workflows/ and are not executable workflows.
 
-The reruns took place in temporary copies. Original validation.json files and
-source hashes were not changed. The new wrapper also rejects nonfinite or
-out-of-tolerance reported residuals in the matched validator, which otherwise
-reports some values without final numerical assertions.
+## Research position
 
-## Initialization update
-
-The user has created the private remote. The project framing has been corrected
-to describe a self-contained research problem; the source packets are unchanged.
-Fresh initialization checks are recorded under `validation/initialization/`.
-GitHub Actions outcomes must be checked against the actual remote commit.
-
-## Next work
-
-Execute work_orders/CURRENT.md after recording the real repository baseline.
-It is a bounded independent proof/novelty/matched-cost audit. It has not been
-completed by reproducing the existing code.
-
-## Not established
-
-The 4 tr(G) benchmark is not universal measurement optimality. The phase-rank
-witness is not a general CNOT lower bound. No novel primitive, hardware speedup,
-noise robustness, trainability, or guaranteed PRL outcome is claimed. Earlier
-spectral/coherence assertions are not promoted into the verified baseline.
+Keep the parity compiler as a reproducible baseline. No positive strongest-method
+advantage, novelty clearance, hardware performance, trainability or optimizer
+convergence claim follows from the integration. A new scientific phase needs a
+separately justified work order; no additional sweep is in progress.

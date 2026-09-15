@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "seed": 2026091566,
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "contract": {
+    "epsilon": 0.1,
+    "delta": 0.1,
+    "shared_shots": "ceil(B/(delta*epsilon^2))",
+    "output": "complete raw real P-entry classical gradient; unbiased mean",
+    "work": "expected normalized serialized cost, not hardware seconds",
+    "cost_model": "All price profiles positive. Objective price may be zero as a stress case. Common response counted per record. Individual compiler synthesis paid per sampled mask. Memory charged once as resident words; no memory-time interpretation.",
+    "classical_ledger": "Explicit conservative scalar/word-operation prescriptions, not measured operation-optimal code or wall-clock timing. Gray-traversal interval aggregation (quadratic-character implementation) or shifted-table lookup selected by priced total work. Shifted lookup charges a load, multiply and add per term plus mask restriction/shift generation. Scalar kernel counts exclude Python interpreter loop overhead.",
+    "randomness": "Exact ensemble mean compilation/relabel costs for all masks n=2..5; parity native gate costs are analytic expectations and may overcount degenerate rounds. Recompiling the same parity mask is also allowed.",
+    "comparators": "No mask, direct/pivot/greedy/portfolio exact full masks, both parity interfaces and equivalent-mask recompilation, grouped suffix reversed tests.",
+    "not_claimed": "global optimal Clifford synthesis, universal measurement optimum, hardware speedup, exact optimal sample counts, or strongest-all-method advantage."
+  },
+  "prices": {
+    "gate_weighted": {
+      "cnot": 1.0,
+      "cz": 1.0,
+      "oneq": 0.1,
+      "word": 0.0001,
+      "measure": 1.0,
+      "reset": 1.0,
+      "memory": 0.0001
+    },
+    "classical_weighted": {
+      "cnot": 1.0,
+      "cz": 1.0,
+      "oneq": 0.1,
+      "word": 1.0,
+      "measure": 1.0,
+      "reset": 1.0,
+      "memory": 0.01
+    },
+    "reset_weighted": {
+      "cnot": 1.0,
+      "cz": 1.0,
+      "oneq": 0.1,
+      "word": 0.01,
+      "measure": 20.0,
+      "reset": 50.0,
+      "memory": 0.001
+    }
+  },
+  "compiler_stats": [
+    {
+      "n": 2,
+      "masks": 2,
+      "direct_mean_entangling": 0.5,
+      "best_gate_mean_entangling": 0.5,
+      "strict_gate_reductions": 0,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 3,
+      "masks": 8,
+      "direct_mean_entangling": 1.5,
+      "best_gate_mean_entangling": 1.5,
+      "strict_gate_reductions": 0,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 4,
+      "masks": 64,
+      "direct_mean_entangling": 3.0,
+      "best_gate_mean_entangling": 2.84375,
+      "strict_gate_reductions": 10,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 5,
+      "masks": 1024,
+      "direct_mean_entangling": 5.0,
+      "best_gate_mean_entangling": 4.38671875,
+      "strict_gate_reductions": 476,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    }
+  ],
+  "circuits": [
+    {
+      "n": 2,
+      "depth": 1,
+      "P": 6,
+      "s": 6.0,
+      "beta": 1.1674433154348152,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "coefficient_words": 20,
+      "accumulator_words": 8,
+      "shared_preprocess_ops": 56,
+      "beta_preprocess_ops": 32,
+      "source_angles": [
+        0.5397675986918185,
+        0.3169559006089018,
+        0.476985379636911,
+        -0.0886176582272521,
+        -0.40978316342800314,
+        0.5228681751583677
+      ]
+    },
+    {
+      "n": 2,
+      "depth": 2,
+      "P": 6,
+      "s": 5.999999999999998,
+      "beta": 1.3129307636596126,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "coefficient_words": 20,
+      "accumulator_words": 8,
+      "shared_preprocess_ops": 116,
+      "beta_preprocess_ops": 32,
+      "source_angles": [
+        0.4187777150437333,
+        0.25200085470971656,
+        -0.5809436688719706,
+        -0.40926843779968525,
+        0.169789997373475,
+        0.39719454718639446
+      ]
+    },
+    {
+      "n": 2,
+      "depth": 3,
+      "P": 12,
+      "s": 11.999999999999996,
+      "beta": 1.152973410032965,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "coefficient_words": 44,
+      "accumulator_words": 8,
+      "shared_preprocess_ops": 480,
+      "beta_preprocess_ops": 56,
+      "source_angles": [
+        0.3661045221024357,
+        -0.41202899134197823,
+        -0.32138035960551636,
+        -0.1258085584835522,
+        -0.5204014159785872,
+        0.6959253832589418,
+        -0.6688423887767388,
+        -0.07434619890457472,
+        -0.030277553763652376,
+        0.3433864012031884,
+        0.6380335540371422,
+        -0.6477948316118599
+      ]
+    },
+    {
+      "n": 3,
+      "depth": 1,
+      "P": 6,
+      "s": 5.999999999999998,
+      "beta": 1.280591675657552,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "coefficient_words": 20,
+      "accumulator_words": 8,
+      "shared_preprocess_ops": 56,
+      "beta_preprocess_ops": 36,
+      "source_angles": [
+        -0.10838749904652134,
+        0.3063399271788303,
+        0.6160696903126461,
+        0.5308040187071494,
+        0.2726657384415352,
+        -0.3567227105841667
+      ]
+    },
+    {
+      "n": 3,
+      "depth": 2,
+      "P": 12,
+      "s": 11.999999999999996,
+      "beta": 1.411895188351538,
+      "w": 3,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "coefficient_words": 58,
+      "accumulator_words": 18,
+      "shared_preprocess_ops": 374,
+      "beta_preprocess_ops": 120,
+      "source_angles": [
+        0.2977352334941539,
+        0.21824288697003624,
+        0.4771953952605821,
+        -0.40984546008846506,
+        0.6411759064586084,
+        0.1737072163570853,
+        -0.14388457927541076,
+        0.29974467983887354,
+        -0.37228626918777186,
+        0.6601063118261234,
+        0.47993172305413334,
+        -0.1978856323975201
+      ]
+    },
+    {
+      "n": 3,
+      "depth": 3,
+      "P": 18,
+      "s": 18.000000000000004,
+      "beta": 1.5556962054136525,
+      "w": 3,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "coefficient_words": 102,
+      "accumulator_words": 18,
+      "shared_preprocess_ops": 1188,
+      "beta_preprocess_ops": 168,
+      "source_angles": [
+        -0.22670212152037084,
+        -0.058357055927824364,
+        -0.35001526365130886,
+        -0.45957868569483046,
+        -0.25888331058983943,
+        -0.43399779415855544,
+        0.41686391705629466,
+        0.014191285883538352,
+        0.1327544113437349,
+        -0.6456296253959026,
+        0.385685994345629,
+        0.29537389947004167,
+        -0.1866919967461056,
+        -0.5553541739226212,
+        0.08646648932391265,
+        -0.6361222712878254,
+        -0.6406783788751836,
+        -0.624090865060604
+      ]
+    },
+    {
+      "n": 4,
+      "depth": 1,
+      "P": 12,
+      "s": 11.999999999999998,
+      "beta": 1.2716186544353472,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "coefficient_words": 40,
+      "accumulator_words": 16,
+      "shared_preprocess_ops": 112,
+      "beta_preprocess_ops": 64,
+      "source_angles": [
+        -0.4494826339234722,
+        0.6580063135023071,
+        -0.16663758378023275,
+        0.524018115230154,
+        0.4563280237263576,
+        -0.13725718712741364,
+        -0.38153854031974643,
+        0.4795844425979481,
+        0.5363577728407418,
+        -0.0040857697670726445,
+        -0.12503863121267333,
+        0.42981431674858595
+      ]
+    },
+    {
+      "n": 4,
+      "depth": 2,
+      "P": 18,
+      "s": 18.000000000000004,
+      "beta": 1.6316774439031556,
+      "w": 4,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "coefficient_words": 112,
+      "accumulator_words": 32,
+      "shared_preprocess_ops": 792,
+      "beta_preprocess_ops": 352,
+      "source_angles": [
+        0.40971414558993535,
+        -0.4094116243252627,
+        0.22913193534813392,
+        0.1551453482793903,
+        0.2941674822427307,
+        0.25427965727562163,
+        -0.008179885050156988,
+        0.40167130025654285,
+        0.003137738705284221,
+        0.10727526310691049,
+        0.35386608637187367,
+        0.377563790184384,
+        -0.5962533353045483,
+        -0.1310469744292173,
+        0.5736713502206072,
+        0.08427626180346759,
+        -0.6781168271357395,
+        -0.6275240281127286
+      ]
+    },
+    {
+      "n": 4,
+      "depth": 3,
+      "P": 30,
+      "s": 30.00000000000001,
+      "beta": 1.3902941997135612,
+      "w": 4,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "coefficient_words": 280,
+      "accumulator_words": 32,
+      "shared_preprocess_ops": 3520,
+      "beta_preprocess_ops": 544,
+      "source_angles": [
+        0.35429173237371336,
+        -0.6289974522312816,
+        -0.6111857733909531,
+        -0.44696966491611373,
+        -0.5978037376321086,
+        0.46313478147466136,
+        -0.4438647600612738,
+        0.06065123402721084,
+        0.1374954432489255,
+        0.49602217960376116,
+        0.4980738921770922,
+        0.6845943833689312,
+        0.362878303523936,
+        -0.3369132514846013,
+        0.20728340038382587,
+        0.10026798792365887,
+        0.12560924260867545,
+        -0.5857351132736455,
+        0.005430712759220135,
+        0.5926433641907303,
+        -0.13237488451515844,
+        0.14128969454593043,
+        0.32100300072534127,
+        -0.596651365724779,
+        0.286546048053791,
+        0.1005690714591786,
+        -0.28771793537071266,
+        0.5331471542832178,
+        -0.07193297837125512,
+        0.23125178596184803
+      ]
+    },
+    {
+      "n": 5,
+      "depth": 1,
+      "P": 12,
+      "s": 12.0,
+      "beta": 1.292902505292699,
+      "w": 2,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "coefficient_words": 40,
+      "accumulator_words": 16,
+      "shared_preprocess_ops": 112,
+      "beta_preprocess_ops": 68,
+      "source_angles": [
+        0.14059553235047673,
+        0.09817684718735098,
+        0.2148589017275987,
+        0.5542790278681156,
+        -0.21407272053733417,
+        -0.42709493835183154,
+        -0.6583812097180293,
+        0.33558096994749276,
+        -0.4954920376485462,
+        0.4419098939534889,
+        0.6024724166248927,
+        -0.07216434600157906
+      ]
+    },
+    {
+      "n": 5,
+      "depth": 2,
+      "P": 24,
+      "s": 24.000000000000014,
+      "beta": 1.4799317283745823,
+      "w": 4,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "coefficient_words": 150,
+      "accumulator_words": 42,
+      "shared_preprocess_ops": 1050,
+      "beta_preprocess_ops": 464,
+      "source_angles": [
+        0.45484883607504467,
+        -0.46042240011745605,
+        0.37466810829990993,
+        0.5329328448228643,
+        -0.6387131582295698,
+        0.5597358706269975,
+        0.1325207505356969,
+        0.6404617003104736,
+        0.09053535313477212,
+        -0.20848853164205222,
+        -0.43064377051759567,
+        -0.08854775005822058,
+        0.5492715058964948,
+        -0.2542414249214224,
+        0.06131732417226077,
+        -0.6402198992577527,
+        -0.24548036804667983,
+        0.14365083763541164,
+        0.4222899371391824,
+        0.02296736823937895,
+        -0.02087731621741218,
+        0.012371693375530346,
+        -0.347948319288821,
+        -0.574046194805473
+      ]
+    },
+    {
+      "n": 5,
+      "depth": 3,
+      "P": 36,
+      "s": 36.0,
+      "beta": 1.6889286357244702,
+      "w": 5,
+      "intervals": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "coefficient_words": 386,
+      "accumulator_words": 74,
+      "shared_preprocess_ops": 4980,
+      "beta_preprocess_ops": 1312,
+      "source_angles": [
+        -0.30117739592359416,
+        0.42397367455644974,
+        -0.011233674431481044,
+        0.31585169157706794,
+        0.5053832495734385,
+        -0.3468455445546621,
+        0.5030277591894552,
+        0.09617188721957914,
+        0.27288056838017727,
+        -0.3953207491146683,
+        -0.32323706114853423,
+        -0.48146189849101884,
+        -0.22736380628466085,
+        -0.2431973280927444,
+        -0.22795622610934918,
+        -0.03127382976464921,
+        -0.39141609617297607,
+        -0.6087127630764468,
+        0.4239438436354286,
+        -0.4787621860103404,
+        -0.03427163310256243,
+        0.21267562123629336,
+        -0.6072268201577092,
+        0.26674545434153185,
+        0.6409823678960833,
+        -0.6595651056460806,
+        0.3093317812553482,
+        0.47325500731274994,
+        0.05071135616933231,
+        -0.5300723981617733,
+        0.2694653947296076,
+        0.21550471785290393,
+        0.302685398695113,
+        0.5230342028980635,
+        -0.5727135488413904,
+        -0.6093777563486722
+      ]
+    }
+  ],
+  "scenario_count": 144,
+  "candidate_rows": 4320,
+  "winners": {
+    "full_direct": 96,
+    "no_mask": 24,
+    "full_greedy": 24
+  },
+  "parity_wins": 0,
+  "minimum_parity_ratio": 1.0003125008472145,
+  "maximum_parity_ratio": 2.862704292741779,
+  "decision": "Restricted priced prescriptions only; no promotion of novelty or strongest-method advantage."
+}

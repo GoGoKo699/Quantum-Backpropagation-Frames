@@ -1,0 +1,53 @@
+name: PF-01 bounded audit verification
+on:
+  push:
+    branches: [audit/PF-01]
+    paths:
+      - 'results/PF-01/**'
+      - '.github/workflows/pf01-audit.yml'
+permissions:
+  contents: write
+jobs:
+  verify-and-record:
+    if: github.repository == 'GoGoKo699/Quantum-Backpropagation-Frames' && !contains(github.event.head_commit.message, '[PF-01 evidence]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - name: Execute and preserve bounded checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="results/PF-01/remote_validation/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$OUT"
+          python tools/verify_inputs.py --json "$OUT/before.json"
+          python -m unittest discover -s tests -v > "$OUT/repository-tests.log" 2>&1
+          cat "$OUT/repository-tests.log"
+          python results/PF-01/audit.py --output "$OUT/diagnostics.json" > "$OUT/audit.log"
+          python results/PF-01/software_probe.py --output "$OUT/software.json" > "$OUT/software.log"
+          python results/PF-01/resources.py --output "$OUT/resource_table.json" > "$OUT/resources.log"
+          python tools/reproduce.py parity --output "$OUT/parity"
+          python tools/reproduce.py matched --output "$OUT/matched"
+          python tools/verify_inputs.py --json "$OUT/after.json"
+          git diff --exit-code da0d8c771350b695206b6f06194277538833adb4 -- research provenance/input_archives
+          python results/PF-01/record_run.py --directory "$OUT"
+      - name: Save evidence to the audit branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${GITHUB_REF}" = 'refs/heads/audit/PF-01'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/PF-01
+          git commit -m '[PF-01 evidence] Record completed bounded audit verification'
+          git push origin HEAD:refs/heads/audit/PF-01

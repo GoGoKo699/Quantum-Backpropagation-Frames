@@ -1,0 +1,18 @@
+{
+  "scope": "PF-01 bounded audit; not external peer review",
+  "claims": [
+    {"id":"PF-01","disposition":"KEEP","boundary":"Real reference-family compression, not whole-operator equality"},
+    {"id":"PF-02","disposition":"KEEP","usage":"NARROW","boundary":"Universal conditional unbiasedness of each fixed frame"},
+    {"id":"PF-03","disposition":"KEEP","usage":"NARROW","boundary":"4 tr(G) only in reference-preserving real frame/Walsh class"},
+    {"id":"PF-04","disposition":"KEEP","ingredients":"ALREADY-KNOWN","boundary":"Displayed clean-unitary counts, not optimal final measurement"},
+    {"id":"PF-05","disposition":"KEEP","novelty":"OPEN","boundary":"Real normalized response; exact finite-round interpolation; not full design or pointwise monotonicity"},
+    {"id":"PF-06","disposition":"KEEP","usage":"NARROW","boundary":"An explicit decoder upper bound, not optimal processing"},
+    {"id":"PF-07","disposition":"KEEP","usage":"NARROW","boundary":"Bilinear phase rank and width, not a general gate or measurement lower bound"},
+    {"id":"MR-01","disposition":"KEEP","boundary":"Inherited finite comparison; supplied validator reproduced, full tables not regenerated"},
+    {"id":"SOFTWARE-01","disposition":"CORRECT","boundary":"Reject nonfinite and unsupported complex values before conversion; immutable source left unchanged"},
+    {"id":"OPEN-01","disposition":"OPEN","boundary":"No exhaustive novelty clearance"},
+    {"id":"OPEN-02","disposition":"OPEN","boundary":"Strongest-method end-to-end advantage not established"},
+    {"id":"OPEN-03","disposition":"OPEN","boundary":"No routed hardware or unrestricted optimality claim"},
+    {"id":"OPEN-04","disposition":"NOT-AUDITED","boundary":"Earlier spectral/coherent results have no supplied audit packet"}
+  ]
+}

@@ -1,82 +1,60 @@
 # Quantum Backpropagation Frames
 
-Research on **frame-based complete-gradient readout**: how known
-ansatz tangents can be converted into a shared measurement, and what that
-conversion costs in quantum operations, samples, classical work, and memory.
+Research on converting known ansatz tangent queries into shared quantum
+measurements for a complete classical gradient, with explicit quantum,
+statistical, classical-processing, memory, and output costs.
 
-**Status: working research, not a released theorem package or an established
-quantum-advantage result.** The current candidate is a parity-phase compiler with
-an exact covariance-interpolation derivation, small-system validation, and a
-restricted phase-rank lower bound. Novelty and superiority over the strongest
-matched alternatives remain open.
+## Current conclusion
 
-The problem, assumptions, derivations, implementations, and claim boundaries
-are defined within this repository. The project is organized around the cost of
-turning known tangent queries into a shared measurement.
+The parity-frame algebra is retained **within its audited real-response,
+phase-calibrated, conditionally unbiased frame/Walsh setting**. Its restricted
+variance benchmark is not universal measurement optimality, and its phase-rank
+witness is not a general gate-count lower bound.
 
-## The scientific question
+PF-02 provides a maintained input interface and exact terminal-readout
+compilers. In its 144 declared small-system cost scenarios, positive-round
+parity won **zero** scenarios. Full direct masking won 96, greedy full masking
+24, and no mask 24. These are outcomes of specified sufficient budgets and a
+normalized work model, not measured hardware runtimes or an impossibility
+result. Keep parity as a baseline, not an established flagship advantage.
 
-At one fixed parameter point, write the complete raw coordinate gradient as
+PF-03 reviews these changes for integration. It adds exact round-threshold
+selection, consistent scalar errors, and read-only regression CI. The audit and
+repair branches remain preserved; integration does not re-audit novelty or
+establish the project's end-to-end advantage goal.
 
-```math
-g = 2 T^{\mathsf T}q,
-\qquad
-T = U^{\mathsf T}J,
-\qquad
-q = U^{\mathsf T}OU|0\rangle.
-```
+## The task
 
-The ansatz and its tangent queries are known. The objective-dependent response
-is obtained quantum mechanically. The task is to materialize all gradient
-entries, with explicit error and confidence, without hiding cost in a frame,
-classical decoder, stronger access, or a change of parameter normalization.
-
-The current mathematical packet restricts this equation to real normalized
-responses, real tangents with `T[0] = 0`, and exact phase-calibrated controlled
-reflection access. Broader project assumptions remain open to explicit study.
-See [Scope](docs/SCOPE.md) before changing the model.
-
-## Current constructive candidate
-
-Compute two random binary parities into two clean work qubits, apply one CZ
-between them, and uncompute. Repeat this operation `k` times before the all-X
-readout of the reference-response state. The corresponding classical decoder
-uses the known tangent tables and the recorded masks.
-
-The supplied proof derives
+At a fixed parameter point, the current real-response packet studies
 
 ```math
-\Sigma_k(q)
-=
-(1-4^{-k})\Sigma_{\mathrm{full}}(q)
-+4^{-k}\Sigma_0(q).
+g=2T^{\mathsf T}q,\qquad T=U^{\mathsf T}J,\qquad
+q=U^{\mathsf T}OU|0\rangle.
 ```
 
-Here `Sigma_0` is the ordinary all-X covariance and `Sigma_full` is the
-independent full quadratic-mask covariance. The statement concerns a precisely
-defined measurement and unbiased decoder, not arbitrary quantum measurements.
+The output is all raw coordinate-gradient entries, with explicit whole-vector
+error and confidence. Access, parameter normalization, unbiasedness, and
+coordinatewise versus whole-vector accuracy must not be silently interchanged.
+See [Scope](docs/SCOPE.md) for the project contract.
 
-**Start with [the self-contained proof](research/parity_frames/PROOF.md).**
-Its assumptions and qualifications are part of every claim made from it.
+## Reader and workspace routes
 
-## Read and work from here
-
-| Need | File |
+| Purpose | Start here |
 |---|---|
-| Current evidence and unresolved conclusions | [Status](docs/STATUS.md) |
-| Claim-by-claim assumptions and evidence | [Claim register](docs/CLAIMS.md) |
-| Exact parity construction, derivation, and diagnostic code | [Parity packet](research/parity_frames/README.md) |
-| Matched readout baselines and cost accounting | [Readout audit](research/matched_readout/README.md) |
-| Reproduce checks without changing imported evidence | [Reproducibility](REPRODUCIBILITY.md) |
-| Next bounded research task | [Current work order](work_orders/CURRENT.md) |
-| Earlier directions and their evidence boundary | [Research map](docs/RESEARCH_MAP.md) |
-| Source relationships and attribution | [Literature map](literature/README.md) |
+| Current evidence and limitations | [Status](docs/STATUS.md) |
+| Claim dispositions | [Claim register](docs/CLAIMS.md) |
+| Supported numerical API and compiler contract | [Maintained interface](qbp_frames/README.md) |
+| Independent restricted-proof/source audit | [PF-01 report](results/PF-01/REPORT.md) |
+| Input repair and negative cost result | [PF-02 report](results/PF-02/REPORT.md) |
+| Integration review and corrections | [PF-03 report](results/PF-03/REPORT.md) |
+| Reproduce tests and the same acceptance grid | [Reproducibility](REPRODUCIBILITY.md) |
+| Work boundary and next decision | [Current work order](work_orders/CURRENT.md) |
+| Candidate proof, unchanged as supplied | [Parity proof](research/parity_frames/PROOF.md) |
+| Baselines and imported comparison evidence | [Matched-readout packet](research/matched_readout/README.md) |
+| Sources and earlier directions | [Literature](literature/README.md), [research map](docs/RESEARCH_MAP.md) |
 | Workspace rules | [AGENTS.md](AGENTS.md) |
 
-## Run the startup checks
-
-Python 3.13 and NumPy 2.3.5 are the recorded import environment. Use an isolated
-Python environment; the original packet requirements remain preserved.
+## Run
 
 ```bash
 python -m venv .venv
@@ -84,28 +62,33 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 python tools/verify_inputs.py
 python -m unittest discover -s tests -v
-python tools/reproduce.py parity --output runs/parity-audit-01
+# Clean full Git checkout required; output directory must be new.
+python tools/integration_check.py --output runs/integration-01
 ```
 
-The runner copies a packet into an isolated temporary directory. Imported
-validation JSON files are not overwritten. Each rerun records its own outputs,
-logs, interpreter, dependency versions, source hashes, and return codes.
-A configured CI workflow is included; no remote CI run is implied.
+Use the maintained interface:
 
-## Evidence boundary
+```python
+from qbp_frames import parity
+```
 
-The two original ZIP files and all their extracted files are preserved under
-`provenance/input_archives/` and `research/`. Their manifests are checked. The original
-startup results remain under `validation/bootstrap/`; initialization checks
-are recorded separately under `validation/initialization/`.
+Do not directly import the historical parity core for new input handling. Its
+original invalid-input behavior is intentionally preserved for reproducibility.
+The maintained interface rejects unsupported complex and nonfinite inputs. Its
+realness and numerical tolerance contracts are documented in the API guide.
 
-A small floating-point residual is not a proof, a novelty certificate, a
-hardware result, or an asymptotic benchmark. Earlier spectral/coherence claims
-made during brainstorming are **not adopted as established results** by this
-import. Only two evidence packets were supplied. Historical wording in those immutable
-packets does not define the current project scope; see
-[Origin and terminology](provenance/ORIGIN.md).
+## Evidence and permissions
 
-There is no selected reuse license, release tag, manuscript, or public-release
-authorization. See [License status](LICENSE_STATUS.md) and
-[remote setup](SETUP_GITHUB.md).
+`research/`, `provenance/`, PF-01/PF-02 results, and initialization records are
+preserved. `PACKAGE_MANIFEST.json` is the historical initialization snapshot,
+not a current-file manifest. CI verifies the frozen history against the pinned
+PF-02 commit and writes fresh logs only under `runs/`, uploaded as artifacts.
+CI has read-only repository permissions and never pushes generated results.
+
+Numerical residuals are not proofs, source-novelty certificates, or hardware
+benchmarks. Earlier exploratory spectral/coherence claims are not adopted by
+this integration. The project is self-contained; historical inspiration is not
+a result dependency.
+
+No publication, release tag, reuse license, or merge is implied by a passing
+check. See [License status](LICENSE_STATUS.md) and [setup](SETUP_GITHUB.md).

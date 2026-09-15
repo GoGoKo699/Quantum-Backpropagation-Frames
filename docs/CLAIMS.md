@@ -1,27 +1,28 @@
 # Claim register
 
-This register distinguishes available derivations, inherited computation,
-fresh computation, and unestablished conclusions. The packet proof is a
-working derivation, not independent review. Fresh startup checks are described
-in `../validation/bootstrap/REPORT.md`.
+Scientific dispositions are recorded in the immutable
+[PF-01 audit](../results/PF-01/CLAIM_DISPOSITIONS.json), with its
+[proof notes](../results/PF-01/PROOF_AUDIT.md). The original proof packet is
+working evidence; successful tests do not expand its theorem class.
 
-| ID | Claim / question | Available evidence | Boundary |
-|---|---|---|---|
-| PF-01 | Reference-restricted observable characterization | `research/parity_frames/PROOF.md`, section 2; finite checks | Real symmetric observables on the specified reference family; not operator equality everywhere. |
-| PF-02 | Unique universally conditionally unbiased decoder for fixed all-X readout | Proof section 2; full-rank finite constraint checks | Does not exclude optimizing a richer measurement or dropping conditional unbiasedness. |
-| PF-03 | Worst-response total covariance benchmark `4 tr(G)` | Proof section 3; eigenframe checks | Only the stated reference-preserving real frame/Walsh class, not arbitrary POVMs. |
-| PF-04 | Compute-phase-uncompute parity gadget | Proof section 4; reversible basis-input checks | Two clean work ancillas; all-to-all logical gate ledger. |
-| PF-05 | Exact covariance interpolation with coefficient `4**(-k)` | Proof section 5; complete small ensemble moments | Real normalized response; new independent parity masks per record. |
-| PF-06 | Local shifted-Walsh decoder and explicit costs | Proof section 6; lookup versus direct-score tests | Exponential local-width factors remain; no optimal-decoder claim. |
-| PF-07 | Width-dependent lower bound | Proof section 7; quadratic-rank witness | A bilinear-rank bound for real quadratic phase masks, not an unrestricted gate or measurement bound. |
-| MR-01 | Matched comparison of four readout implementations | `research/matched_readout/` code and JSON records | Diagnostic instances are classically easy; finite examples are not a quantum-advantage demonstration. |
-| OPEN-01 | Novelty of covariance/compiler combination | Literature pointers available | Not cleared. Audit exact statements against primary sources. |
-| OPEN-02 | Advantage over strongest matched compiler/shadow implementation | Resource ledger and selected baselines available | Not established. Near-linear designs, shallow shadows, and optimized compilation must be allowed. |
-| OPEN-03 | General or routed hardware optimality | None in supplied packets | Do not infer from the phase-rank witness or logical counts. |
-| OPEN-04 | Earlier spectral and capped-coherence minimax results | Conversation-level assertions, no corresponding proof/code packet supplied | Not adopted or revalidated in this repository. |
+| Claim | Current disposition | Boundary |
+|---|---|---|
+| Reference-restricted observable characterization | KEEP, PF-01 | Real reference family; not global operator equality |
+| Fixed-measurement decoder uniqueness | KEEP with restricted use | Conditional universal unbiasedness; not arbitrary ensemble duals |
+| 4 tr(G) variance benchmark | KEEP with restricted use | Reference-preserving real frame/Walsh class only |
+| Compute-phase-uncompute gadget | KEEP; established ingredients | Displayed implementation, not optimal synthesis |
+| Exact 4^(-k) covariance interpolation | KEEP; novelty OPEN | Real normalized response and independent masks |
+| Local shifted-Walsh decoder | KEEP as explicit upper implementation | Width-dependent work remains |
+| Quadratic-rank witness | KEEP with restricted use | Bilinear rank, not general CNOT/depth/POVM lower bound |
+| Maintained input validation | Accepted with PF-03 boundary correction | Real finite arrays, documented float tolerance, no implicit projection |
+| Exact terminal-readout plans | Accepted, PF-02 | Affine outcome map mandatory; not a coherent-unitary substitution |
+| Positive-round parity advantage in PF-02 | NOT ACCEPTED | Zero winners in the 144 declared scenarios; no universal impossibility |
+| Exact minimum round helper | PF-03 regression-tested correction | Exact comparison for validated binary64 beta/eta; no interval guarantee for estimated beta |
+| Strongest-method end-to-end advantage | OPEN | Optimized alternatives and full resource accounting remain required |
+| Earlier spectral/coherent minimax exploration | NOT ADOPTED | No corresponding audited packet integrated here |
 
-A diagnostic success may strengthen computational evidence for a premise. It
-must not automatically promote OPEN entries or expand the theorem class.
-Record negative findings and known-method equivalences as carefully as positive
-results. A future patch to an imported proof must preserve the original source
-and a claim-to-change map.
+The PF-02 result and its cost-model qualifications must accompany any use of its
+comparison. PF-03 reruns the same grid as a regression; it does not change the
+prices, objectives, estimator formulas, or acceptance rule. Historical sources
+and logs remain unchanged. Retired workflow files preserve the exact code that
+created prior evidence; current CI has no repository write permission.

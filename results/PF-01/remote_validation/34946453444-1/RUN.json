@@ -1,0 +1,21 @@
+{
+  "status": "completed_with_findings",
+  "completed_utc": "2026-09-15T08:21:10.367319+00:00",
+  "source_commit": "e32667eca5033c8040a008ef84a3010fe1eae2d6",
+  "workflow_run_id": "34946453444",
+  "workflow_run_attempt": "1",
+  "independent_check_groups": 17,
+  "audit_code_sha256": "9600d9658964d919acc1cd9ab53928320c6ad7f5d6ad2e324d10cdc9b767e400",
+  "repository_tests": 12,
+  "archives_verified": 2,
+  "extracted_files_verified": 22,
+  "supplied_validators": {
+    "parity": "passed",
+    "matched": "passed"
+  },
+  "software_probe_status": "issues_found",
+  "software_cases_accepted": 4,
+  "scientific_sources_unchanged": true,
+  "matched_tables_regenerated": false,
+  "scope": "Completed bounded diagnostics and reproductions; no external proof review, novelty clearance or hardware claim."
+}

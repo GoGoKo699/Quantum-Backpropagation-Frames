@@ -1,0 +1,225 @@
+{
+  "checks": {
+    "beta_one_no_mask_suffices": true,
+    "measured_uncompute_halves_expected_CNOT": true,
+    "all_near_optimal_bounds_satisfied": true
+  },
+  "illustrations": [
+    {
+      "method": "parity_clean",
+      "n": 32,
+      "rounds": 2,
+      "variance_ratio_to_4s": 1.09375,
+      "expected_cnot": 128,
+      "cz": 2,
+      "extra_measurements": 0,
+      "extra_resets_with_two_reused_ancillas": 0,
+      "work_ancillas": 2,
+      "width_bound": 2,
+      "beta_assumption": 4.0,
+      "eta": 0.1,
+      "dense_expected_cz": 248.0,
+      "dense_crossover_response_gate_units": 1128.6666666666667,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_measured",
+      "n": 32,
+      "rounds": 2,
+      "variance_ratio_to_4s": 1.09375,
+      "expected_cnot": 64,
+      "cz": 2,
+      "extra_measurements": 4,
+      "extra_resets_with_two_reused_ancillas": 4,
+      "work_ancillas": 2,
+      "width_bound": 2,
+      "beta_assumption": 4.0,
+      "eta": 0.1,
+      "dense_expected_cz": 248.0,
+      "dense_crossover_response_gate_units": 1875.3333333333333,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_clean",
+      "n": 128,
+      "rounds": 5,
+      "variance_ratio_to_4s": 1.03076171875,
+      "expected_cnot": 1280,
+      "cz": 5,
+      "extra_measurements": 0,
+      "extra_resets_with_two_reused_ancillas": 0,
+      "work_ancillas": 2,
+      "width_bound": 6,
+      "beta_assumption": 64.0,
+      "eta": 0.1,
+      "dense_expected_cz": 4064.0,
+      "dense_crossover_response_gate_units": 89054.55555555556,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_measured",
+      "n": 128,
+      "rounds": 5,
+      "variance_ratio_to_4s": 1.03076171875,
+      "expected_cnot": 640,
+      "cz": 5,
+      "extra_measurements": 10,
+      "extra_resets_with_two_reused_ancillas": 10,
+      "work_ancillas": 2,
+      "width_bound": 6,
+      "beta_assumption": 64.0,
+      "eta": 0.1,
+      "dense_expected_cz": 4064.0,
+      "dense_crossover_response_gate_units": 110499.63492063493,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_clean",
+      "n": 1024,
+      "rounds": 5,
+      "variance_ratio_to_4s": 1.03076171875,
+      "expected_cnot": 10240,
+      "cz": 5,
+      "extra_measurements": 0,
+      "extra_resets_with_two_reused_ancillas": 0,
+      "work_ancillas": 2,
+      "width_bound": 6,
+      "beta_assumption": 64.0,
+      "eta": 0.1,
+      "dense_expected_cz": 261888.0,
+      "dense_crossover_response_gate_units": 8170149.666666667,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_measured",
+      "n": 1024,
+      "rounds": 5,
+      "variance_ratio_to_4s": 1.03076171875,
+      "expected_cnot": 5120,
+      "cz": 5,
+      "extra_measurements": 10,
+      "extra_resets_with_two_reused_ancillas": 10,
+      "work_ancillas": 2,
+      "width_bound": 6,
+      "beta_assumption": 64.0,
+      "eta": 0.1,
+      "dense_expected_cz": 261888.0,
+      "dense_crossover_response_gate_units": 8341710.301587301,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_clean",
+      "n": 1024,
+      "rounds": 8,
+      "variance_ratio_to_4s": 1.0312423706054688,
+      "expected_cnot": 16384,
+      "cz": 8,
+      "extra_measurements": 0,
+      "extra_resets_with_two_reused_ancillas": 0,
+      "work_ancillas": 2,
+      "width_bound": 12,
+      "beta_assumption": 4096.0,
+      "eta": 0.1,
+      "dense_expected_cz": 261888.0,
+      "dense_crossover_response_gate_units": 7841398.405860806,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    },
+    {
+      "method": "parity_measured",
+      "n": 1024,
+      "rounds": 8,
+      "variance_ratio_to_4s": 1.0312423706054688,
+      "expected_cnot": 8192,
+      "cz": 8,
+      "extra_measurements": 16,
+      "extra_resets_with_two_reused_ancillas": 16,
+      "work_ancillas": 2,
+      "width_bound": 12,
+      "beta_assumption": 4096.0,
+      "eta": 0.1,
+      "dense_expected_cz": 261888.0,
+      "dense_crossover_response_gate_units": 8111798.4214896215,
+      "crossover_positive": true,
+      "interpretation": "Below a positive crossover the parity prescription wins this gate-only comparison; above it dense wins. No classical or reset time priced."
+    }
+  ],
+  "choices": [
+    {
+      "response_gate_units": 0.0,
+      "price_per_extra_measurement_or_reset": 0.0,
+      "best_among_displayed_only": "no_mask",
+      "rounds": 0,
+      "work_divided_by_4s_over_delta_epsilon_squared": 0.0
+    },
+    {
+      "response_gate_units": 0.0,
+      "price_per_extra_measurement_or_reset": 1000.0,
+      "best_among_displayed_only": "no_mask",
+      "rounds": 0,
+      "work_divided_by_4s_over_delta_epsilon_squared": 0.0
+    },
+    {
+      "response_gate_units": 1000.0,
+      "price_per_extra_measurement_or_reset": 0.0,
+      "best_among_displayed_only": "parity_measured",
+      "rounds": 4,
+      "work_divided_by_4s_over_delta_epsilon_squared": 5727.5390625
+    },
+    {
+      "response_gate_units": 1000.0,
+      "price_per_extra_measurement_or_reset": 1000.0,
+      "best_among_displayed_only": "parity_clean",
+      "rounds": 4,
+      "work_divided_by_4s_over_delta_epsilon_squared": 10327.5390625
+    },
+    {
+      "response_gate_units": 100000.0,
+      "price_per_extra_measurement_or_reset": 0.0,
+      "best_among_displayed_only": "parity_measured",
+      "rounds": 6,
+      "work_divided_by_4s_over_delta_epsilon_squared": 106966.33911132812
+    },
+    {
+      "response_gate_units": 100000.0,
+      "price_per_extra_measurement_or_reset": 1000.0,
+      "best_among_displayed_only": "parity_clean",
+      "rounds": 6,
+      "work_divided_by_4s_over_delta_epsilon_squared": 113157.58911132812
+    },
+    {
+      "response_gate_units": 10000000.0,
+      "price_per_extra_measurement_or_reset": 0.0,
+      "best_among_displayed_only": "parity_measured",
+      "rounds": 9,
+      "work_divided_by_4s_over_delta_epsilon_squared": 10010427.738142014
+    },
+    {
+      "response_gate_units": 10000000.0,
+      "price_per_extra_measurement_or_reset": 1000.0,
+      "best_among_displayed_only": "parity_clean",
+      "rounds": 9,
+      "work_divided_by_4s_over_delta_epsilon_squared": 10019644.845563889
+    },
+    {
+      "response_gate_units": 1000000000.0,
+      "price_per_extra_measurement_or_reset": 0.0,
+      "best_among_displayed_only": "parity_measured",
+      "rounds": 12,
+      "work_divided_by_4s_over_delta_epsilon_squared": 1000014177.5694042
+    },
+    {
+      "response_gate_units": 1000000000.0,
+      "price_per_extra_measurement_or_reset": 1000.0,
+      "best_among_displayed_only": "parity_clean",
+      "rounds": 12,
+      "work_divided_by_4s_over_delta_epsilon_squared": 1000026465.5924755
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source_sha256":"168d7022dde985ae9373c08cc4dcbce9c2445c24f4fffd875d8366567b86f1f7",
+  "status":"issues_found",
+  "findings":[
+    {"case":"nan_response","accepted":true,"mean_finite":false,"warnings":[]},
+    {"case":"complex_response_silently_coerced","accepted":true,"mean_finite":true,"warnings":["Casting complex values to real discards the imaginary part"]},
+    {"case":"nan_internal_tangent","accepted":true,"mean_finite":false,"warnings":[]},
+    {"case":"nan_phase","accepted":true,"mean_finite":false,"warnings":[]}
+  ],
+  "scope":"Input guard defects, not counterexamples to the theorem on its valid domain. Imported code unchanged."
+}
