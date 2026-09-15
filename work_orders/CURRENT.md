@@ -1,27 +1,35 @@
 # Current work order
 
-**ID:** PF-05  
-**Title:** Independent proof and novelty audit of the exact readout optimum  
-**Status:** COMPLETE WITH FINDINGS; remote evidence inspected and recorded.  
-**Branch:** audit/PF-05-optimal-readout  
-**Baseline:** 996d60ab06e872ec44a0ab447917f2e198b4241b
+**ID:** PF-06  
+**Title:** Sparse optimal-readout compiler feasibility  
+**Status:** Local study complete with findings; remote verification pending.  
+**Branch:** research/PF-06-sparse-compiler  
+**Baseline:** 070b2728dbdc022d35b9bb9a36bf8938e8bd9408
 
-The exact flat-spectrum single-copy universally unbiased trace-risk theorem
-survived independent rederivation. A simpler 2r+1-outcome attaining POVM and
-explicit dilation were added. Neither minimal outcome count, efficient generic
-basis synthesis, exact confidence optimality nor a strongest-method advantage
-was established. The bounded eight-source comparison leaves novelty OPEN.
-See results/PF-05/REPORT.md, PROOF_AUDIT.md, SOURCE_AUDIT.md and DECISION.md.
+The user authorized the bounded study recommended after PF-05. The start
+checkpoint is results/PF-06/START.md. Main remains at
+1986fe53a65062120f1be9da14c28fa48b12484d; neither it nor prior branches is modified.
 
-GitHub run 34982605443, attempt 1, job 104426472940 passed on scientific-code
-commit e589d9efbab9ac32639cdafba32b3a9d5a337ae7. The job log and artifact metadata
-were inspected. It verified 36 inherited repository tests, all prior integration
-checks and PF-02 results, the original PF-04 study, nine PF-05 hashes and all ten
-independent PF-05 diagnostic groups. Previous scientific/implementation paths
-and the checkout remained unchanged. Receipt: results/PF-05/REMOTE_VALIDATION.json.
-CI has read-only repository permissions and never commits generated evidence.
+Constructed: an explicit CNOT/R_y/X/H implementation of the sparse reference
+measurement for the existing disjoint one-layer six-rotation family. At zero
+angles it attains the audited 4P-8 single-copy universally unbiased trace-risk
+optimum. At nonzero one-layer angles it remains unbiased with an explicit
+variance bound; unequal-spectrum optimality is not claimed. Tangent preparation,
+physical outcome classification, all gate controls and final P-vector mapping
+are charged. No singular-basis oracle or additional work qubits are supplied.
 
-Stop here. Main and the PF-04 branch remain unchanged. No merge, arbitrary-spectrum
-study, new ansatz, price sweep, hardware work, manuscript, release or licensing
-change occurred. The recommended sparse-measurement compiler-feasibility study
-is not dispatched or authorized by this completed work order.
+The small gate/Born tests, finite differences, aggregate decoder and predeclared
+compiler-only sizes passed locally. A second-overlapping-layer example shows
+where the one-layer selector is invalid. The strongest-method scaling separation
+was NOT established: the cheap no-mask baseline already has the same asymptotic
+work order. All comparisons retain the common full-gradient error/confidence
+contract and allow optimized synthesis and aggregation on every side.
+
+Read results/PF-06/REPORT.md, PROOF.md, RESOURCES.md, SOURCE_NOTES.md and
+DECISION.md. Remote CI runs inherited integration/PF-04/PF-05 checks plus the
+PF-06 source hashes and elementary circuit study, without repository write
+permissions. A receipt will identify the actually executed source after review.
+
+Stop after preserving code, evidence, source attributions, matched costs and the
+bounded decision. No merge, public release, license, manuscript, new ansatz,
+price-winner search, unrestricted theorem or follow-on study is performed.
