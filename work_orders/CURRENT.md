@@ -1,25 +1,28 @@
 # Current work order
 
-**ID:** PF-03  
-**Title:** Integration review of the completed PF-02 repair  
-**Status:** COMPLETE; ready for merge review, not merged.  
-**Branch:** review/PF-03-integration  
-**Baseline:** 8781c8fad5de5742b743178268b8e4f0e4b4f089
+**ID:** PF-04  
+**Title:** Information and implementation boundary for complete-gradient readout  
+**Status:** COMPLETE WITH FINDINGS; remote regression evidence pending inspection.  
+**Branch:** research/PF-04-boundary  
+**Baseline:** 1986fe53a65062120f1be9da14c28fa48b12484d
 
-The read-only integration gate passed on source commit
-739a84854e467450586fc07493171152c418f205, run 34963997457.
-See results/PF-03/REPORT.md, DECISION.md and REMOTE_VALIDATION.json.
+Authorized by the user's instruction to proceed with PF-04 after integration.
+The signed reference-state, real response, fixed single-copy universally unbiased
+output contract is defined in results/PF-04/PROOF.md. The earlier completed PF-03
+merge is verified by the baseline commit and PR #1; its original records remain
+unchanged.
 
-Completed: 36 tests, existing PF-01 diagnostics, supplied validators, 109 frozen
-file checks, and an unchanged rerun of all 144 PF-02 scenarios and 4320 candidate
-rows. CI writes logs as artifacts and never commits to a branch.
+Completed scientific work: the general 2s-to-4s statistical boundary, an exact
+flat-spectrum all-POVM theorem and finite attaining measurement, a near-flat
+same-family corollary, and an independent growing-depth local compiler. The
+implementation-cost separation was NOT established. Novelty remains OPEN.
+See results/PF-04/REPORT.md, DECISION.md, SOURCE_AUDIT.md and resources.json.
 
-Corrections: exact round-threshold selection, consistent ValueError for scalars
-outside the supported range, accurate reader-facing status, and one maintained
-read-only CI gate. Original research, provenance, PF-01/PF-02 records, terminal
-compilers and priced acceptance code remain unchanged.
+The branch's single read-only workflow reruns the existing integration gate and
+the new eight-group diagnostic script. It must not rewrite PF-01/PF-02/PF-03,
+source archives, maintained code or the old acceptance results. Actual verification
+will be recorded separately in REMOTE_VALIDATION.json after inspection.
 
-Stop after recording this recommendation and opening an unmerged pull request.
-Main and the two source branches remain untouched. No new research, broader
-sweep, manuscript, release or license change was performed. A merge or a new
-scientific task requires explicit authorization.
+Stop after preserving proof, source comparison, local and remote evidence and a
+bounded decision. No merge, new ansatz, hardware campaign, favorable-price sweep,
+manuscript, public release, license or follow-on study is authorized by PF-04.

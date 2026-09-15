@@ -1,0 +1,14 @@
+{
+  "scope": "Locally produced PF-04 proof/code/evidence files; excludes this manifest, remote run receipt and start checkpoint. Historical sources are separately pinned.",
+  "sha256": {
+    "DECISION.md": "769c650fce57b7f7a26d89e6313431dbf4ae13733b7c7d04eb0f82d78776a6d1",
+    "PROOF.md": "d6a98b5ee7284f211b4045765fcb8ebedf10757d1f2f366ba724573f8972738d",
+    "REPORT.md": "efc0a96702a20f2eaf4384a9688240d91281714a672cfbc9d3f7730ed95c4b71",
+    "REPRODUCE.md": "e5c6163d18014f165e5419732531b1dc87c6b496cf8008751a7a9bb9a77d2cb1",
+    "SOURCE_AUDIT.md": "49223eee9e881cae1c3b6e23eb309480652b9b2f1443e470c671f41340fc79e6",
+    "STRUCTURE.md": "7136645f6f9ecbf2ffc6aa3f3f24f8bdc5e7f639299dfd1d030bd7e16bdce199",
+    "diagnostics.json": "2ef05f26abe84d62b9d236e7c77510a27b42c56311884614b8380141d7c89ebb",
+    "resources.json": "301cc4d64ad85ec6771ffdfcbcca803c881b8592c87162147b15550115d46517",
+    "study.py": "373f76105d7a07ec5604173bbab9a6e3da56dee4908510afe2e346456422df85"
+  }
+}
