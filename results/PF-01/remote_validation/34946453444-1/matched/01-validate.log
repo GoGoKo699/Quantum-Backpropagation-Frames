@@ -1,0 +1,24 @@
+{
+  "seed": 2026091532,
+  "checks": {
+    "group_mean": 7.077671781985373e-15,
+    "group_second": 1.2434497875801753e-14,
+    "block_mean": 2.220446049250313e-16,
+    "block_second": 7.105427357601002e-15,
+    "walsh_aggregate": 1.6653345369377348e-16,
+    "block_aggregate": 2.220446049250313e-16
+  },
+  "counts": {
+    "group_mean": 288,
+    "group_second": 288,
+    "block_mean": 15,
+    "block_second": 15,
+    "walsh_aggregate": 168,
+    "block_aggregate": 15
+  },
+  "stabilizer_counts": {
+    "1": 6,
+    "2": 60,
+    "3": 1080
+  }
+}
