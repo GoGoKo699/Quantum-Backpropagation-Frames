@@ -1,0 +1,43 @@
+name: Initialize preserved research baseline
+on:
+  push:
+    branches: [main]
+    paths: ['.bootstrap/READY']
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'GoGoKo699/Quantum-Backpropagation-Frames'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Restore and validate exactly the supplied baseline
+        run: |
+          test -f .bootstrap/READY
+          test ! -e provenance/REMOTE_INITIALIZED.json
+          python .bootstrap/restore.py
+          python -m pip install -r requirements.txt
+          python tools/verify_inputs.py --json validation/initialization/integrity.json
+          python -m unittest discover -s tests -v > validation/initialization/repository-tests.log 2>&1
+          cat validation/initialization/repository-tests.log
+          python tools/reproduce.py parity --output validation/initialization/parity
+          python tools/reproduce.py matched --output validation/initialization/matched
+          python tools/verify_inputs.py
+          python .bootstrap/finalize.py
+      - name: Commit only the validated initialization
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Import checksum-verified evidence and record initialization validation'
+          git push origin HEAD:main
