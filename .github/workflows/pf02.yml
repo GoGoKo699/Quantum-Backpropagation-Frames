@@ -1,0 +1,39 @@
+name: PF-02 contract and acceptance checks
+on:
+  push:
+    branches: ['repair/PF-02']
+    paths:
+      - 'qbp_frames/**'
+      - 'tests/test_pf02.py'
+      - 'results/PF-02/acceptance.py'
+      - 'results/PF-02/record_run.py'
+      - '.github/workflows/pf02.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/repair/PF-02'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python results/PF-02/record_run.py
+      - name: Commit verification evidence to the repair branch only
+        run: |
+          test "$GITHUB_REF" = 'refs/heads/repair/PF-02'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/PF-02/remote_validation results/PF-02/REMOTE_VALIDATION.json
+          git commit -m '[pf02-results] Record contract tests and priced acceptance evidence'
+          git push origin HEAD:repair/PF-02
