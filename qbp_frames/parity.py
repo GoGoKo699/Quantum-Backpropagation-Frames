@@ -33,7 +33,10 @@ def _integer(value, name, minimum=0):
 def _scalar(value, name):
     if isinstance(value, (bool, np.bool_)) or not isinstance(value, Real):
         raise ValueError(f'{name} must be real')
-    value = float(value)
+    try:
+        value = float(value)
+    except (OverflowError, ValueError) as exc:
+        raise ValueError(f'{name} is outside the supported real-scalar range') from exc
     if not math.isfinite(value):
         raise ValueError(f'{name} must be finite')
     return value
@@ -141,8 +144,20 @@ def rounds_for_relative_bound(beta, eta):
         raise ValueError('beta >= 1 and eta > 0 required')
     if beta == 1:
         return 0
-    # Use logarithms to avoid overflow in (beta-1)/(2*eta).
-    return max(0, math.ceil((math.log(beta - 1) - math.log(2) - math.log(eta))/math.log(4)))
+    # Exact arithmetic on the validated binary64 values. Logarithms can round
+    # across a power-of-four boundary, returning an insufficient or extra round.
+    bn, bd = beta.as_integer_ratio()
+    en, ed = eta.as_integer_ratio()
+    numerator = (bn - bd) * ed
+    denominator = 2 * bd * en
+    if numerator <= denominator:
+        return 0
+    rounds = max(0, (numerator.bit_length() - denominator.bit_length() + 1) // 2)
+    if numerator > denominator << (2 * rounds):
+        rounds += 1
+    while rounds and numerator <= denominator << (2 * (rounds - 1)):
+        rounds -= 1
+    return rounds
 
 
 def _pairs(n, pairs):

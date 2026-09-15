@@ -1,20 +1,25 @@
 # Maintained numerical interface
 
-Use `from qbp_frames import parity` for new numerical work. The functions in
-`research/parity_frames/core.py` remain an immutable historical source, with the
-four PF-01 input defects intentionally reproducible. They are not the maintained
-input interface. The adapter checks the source hash before importing it.
+Use `from qbp_frames import parity` for new numerical work. The immutable
+research/parity_frames/core.py retains its original four PF-01 input defects;
+it is not the supported input interface. The adapter pins its SHA-256.
 
-The adapter rejects complex dtypes (even zero imaginary parts), NaN/infinity,
-non-numeric/object/string arrays, invalid dimensions, zero-column tangents,
-nonunit responses, nonzero reference rows, invalid signs, fractional/Boolean
-counts, and out-of-range masks or outcomes. Validation precedes float conversion.
-It neither normalizes nor projects inputs. Numerical reference-row and response
-norm checks retain the source's `1e-10` tolerance. Phases must be exact real +/-1
-values fixing address zero. Unsafe overflow raises an error instead of returning
-nonfinite output. Root dimensions require at least one system qubit; local score
-tables require at least two entries. Dense functions are diagnostic, not a
-large-system implementation.
+The adapter rejects complex dtypes (including zero imaginary parts), nonfinite
+values, object/string/bool arrays, invalid dimensions, zero-column tangents,
+invalid phases, coerced integer counts, and out-of-range masks/outcomes before
+numeric evaluation. It does not normalize or project invalid inputs. Dense
+functions remain diagnostic rather than large-system implementations.
+
+Reference-row and unit-response checks use the inherited 1e-10 numerical
+tolerance. This is a floating-point acceptance tolerance, not a theorem that
+relaxes exact realness or normalization. Phases are exact real +/-1 values and
+must fix address zero. Arrays are converted to float64 after validation.
+
+PF-03 makes scalar conversion failures consistently raise ValueError and selects
+the smallest nonnegative k satisfying beta-1 <= 2*eta*4**k by exact integer-ratio
+arithmetic on the validated binary64 scalars. This avoids a one-round error at
+logarithm thresholds and handles subnormal eta without overflow. It does not
+certify that a beta estimated numerically is an upper bound on true imbalance.
 
 ```python
 import numpy as np
@@ -24,16 +29,16 @@ q = np.array([0.0, 1.0])
 mean, covariance, probabilities, records = parity.measurement_moments(T, q)
 ```
 
-`readout.py` returns direct, pivot-elimination and greedy exact terminal readout
-plans. A plan's `outcome(y)` correction is mandatory. An optimized plan is not a
-coherent substitute for the diagonal unitary: it also permutes system basis
-addresses. Uniformly sampling the original quadratic mask, then choosing a
-compiler, preserves the original measurement ensemble after relabeling.
+`readout.py` supplies direct, pivot and greedy terminal measurement plans.
+Apply `plan.outcome(y)` to the measured bit string. The optimized circuit can
+permute basis addresses and is not a drop-in coherent diagonal unitary. Sampling
+the original mask uniformly and then choosing a compiler preserves its measured
+ensemble after that correction. The heuristics are not globally optimal.
 
-`quadratic_character` uses Gray traversal for local accumulator updates; it does
-not evaluate a quadratic polynomial separately at every basis string. It should
-be applied to small tangent-support intervals, not the full system when n is
-large. Bit zero is the least significant address bit.
+`quadratic_character` evaluates local characters by Gray traversal. Use it on
+small tangent-support intervals, not a large full register. Bit zero is the
+least significant address bit. Integration leaves these compilers unchanged.
 
-No globally optimal synthesis, noise guarantee, license change, new estimator,
-or scientific novelty is asserted by this interface. See results/PF-02/REPORT.md.
+PF-02's 144 declared scenarios produced zero parity winners; the interface
+repair does not reverse that result. See results/PF-02/REPORT.md and the PF-03
+integration report for the implementation and evidence boundaries.

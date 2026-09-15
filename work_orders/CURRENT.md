@@ -1,22 +1,25 @@
 # Current work order
 
-**ID:** PF-02  
-**Title:** Input-contract repair and optimized-readout acceptance test  
-**Status:** COMPLETE WITH FINDINGS on repair/PF-02. See results/PF-02/REPORT.md,
-DECISION.md and REMOTE_VALIDATION.json for findings and actual verification.
+**ID:** PF-03  
+**Title:** Integration review of the completed PF-02 repair  
+**Branch:** review/PF-03-integration  
+**Baseline:** 8781c8fad5de5742b743178268b8e4f0e4b4f089
 
-Authorized scope and starting baseline are recorded in results/PF-02/START.md.
-PF-01 remains complete and unchanged under results/PF-01/.
+Scope authorized by the user: inspect and prepare the repair and negative
+acceptance record for integration, without merging or expanding the research.
+See results/PF-03/START.md, REPORT.md, and DECISION.md. Remote verification is
+identified separately in REMOTE_VALIDATION.json once checked.
 
-The maintained interface is qbp_frames/parity.py; direct imports of the immutable
-historical core retain its known input defects. Both source archives and all
-imported scientific files remain unchanged.
+The integration gate must pass the full test suite, frozen-source checks,
+supplied diagnostics and an unchanged rerun of all 144 PF-02 scenarios and
+4320 candidate rows. Read-only CI publishes artifacts, not evidence commits.
 
-The repair and exact terminal compiler contracts are accepted. The bounded
-priced comparison does not establish the requested parity advantage. The source
-report preserves the distinction between normalized work prescriptions and
-hardware runtime or all-method optimality.
+Corrections: exact round-threshold selection, consistent ValueError for scalars
+outside the supported range, current reader-facing status, and one maintained
+CI gate. Original research, provenance, PF-01/PF-02 reports, compilers and priced
+acceptance code remain unchanged.
 
-No merge, release, license change, manuscript, new ansatz or broader research
-extension was executed. Stop after recording the verification. Any next task
-requires a new bounded work order or explicit user instruction.
+Stop after a recorded integration recommendation and an unmerged pull request.
+Main, audit/PF-01 and repair/PF-02 remain untouched. No release, license change,
+manuscript, new ansatz, broader sweep or new theoretical claim is authorized.
+Any next scientific task or merge requires explicit authorization.
