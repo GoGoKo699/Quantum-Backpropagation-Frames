@@ -1,7 +1,7 @@
 name: Integration and evidence checks
 on:
   push:
-    branches: [main, 'review/**', 'research/PF-04-boundary']
+    branches: [main, 'review/**', 'research/PF-04-boundary', 'audit/PF-05-optimal-readout']
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -47,6 +47,29 @@ jobs:
         run: |
           set -euo pipefail
           python results/PF-04/study.py --output runs/pf04-study | tee runs/pf04-study.log
+          git diff --exit-code
+          test -z "$(git status --porcelain --untracked-files=all)"
+      - name: Verify PF-05 packet and preserve previous sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code 996d60ab06e872ec44a0ab447917f2e198b4241b -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          root = Path('results/PF-05')
+          entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
+          for name, expected in entries.items():
+              if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
+                  raise SystemExit(f'PF-05 file identity mismatch: {name}')
+          print(f'All {len(entries)} PF-05 packet file hashes verified')
+          PY
+      - name: Execute independent PF-05 audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python results/PF-05/audit.py --output runs/pf05-audit | tee runs/pf05-audit.log
+          git diff --exit-code 996d60ab06e872ec44a0ab447917f2e198b4241b -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04
           git diff --exit-code
           test -z "$(git status --porcelain --untracked-files=all)"
       - uses: actions/upload-artifact@v4
