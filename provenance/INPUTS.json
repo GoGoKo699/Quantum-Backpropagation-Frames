@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "remote_repository_created": true,
+  "source_of_truth": "The two supplied ZIP files, not reconstructed chat transcripts.",
+  "imports": [
+    {
+      "archive": "provenance/input_archives/parity_frame_compiler_20260915.zip",
+      "sha256": "d0bc3a0b837d5f41190b525de361af4f345e2caf5dae19d026720052f452d99f",
+      "archive_prefix": "parity_frame_compiler_20260915",
+      "extracted_directory": "research/parity_frames",
+      "manifest": "research/parity_frames/SHA256.json",
+      "manifest_entries": 9
+    },
+    {
+      "archive": "provenance/input_archives/frame_readout_matched_audit_20260915.zip",
+      "sha256": "1cc59bc0d3497bf535f4e1eb742433c1f85376e7473fa4969e4e884bcef036a2",
+      "archive_prefix": "frame_readout_audit",
+      "extracted_directory": "research/matched_readout",
+      "manifest": "research/matched_readout/SHA256.json",
+      "manifest_entries": 11
+    }
+  ],
+  "cross_import_equality": [
+    "research/parity_frames/reference_circuit.py",
+    "research/matched_readout/core.py"
+  ],
+  "repository": "GoGoKo699/Quantum-Backpropagation-Frames"
+}

@@ -1,0 +1,53 @@
+{
+  "packet": "matched",
+  "status": "passed",
+  "started_utc": "2026-09-15T06:26:18.565310+00:00",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "thread_limit": 1
+  },
+  "source_directory": "research/matched_readout",
+  "source_sha256": {
+    "README.md": "f326a60bde39a020b6d41a27d4025dda7260d3cb7321fda05dfd8647f92c59af",
+    "SHA256.json": "7cf7d282568034cda3fb17e26d6ced011ae792a98fd1b752d0a6f417b9a8faa4",
+    "comparison.json": "808a5035038826b61881ebb0399257b0cc632beb10411908f0333de19a90c956",
+    "core.py": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01",
+    "cost_certificates.json": "620177c643e65a20efed7b74d80a4cc32f0c5f56326b747df1950efd8ff4260e",
+    "cost_certificates.py": "70b15ebc605595aebd64496a4c3b9cba84f3acaf1abd6ed36e7d664beff7fc4b",
+    "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "run_comparison.py": "a555b3e7ef71a6ea3a95e79d299375a052b82a68be2af023493312315122cd08",
+    "uniform_comparison.json": "4e4d089004b06fa97bfe346709f37e6e1264e34559ee9c22ec9d9761b9a90df1",
+    "uniform_comparison.py": "8d5b6ac773f25b04730cad7752f5a9a059016e6a6bef3f27c0d4a475c2137188",
+    "validate.py": "496e76cbbf19e4338bb036bb2beb9c137cae9a4b81b57ea2308d9e5926f7a6a7",
+    "validation.json": "e583521330d7b92e361210a423127c5beafe11fa073d06450f61fe018909a4db"
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "validate.py"
+      ],
+      "returncode": 0,
+      "log": "01-validate.log"
+    }
+  ],
+  "comparison_tables_regenerated": false,
+  "limitations": "Finite diagnostics; not independent proof, novelty review, or remote CI.",
+  "residual_checks": "passed; finite values and residuals <= 1e-8",
+  "check_groups": 6,
+  "observed_checks": {
+    "group_mean": 5.2562121322097255e-15,
+    "group_second": 1.2434497875801753e-14,
+    "block_mean": 3.3306690738754696e-16,
+    "block_second": 5.329070518200751e-15,
+    "walsh_aggregate": 1.8735013540549517e-16,
+    "block_aggregate": 2.220446049250313e-16
+  },
+  "changed_in_temporary_copy": [
+    "validation.json"
+  ],
+  "immutable_sources_unchanged": true,
+  "elapsed_seconds": 3.4400642530000027
+}

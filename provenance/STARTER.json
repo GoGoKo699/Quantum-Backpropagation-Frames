@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "source_archive": "Quantum-Backpropagation-Frames-starter-20260915.zip",
+  "sha256": "c8653bc120c5b682190ebb845367106f022c044087febd6021fb6e9e1d074d49",
+  "role": "Original repository starter; source of governance and bootstrap files.",
+  "note": "Scientific input archives are separately identified and retained in INPUTS.json. Active positioning files were revised for the user clarification; scientific files were not."
+}

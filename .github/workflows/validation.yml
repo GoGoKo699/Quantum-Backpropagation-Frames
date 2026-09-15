@@ -1,0 +1,26 @@
+name: Evidence and parity checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[initialization]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python tools/verify_inputs.py
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/reproduce.py parity --output runs/ci-parity
+      - run: python tools/verify_inputs.py
