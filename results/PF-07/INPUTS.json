@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-16",
+  "baseline": "0633ff37de69debbad93b78b146bb128be12106e",
+  "main_at_start": "1986fe53a65062120f1be9da14c28fa48b12484d",
+  "branch": "research/PF-07-overlap-reference",
+  "local_full_checkout": false,
+  "access_note": "Direct git ls-remote failed DNS. Local source subset extracted from mounted delivery archives; remote reads and writes use the authorized GitHub connection. Full pinned-tree verification is separate read-only CI.",
+  "archives": {
+    "Quantum-Backpropagation-Frames-PF-04-20260915.zip": "0d5b7c910a563d9f0ebbf5908945cdd93d725cc3b8c45b4eb33fa6e5c2eaaf41",
+    "Quantum-Backpropagation-Frames-PF-06-20260915.zip": "9568b1a0ecb84ecaf9386bb22398d1f75679cc240e282c12c197be39c66fcf95"
+  },
+  "inherited_source_sha256": {
+    "results/PF-04/study.py": "373f76105d7a07ec5604173bbab9a6e3da56dee4908510afe2e346456422df85",
+    "results/PF-06/compiler.py": "456083f4545fe5832c56546793b5cffb817ed003da46522520215f5deffc5528",
+    "research/matched_readout/core.py": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01"
+  },
+  "packet_manifest_entries_verified": {
+    "PF04": 9,
+    "PF06": 12
+  }
+}

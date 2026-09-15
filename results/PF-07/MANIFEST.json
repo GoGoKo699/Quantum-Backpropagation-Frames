@@ -1,0 +1,16 @@
+{
+  "scope": "PF-07 fixed source packet; excludes manifest, start checkpoint and remote receipt. Prior packets are not changed.",
+  "sha256": {
+    "DECISION.md": "44bb85a77a37d4e76a1dd25c62a2cbcbc1ec86d875d1da55c38ba0886c81603d",
+    "INPUTS.json": "5b910d25540c4574254bf0749411dd032e7f49ce94c3ba4c317863baf3660aa7",
+    "LOCAL_VALIDATION.json": "d9160c4d2addd21052249ed454a57be532afc66d818c750d61a1442c659e3d66",
+    "PROOF.md": "f5d243f28f2bb54c6a2301fd06de0eb69a36c5a4c57be02a8e482e31beed1045",
+    "REPORT.md": "41a5cbf7335ae0a21657ae5bb7ed33f71a670a58a87e0d869f79df058988c704",
+    "REPRODUCE.md": "a3dc7500e09046c17d5280d8bb0b2dc019b4cbc845bd83f147a80dca670af806",
+    "RESOURCES.md": "fb06eacd0ee556492bde570a1e4be9ef17ea413adfcf59d2e1518b2eb70e1a32",
+    "SOURCE_AUDIT.md": "e4c565217897c0b83e201765d07bf6c5332cbfe1be2e04b874c0d832174017bf",
+    "compiler.py": "e72813edd9883240e9f1efe903aafc7dee86404eaae9ea2349501174738b6efa",
+    "resources.json": "8845c59d116bb4a69711ef4f3b642b52d8959968f142d982a4102b89d90fea74",
+    "study.py": "43f5ca1d30d0ce390fa04505c69f6e5a301c409d4c67a3921b8d60e413795faf"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "seed": 2026091607,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "checks": {
+    "fast_UCR_all_columns": {
+      "cases": 15,
+      "max_residual": 4.440892098500626e-16
+    },
+    "synthetic_reference": {
+      "cases": 3,
+      "max_residual": 2.220446049250313e-16
+    },
+    "elementary_Born": {
+      "cases": 191,
+      "max_residual": 3.552713678800501e-15
+    },
+    "whole_raw_gradient": {
+      "cases": 191,
+      "max_residual": 5.10702591327572e-15
+    },
+    "exact_trace_risk": {
+      "cases": 191,
+      "max_residual": 8.526512829121202e-13
+    },
+    "uniform_4s_bound": {
+      "cases": 191,
+      "max_residual": 9.663381206337363e-13
+    },
+    "response_branch_identity": {
+      "cases": 191,
+      "max_residual": 3.3306690738754696e-15
+    },
+    "unique_first_mass": {
+      "cases": 3,
+      "max_residual": 0.0
+    },
+    "local_suffix_mass": {
+      "cases": 11,
+      "max_residual": 0.0
+    },
+    "sparse_score_contract": {
+      "cases": 40,
+      "max_residual": 4.440892098500626e-16
+    },
+    "envelope_size_formula": {
+      "cases": 21,
+      "max_residual": 0.0
+    },
+    "full_envelope_gate_bound": {
+      "cases": 21,
+      "max_residual": 0.0
+    },
+    "full_envelope_preparation": {
+      "cases": 21,
+      "max_residual": 5.551115123125783e-16
+    },
+    "wrong_order_counterexample": {
+      "cases": 1,
+      "max_residual": 0.0
+    },
+    "coordinate_null_witness": {
+      "cases": 1,
+      "max_residual": 2.3551386880256624e-16
+    },
+    "coordinate_null_saturates_4s": {
+      "cases": 1,
+      "max_residual": 7.105427357601002e-15
+    },
+    "independent_dense_tangents": {
+      "cases": 30,
+      "max_residual": 1.2212453270876722e-15
+    },
+    "exact_gate_ledger": {
+      "cases": 120,
+      "max_residual": 0.0
+    },
+    "existing_family_reference": {
+      "cases": 30,
+      "max_residual": 1.609823385706477e-15
+    },
+    "risk_eigen_endpoint": {
+      "cases": 30,
+      "max_residual": 7.389644451905042e-13
+    },
+    "aggregate_original_output": {
+      "cases": 30,
+      "max_residual": 1.4988010832439613e-15
+    },
+    "independent_finite_difference": {
+      "cases": 60,
+      "max_residual": 2.9006586022006786e-10
+    },
+    "PF06_missed_gradient_recovered": {
+      "cases": 1,
+      "max_residual": 1.1689852668407708e-15
+    },
+    "streamed_scaling_gates": {
+      "cases": 10,
+      "max_residual": 0.0
+    },
+    "finite_scalable_decoder": {
+      "cases": 10,
+      "max_residual": 0.0
+    },
+    "invalid_input_rejected": {
+      "cases": 6,
+      "max_residual": 0.0
+    }
+  },
+  "wrong_order_reference_error": 0.247321261434242,
+  "max_analytic_reference_roundoff_zeroed": 3.8163916471489756e-16,
+  "PF06_counterexample": {
+    "original_missed_gradient_norm": 2.7639718921748453,
+    "new_gradient_error": 1.1689852668407708e-15
+  },
+  "source_hashes": {
+    "study.py": "43f5ca1d30d0ce390fa04505c69f6e5a301c409d4c67a3921b8d60e413795faf",
+    "compiler.py": "e72813edd9883240e9f1efe903aafc7dee86404eaae9ea2349501174738b6efa"
+  },
+  "inherited_source_hashes": {
+    "results/PF-04/study.py": "373f76105d7a07ec5604173bbab9a6e3da56dee4908510afe2e346456422df85",
+    "results/PF-06/compiler.py": "456083f4545fe5832c56546793b5cffb817ed003da46522520215f5deffc5528",
+    "research/matched_readout/core.py": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01"
+  },
+  "elapsed_seconds": 20.169756061999806,
+  "limits": "Gate/Born diagnostics at n<=8; compiler-only through n=256; no global support union, no large state, no hardware/novelty/strongest-method advantage or merge.",
+  "run_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python results/PF-07/study.py --output runs/pf07-packaged",
+  "small_parameter_points": 30,
+  "compiler_only_sizes": 10,
+  "record": "Summary of the actual local packaged-source run. Complete diagnostics, example gate list and log are retained in the delivery. Not a full authenticated checkout or remote CI."
+}
