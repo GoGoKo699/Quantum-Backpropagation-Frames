@@ -1,0 +1,46 @@
+{
+  "scenario_count": 144,
+  "candidate_rows": 4320,
+  "winners": {
+    "full_direct": 96,
+    "no_mask": 24,
+    "full_greedy": 24
+  },
+  "parity_wins": 0,
+  "minimum_parity_ratio": 1.0003125008472145,
+  "maximum_parity_ratio": 2.862704292741779,
+  "compiler_stats": [
+    {
+      "n": 2,
+      "masks": 2,
+      "direct_mean_entangling": 0.5,
+      "best_gate_mean_entangling": 0.5,
+      "strict_gate_reductions": 0,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 3,
+      "masks": 8,
+      "direct_mean_entangling": 1.5,
+      "best_gate_mean_entangling": 1.5,
+      "strict_gate_reductions": 0,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 4,
+      "masks": 64,
+      "direct_mean_entangling": 3.0,
+      "best_gate_mean_entangling": 2.84375,
+      "strict_gate_reductions": 10,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    },
+    {
+      "n": 5,
+      "masks": 1024,
+      "direct_mean_entangling": 5.0,
+      "best_gate_mean_entangling": 4.38671875,
+      "strict_gate_reductions": 476,
+      "scope": "Best-gate count alone; acceptance also charges all synthesis and relabeling."
+    }
+  ]
+}

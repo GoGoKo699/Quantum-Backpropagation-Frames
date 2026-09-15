@@ -1,0 +1,35 @@
+test_compiler_invalid_inputs (test_pf02.CompilerTests.test_compiler_invalid_inputs) ... ok
+test_exhaustive_phase_contract (test_pf02.CompilerTests.test_exhaustive_phase_contract) ... ok
+test_folded_born_distributions (test_pf02.CompilerTests.test_folded_born_distributions) ... ok
+test_gray_character (test_pf02.CompilerTests.test_gray_character) ... ok
+test_greedy_does_not_increase_gate_count (test_pf02.CompilerTests.test_greedy_does_not_increase_gate_count) ... ok
+test_terminal_parity_folded_born (test_pf02.CompilerTests.test_terminal_parity_folded_born) ... ok
+test_beta_eta_and_extreme_finite_scalars (test_pf02.ContractTests.test_beta_eta_and_extreme_finite_scalars) ... ok
+test_exact_sign_contract (test_pf02.ContractTests.test_exact_sign_contract) ... ok
+test_local_masks_and_addresses (test_pf02.ContractTests.test_local_masks_and_addresses) ... ok
+test_no_coerced_strings_objects_or_bools (test_pf02.ContractTests.test_no_coerced_strings_objects_or_bools) ... ok
+test_no_input_mutation_and_shift_equivalence (test_pf02.ContractTests.test_no_input_mutation_and_shift_equivalence) ... ok
+test_nonfinite_and_complex_all_array_positions (test_pf02.ContractTests.test_nonfinite_and_complex_all_array_positions) ... ok
+test_numeric_overflow_is_not_success (test_pf02.ContractTests.test_numeric_overflow_is_not_success) ... ok
+test_original_four_probes_rejected (test_pf02.ContractTests.test_original_four_probes_rejected) ... ok
+test_risk_functions_guard_tangents (test_pf02.ContractTests.test_risk_functions_guard_tangents) ... ok
+test_round_contract_all_entry_points (test_pf02.ContractTests.test_round_contract_all_entry_points) ... ok
+test_shapes_and_geometry (test_pf02.ContractTests.test_shapes_and_geometry) ... ok
+test_valid_input_equivalence (test_pf02.ContractTests.test_valid_input_equivalence) ... ok
+test_archive_integrity (test_repository.RepositoryTests.test_archive_integrity) ... ok
+test_clean_parity_gadget (test_repository.RepositoryTests.test_clean_parity_gadget) ... ok
+test_covariance_interpolation_small_ensemble (test_repository.RepositoryTests.test_covariance_interpolation_small_ensemble) ... ok
+test_inherited_reports_match_declared_schema (test_repository.RepositoryTests.test_inherited_reports_match_declared_schema) ... ok
+test_invalid_response_is_rejected (test_repository.RepositoryTests.test_invalid_response_is_rejected) ... ok
+test_origin_is_not_a_result_dependency (test_repository.RepositoryTests.test_origin_is_not_a_result_dependency) ... ok
+test_readme_local_links (test_repository.RepositoryTests.test_readme_local_links) ... ok
+test_report_wrapper_rejects_nan (test_repository.RepositoryTests.test_report_wrapper_rejects_nan) ... ok
+test_repository_target_recorded (test_repository.RepositoryTests.test_repository_target_recorded) ... ok
+test_safe_paths (test_repository.RepositoryTests.test_safe_paths) ... ok
+test_shift_decoder (test_repository.RepositoryTests.test_shift_decoder) ... ok
+test_standalone_project_framing (test_repository.RepositoryTests.test_standalone_project_framing) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.499s
+
+OK
