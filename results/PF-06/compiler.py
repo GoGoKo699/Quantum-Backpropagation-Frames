@@ -98,9 +98,12 @@ class Plan:
         x = int(system_outcome)
         if not 0 <= x < 1 << self.n:
             raise ValueError('outcome outside register')
+        # Convert once: repeated shifts of a growing arbitrary-size integer
+        # would not implement the stated linear physical-bit scan in Python.
+        bits = format(x, f'0{self.n}b')
         active = None
         for b in range(self.blocks):
-            digit = (x >> (self.n-2-2*b)) & 3
+            digit = 2*(bits[2*b] == '1') + (bits[2*b+1] == '1')
             if digit:
                 if active is not None: return None
                 active = (b, digit-1)
