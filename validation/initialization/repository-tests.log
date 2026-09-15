@@ -1,0 +1,17 @@
+test_archive_integrity (test_repository.RepositoryTests.test_archive_integrity) ... ok
+test_clean_parity_gadget (test_repository.RepositoryTests.test_clean_parity_gadget) ... ok
+test_covariance_interpolation_small_ensemble (test_repository.RepositoryTests.test_covariance_interpolation_small_ensemble) ... ok
+test_inherited_reports_match_declared_schema (test_repository.RepositoryTests.test_inherited_reports_match_declared_schema) ... ok
+test_invalid_response_is_rejected (test_repository.RepositoryTests.test_invalid_response_is_rejected) ... ok
+test_origin_is_not_a_result_dependency (test_repository.RepositoryTests.test_origin_is_not_a_result_dependency) ... ok
+test_readme_local_links (test_repository.RepositoryTests.test_readme_local_links) ... ok
+test_report_wrapper_rejects_nan (test_repository.RepositoryTests.test_report_wrapper_rejects_nan) ... ok
+test_repository_target_recorded (test_repository.RepositoryTests.test_repository_target_recorded) ... ok
+test_safe_paths (test_repository.RepositoryTests.test_safe_paths) ... ok
+test_shift_decoder (test_repository.RepositoryTests.test_shift_decoder) ... ok
+test_standalone_project_framing (test_repository.RepositoryTests.test_standalone_project_framing) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.081s
+
+OK

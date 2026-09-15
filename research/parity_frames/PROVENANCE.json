@@ -1,0 +1,10 @@
+{
+  "source_archive": "frame_readout_matched_audit_20260915.zip",
+  "source_archive_sha256": "1cc59bc0d3497bf535f4e1eb742433c1f85376e7473fa4969e4e884bcef036a2",
+  "inherited_file": "reference_circuit.py",
+  "inherited_source_path": "frame_readout_audit/core.py",
+  "inherited_sha256": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01",
+  "new_code_seed": 2026091551,
+  "repository_modified": false,
+  "fresh_checks": "validate.py; not a rerun of the entire inherited audit"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "archives": [
+    {
+      "path": "provenance/input_archives/parity_frame_compiler_20260915.zip",
+      "sha256": "d0bc3a0b837d5f41190b525de361af4f345e2caf5dae19d026720052f452d99f",
+      "extracted_files": 10,
+      "manifest_entries": 9
+    },
+    {
+      "path": "provenance/input_archives/frame_readout_matched_audit_20260915.zip",
+      "sha256": "1cc59bc0d3497bf535f4e1eb742433c1f85376e7473fa4969e4e884bcef036a2",
+      "extracted_files": 12,
+      "manifest_entries": 11
+    }
+  ],
+  "manifest_entries_checked": 20,
+  "extracted_files_checked": 22,
+  "limitations": "Checks identity and internal consistency, not scientific correctness or authorship.",
+  "inherited_fixture_equal": true
+}
