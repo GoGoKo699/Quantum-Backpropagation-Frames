@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "record_type": "Reviewed receipt from completed GitHub job logs; original RUN.json and logs are in the artifact",
+  "source_commit": "739a84854e467450586fc07493171152c418f205",
+  "baseline": "8781c8fad5de5742b743178268b8e4f0e4b4f089",
+  "workflow_run_id": 34963997457,
+  "workflow_run_attempt": 1,
+  "job_id": 104364016530,
+  "conclusion": "success",
+  "completed_utc": "2026-09-15T11:34:34.988248+00:00",
+  "environment": {"python": "3.13.15", "numpy": "2.3.5"},
+  "repository_tests": 36,
+  "new_test_methods": 6,
+  "pf01_existing_diagnostics": "passed",
+  "supplied_parity_validator": "passed",
+  "supplied_matched_validator": "passed",
+  "frozen_files_verified": 109,
+  "scientific_sources_unchanged": true,
+  "clean_checkout_before_and_after": true,
+  "acceptance": {
+    "scenarios_compared": 144,
+    "candidate_rows_compared": 4320,
+    "matches_PF02": true,
+    "numeric_tolerance": "1e-12 relative and absolute; categories exact",
+    "winners": {"full_direct": 96, "full_greedy": 24, "no_mask": 24},
+    "parity_wins": 0
+  },
+  "boundary_probes": [
+    {"beta": 2, "eta_hex": "0x1.fffffffffffffp-6", "before": 2, "after": 3, "required": 3},
+    {"beta": 2, "eta_hex": "0x1.0000000000000p-25", "before": 13, "after": 12, "required": 12},
+    {"case": "beta=10**400", "before": "OverflowError", "after": "ValueError"}
+  ],
+  "source_sha256": {
+    "qbp_frames/parity.py": "4daacfdc3b9b0e2c38f01fe8c65cbb70d0821fd00546d7e4d1feb188eb3a8ca9",
+    "qbp_frames/readout.py": "6da6ad635d4cfa5b825ccd6c7c41a53856bfb720573de5004cb09f7cf1a297cd",
+    "tests/test_pf02.py": "c1f1405ca3115e925770b4f0ee415bfafb18e66f3b19d2195c2fe097bf82a3fa",
+    "tests/test_pf03.py": "ae09972a8c989f2cd44d07434fe1cea60589c77b657c80ad74fbd267b7d12caf",
+    "tools/integration_check.py": "b64d6d81096383938f27f469243aedd7996f7d7094885d89a831f87dcccca0f1",
+    ".github/workflows/validation.yml": "56adc03479fdd193cc7987a75911ff2d6c350cd691017ae094cd19d7b6c2b8d7"
+  },
+  "artifact": {
+    "id": 10394815160,
+    "name": "integration-34963997457-1",
+    "size_in_bytes": 95888,
+    "sha256": "028e98552aaefee1ccc23fac9a4bb7701078459bf7574aa342291bdda95e5254",
+    "expires_at": "2026-10-15T11:34:35Z"
+  },
+  "permissions_observed": {"contents": "read", "metadata": "read"},
+  "scope": "Integration regressions and identical bounded acceptance rerun; no new scientific audit, hardware test, advantage claim or merge. Later metadata commits do not extend this receipt to changed code."
+}

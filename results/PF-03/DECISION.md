@@ -1,26 +1,29 @@
 # PF-03 integration decision
 
-**Recommendation: integrate the repaired baseline after the read-only integration
-gate passes. Do not promote a parity-advantage or novelty claim. No merge is
-performed by this work order.**
+**COMPLETE. READY FOR MERGE REVIEW. The read-only integration gate passed;
+no merge has been performed.**
 
-The merge candidate includes PF-01 and PF-02 history, their original logs, the
-maintained real/finite API, and the exact terminal-readout compilers. PF-03 fixes
-two scalar-helper boundary behaviors and makes current status/CI match the
-actual accumulated evidence. Estimator mathematics and the cost model are not
-changed. The source branches remain preserved.
+Verified run: 34963997457, job 104364016530, source commit
+739a84854e467450586fc07493171152c418f205. See REMOTE_VALIDATION.json for the
+reviewed receipt, source hashes and artifact identity.
 
-Acceptance requires the full gate, not only a green unit-test job: frozen-tree
-identity, 36 test methods, supplied diagnostics and validators, and unchanged
-144-scenario/4320-row PF-02 acceptance output. The reviewed run receipt identifies
-the executed commit. A later code change requires a new run; a receipt for an
-older commit does not claim verification of later code.
+The merge candidate preserves PF-01/PF-02 history, original logs, input archives,
+the maintained real/finite API, and exact terminal-readout compilers. PF-03 fixes
+scalar conversion and minimum-round boundary selection, then updates current
+status and CI. Estimator mathematics and the declared cost model are unchanged.
 
-The inherited 96 full-direct, 24 full-greedy and 24 no-mask winners remain the
-research record. Zero positive-round parity wins is not erased, reinterpreted
-as a success, or generalized into a no-go theorem.
+The complete gate passed: 36 test methods, PF-01 diagnostics, both supplied
+validators, 109 frozen-file checks, and unchanged 144-scenario/4320-row PF-02
+acceptance results. The checkout was clean before and after. Subsequent changes
+to code require revalidation; passing metadata-only commits do not change the
+recorded scientific conclusion.
 
-Once the gate is verified, open an unmerged pull request to main. The next
-operational decision is authorization to merge that reviewed candidate. A new
-advantage study requires a separately justified work order; it is not started
-by this integration review.
+The inherited winners remain 96 full-direct, 24 full-greedy and 24 no-mask.
+Zero positive-round parity wins is retained, not converted into a success or a
+universal no-go theorem. The result remains limited to the specified sufficient
+budgets, cases and work model.
+
+Open an unmerged pull request to main. Main, audit/PF-01 and repair/PF-02 remain
+untouched. The next operational decision is authorization to merge the reviewed
+candidate. A new scientific study requires a separate justified work order;
+this review does not start a sweep, manuscript, release or licensing action.
