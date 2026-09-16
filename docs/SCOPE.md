@@ -12,7 +12,7 @@ state; it does not grant an uncharged circuit for constructing either one.
 
 ## Exact statistical contract
 
-- $T$ is a known real $N$-by-$P$ matrix with $T^{\mathsf T}|0\rangle=0$.
+- $T$ is a known real matrix of size $N \times P$ with $T^{\mathsf T}|0\rangle=0$.
 - $q$ ranges over the **entire real unit sphere** in dimension $N$.
 - One copy of $(|0,0\rangle+|1,q\rangle)/\sqrt2$ is supplied per record.
 - One fixed overall POVM and real vector score may depend on $T$, not $q$.

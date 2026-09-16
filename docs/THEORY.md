@@ -239,8 +239,13 @@ B=\sum_\omega\|y_\omega\|_2^2\|z_\omega\|_2^2.
 Cauchy–Schwarz with vector factors $x_\omega z_\omega$ and $y_\omega$ gives
 $(2r\sqrt\lambda)^2\le Ar$. Using the scalar factors $x_\omega$ and
 $z_\omega^{\mathsf T}y_\omega$, followed by
-$(z_\omega^{\mathsf T}y_\omega)^2\le\|z_\omega\|_2^2\|y_\omega\|_2^2$, gives
-$(2r\sqrt\lambda)^2\le B$. Hence
+
+```math
+(z_\omega^{\mathsf T}y_\omega)^2
+ \le\|z_\omega\|_2^2\|y_\omega\|_2^2,
+```
+
+gives $(2r\sqrt\lambda)^2\le B$. Hence
 
 ```math
 A\ge4r\lambda,\qquad B\ge4r^2\lambda.

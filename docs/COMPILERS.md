@@ -95,8 +95,14 @@ order is generator slot first, then block: index $jm+b$ for slot $j$ and block
 $b$. The six entries of a row of $K_b$ always update these original coordinates.
 
 Only addresses with one nonzero two-bit block can have nonzero tangent rows.
-Their row energies are $d_{b,t}=\sum_j(K_b)_{t,j}^2$, and the reference amplitudes
-are $c_{b,t}=\sqrt{d_{b,t}/s}$. This is exactly the row-norm construction above.
+Their row energies and reference amplitudes are
+
+```math
+d_{b,t}=\sum_j(K_b)_{t,j}^2,\qquad
+c_{b,t}=\sqrt{d_{b,t}/s}.
+```
+
+This is exactly the row-norm construction above.
 
 ### Exact optimality at the flat point
 
@@ -136,11 +142,17 @@ $K_bK_b^{\mathsf T}$. Then this measurement's exact worst-case risk is
 B_{\mathrm{row}}=\max\{2s,\,4s-4\mu_{\min}\}.
 ```
 
-To see this, fix $h=\|\Pi_Sq\|_2^2$. The quadratic term is at least
-$\mu_{\min}h$, attained in a least-eigenvalue direction. Maximizing
-$2s+(2s-4\mu_{\min})h$ over $h\in[0,1]$ gives the formula. Both endpoints are
-available because $e_0$ lies outside the support. If rows disappear or rank is
-lost, the pointwise formula with the actual support remains authoritative;
+To see this, fix the response's squared weight in the active support:
+
+```math
+h=\|\Pi_Sq\|_2^2,\qquad
+\|T^{\mathsf T}q\|_2^2\ge\mu_{\min}h.
+```
+
+The quadratic bound is attained in a least-eigenvalue direction. The largest
+risk at fixed $h$ is therefore affine in $h$; maximizing over $h\in[0,1]$ gives
+the formula. Both endpoints are available because $e_0$ lies outside the support.
+If rows disappear or rank is lost, the pointwise formula with the actual support remains authoritative;
 $4s$ remains sufficient. Including zero eigenvalues from absent rows can make
 a numerical bound conservative. No exact unequal-spectrum optimum is claimed.
 
@@ -385,7 +397,7 @@ all-to-all and arbitrary rotations are logical primitives; no routed-device
 or depth advantage is asserted.
 
 The envelope of all nonzero addresses whose first and last ones fit in a
-width-$w$ interval has size
+interval of width $w$ has size
 
 ```math
 M_w=\sum_{a=0}^{n-1}2^{\min(w-1,n-a-1)}
@@ -442,13 +454,13 @@ parameter indices by $2(-1)^b\sqrt s\,k_x/\|k_x\|_2$, where $b$ is the reference
 bit, or make no update when the row is zero. The reference bit must not be
 confused with the position of the last system one.
 
-A word implementation with width-$w$ local indices uses $O(n+\nu w)$ bit/scalar
+A word implementation with local indices of width $w$ uses $O(n+\nu w)$ bit/scalar
 work and at most $\nu$ parameter updates per record. After all $K$ records,
 divide the $P$-entry accumulator by $K$ and emit every coordinate, including
 zero ones. No dense $P$-vector is allocated per shot, and no response is
 reconstructed classically.
 
-For the existing depth-$d$ line circuit, $P=\Theta(nd)$, $w\le2d$ and
+For the existing line circuit of depth $d$, $P=\Theta(nd)$, $w\le2d$ and
 $\nu=O(d^2)$. Constructing the local tangent tables with the retained causal
 compiler costs $O(d^2L_{\mathrm{tab}})$ scalar kernels plus incidence and
 priority-queue indexing; actual gate-visit and kernel counts are recorded.

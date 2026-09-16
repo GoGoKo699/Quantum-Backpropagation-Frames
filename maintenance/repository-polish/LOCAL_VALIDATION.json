@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "mode": "full",
+  "started_utc": "2026-09-16T04:09:20.931261+00:00",
+  "workflow_run_id": null,
+  "workflow_run_attempt": null,
+  "python": "3.12.14",
+  "commands": [
+    {
+      "arguments": [
+        "tools/integration_check.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/integration"
+      ],
+      "log": "integration.log",
+      "returncode": 0,
+      "elapsed_seconds": 4.178596605999701
+    },
+    {
+      "arguments": [
+        "results/PF-04/study.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-04"
+      ],
+      "log": "PF-04.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.2208162209990405
+    },
+    {
+      "arguments": [
+        "results/PF-05/audit.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-05"
+      ],
+      "log": "PF-05.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.21446735700010322
+    },
+    {
+      "arguments": [
+        "results/PF-06/study.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-06"
+      ],
+      "log": "PF-06.log",
+      "returncode": 0,
+      "elapsed_seconds": 9.272851888999867
+    },
+    {
+      "arguments": [
+        "results/PF-07/study.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-07"
+      ],
+      "log": "PF-07.log",
+      "returncode": 0,
+      "elapsed_seconds": 20.79329747600059
+    },
+    {
+      "arguments": [
+        "results/PF-08/compare.py",
+        "--input",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-07/diagnostics.json",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/PF-08"
+      ],
+      "log": "PF-08.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.064558426000076
+    },
+    {
+      "arguments": [
+        "figures/generate_tutorial.py",
+        "--output",
+        "/workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames/runs/complete-local/figures"
+      ],
+      "log": "figures.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.5657828849998623
+    },
+    {
+      "arguments": [
+        "examples/flat_readout.py"
+      ],
+      "log": "example-flat_readout.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.11456468799951836
+    },
+    {
+      "arguments": [
+        "examples/compile_large.py"
+      ],
+      "log": "example-compile_large.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.114384340999095
+    }
+  ],
+  "scope": "Existing bounded regressions; not a novelty review, new study or visual rendering test.",
+  "source_commit": "8fdc51a661dccfbca4e853c4cee815d2d1350117",
+  "source_tree": "905cbc4325909515654a875882cc4c3a9d75f519",
+  "working_tree_clean_at_start": true,
+  "documentation": {
+    "status": "passed",
+    "active_pages": 21,
+    "links_checked": 218,
+    "license": "MIT",
+    "citation": "CFF 1.2.0 required fields checked",
+    "scope": "Active Markdown source and local targets; no visual or external-URL claim."
+  },
+  "integrity": {
+    "preserved_files_verified": 187,
+    "migration_manifest_sha256": "24ac3960ad8602e0cc9a23c6799156650dabaa640aef861a79ff058e65d10b46",
+    "guidance_copies_verified": 12,
+    "maintained_code_maps_verified": 4,
+    "original_packet_manifests": {
+      "PF-04": 9,
+      "PF-05": 9,
+      "PF-06": 12,
+      "PF-07": 11,
+      "PF-08": 8
+    }
+  },
+  "repository_tests": 53,
+  "acceptance": {
+    "rows_compared": {
+      "scenarios.csv": 144,
+      "candidates.csv": 4320
+    },
+    "winners": {
+      "full_direct": 96,
+      "no_mask": 24,
+      "full_greedy": 24
+    },
+    "parity_wins": 0,
+    "matches_PF02": true,
+    "comparison_tolerance": "1e-12 relative and absolute; categories exact"
+  },
+  "scientific_packets": {
+    "PF-04": {
+      "status": "passed",
+      "check_groups": 8,
+      "elapsed_seconds": 2.1271102070004417
+    },
+    "PF-05": {
+      "status": "passed",
+      "check_groups": 10,
+      "elapsed_seconds": 0.11418145599964191
+    },
+    "PF-06": {
+      "status": "passed",
+      "check_groups": 17,
+      "elapsed_seconds": 9.176984940999318
+    },
+    "PF-07": {
+      "status": "passed",
+      "check_groups": 26,
+      "elapsed_seconds": 20.67569304999961
+    },
+    "PF-08": {
+      "status": "passed",
+      "analysis_tests": 8,
+      "small_points": 30,
+      "compiler_points": 10,
+      "small_results": {
+        "reference_lower_than_no_mask": 30,
+        "reference_lower_than_full": 22,
+        "reference_equal_to_full_numerically": 8,
+        "reference_larger_than_full": 0,
+        "maximum_no_mask_over_reference": 1.5,
+        "maximum_full_over_reference": 1.5
+      },
+      "profiles_searched": 0,
+      "new_circuit_cases": 0
+    }
+  },
+  "figures": {
+    "tutorial-readout.svg": "72e600ad77971259d0fe5cfb6cd70ce1715e7b9a5b926f20c607b2303558904b",
+    "tutorial-readout.json": "9367b7bb789903e768703f75d7736caaf07fc76b2d6fbb3616175642883ce3da"
+  },
+  "clean_checkout_before_and_after": true,
+  "elapsed_seconds": 37.607621582999855,
+  "completed_utc": "2026-09-16T04:09:58.538882+00:00"
+}

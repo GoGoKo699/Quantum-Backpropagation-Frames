@@ -110,3 +110,86 @@ the guidance archive; the operative MIT text is unchanged.
 The maintained disjoint histogram decoder now validates raw integer entries
 before binary64 conversion and sums absolute counts exactly. Regression probes
 cover oversized and summed counts at 2^53; valid endpoints remain accepted.
+
+## Executed current-tree verification
+
+[LOCAL_VALIDATION.json](LOCAL_VALIDATION.json) records the full gate on local
+commit 8fdc51a661dccfbca4e853c4cee815d2d1350117, tree
+905cbc4325909515654a875882cc4c3a9d75f519. Command:
+
+```bash
+python tools/validate.py --mode full --output runs/complete-local
+```
+
+It passed 53 repository tests (36 inherited, 12 supported-package tests, five
+validation tests), original 109 frozen checks, 187 preserved-file identities,
+12 then-recorded guidance copies, four maintained-code maps, the 144/4320
+acceptance regression, all 8/10/17/26 diagnostic groups, eight final analysis
+checks, both examples, and byte-identical figure/data regeneration. Runtime was
+37.61 seconds with Python 3.12.14, NumPy 2.3.5, Matplotlib 3.10.8, and PyYAML
+6.0.3. The checkout was clean before and after. The later licensing relocation
+adds a thirteenth preserved guidance copy without changing scientific code.
+
+[FRESH_QUICKSTART.json](FRESH_QUICKSTART.json) records a separate full local clone
+of the verified object database, an ordinary isolated venv, and the exact README
+`python -m pip install -e .` installation. The installer selected NumPy 2.5.3
+under Python 3.12.14. Both examples passed from the clone and from an unrelated
+working directory; outputs matched and the clone remained clean. A separate
+wheel installation also ran without any research/results directories available
+as runtime imports. CITATION.cff passed the complete official CFF 1.2.0 JSON
+Schema with format checking; its schema hash is in the receipt.
+
+[CI_CANDIDATE.json](CI_CANDIDATE.json) records independently inspected GitHub run
+[35054584006](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/actions/runs/35054584006),
+job 104661958048, on PR head 816ec9ccd260540a4f2c2d58af6afaef12a0e593.
+The actual PR merge checkout has the same tree 905cbc4325909515654a875882cc4c3a9d75f519.
+The full gate passed on Python 3.13.15; all logs and generated outputs were
+inspected, and downloaded artifact 10430046808 matched SHA-256
+ae0bfe94627e6d5fb877165c2b2dd19e390ad6060e2cfdec0767df06555ab80a.
+This is fresh GitHub CI, separate from the local pass and historical receipts.
+Only nonblocking action-runtime deprecation notices appeared.
+
+## Rendered review and new-reader walkthrough
+
+The actual GitHub README, tutorial, theory, compilers, implementation,
+comparisons, reproduction, evidence index, scope, and methods/provenance pages
+were opened in the browser. Desktop viewport was 1363 by 936 CSS pixels; document
+content width was 929 pixels. Rendered headings, tables, code fences, navigation,
+equations, and the analytic SVG were inspected. The pages had no reported
+MathJax error elements or overflowing math/table/code containers at that width.
+
+DOM inspection also checked literal dollar delimiters outside math/code. This
+caught Markdown consuming a few inline norm/subscript expressions and
+hyphen-adjacent formulas despite the absence of MathJax errors. They were changed
+to display math or ordinary phrases for final reinspection. The source checker
+alone is not counted as visual validation.
+
+The browser provides no working viewport-resize or device-emulation control in
+this session; attempted UI shortcuts did not alter its viewport. Narrow/mobile
+rendering is therefore **not verified**. No local approximation is reported as
+GitHub mobile rendering.
+
+The new-reader walkthrough followed the physical question, two-qubit
+probabilities, signed six-coordinate records, inactive-trial normalization,
+exact theorem and exclusions, runnable example, and direct proof/evidence links.
+The tutorial's mean [0,1,0,0,0,1], inactive mass 3/8, risk 13, worst risk 16, and
+no-mask benchmark 24 agree with executable output. The larger demonstration
+emits 1658 gates for 128 qubits and returns 384 original coordinates. It is
+explicitly compiler-only. Neither route requires development chronology or an
+external manuscript.
+
+## Integration review
+
+The complete change inventory was checked against licensed main and the frozen
+research head. All original research/results/provenance/validation trees,
+PACKAGE_MANIFEST.json, terminal compiler, and inherited tests are unchanged from
+the appropriate source baseline. LICENSE matches licensed main exactly.
+Maintained code was compared with original fixtures; an independent review
+identified the count-boundary fix described above, now covered by regression.
+
+PR [2](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/pull/2) contains
+separate research-integration, canonical-content, supported-package, and
+validation commits. Main has no branch-protection rule or ruleset at inspection;
+the task nevertheless requires passing the current validation job before merge.
+Subsequent exact-head and merged-tree checks are associated with that PR and
+GitHub commit statuses; earlier receipts never stand in for a changed tree.

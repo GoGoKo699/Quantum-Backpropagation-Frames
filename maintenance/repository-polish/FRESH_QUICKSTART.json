@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-09-16T04:12:41.349118+00:00",
+  "source_commit": "8fdc51a661dccfbca4e853c4cee815d2d1350117",
+  "source_tree": "905cbc4325909515654a875882cc4c3a9d75f519",
+  "clone": "Fresh full clone of locally verified repository objects; not an independent remote download.",
+  "clone_command": "git clone --no-hardlinks /workspace/scratch/b51a1ab8cf8f/Quantum-Backpropagation-Frames /workspace/scratch/b51a1ab8cf8f/fresh-candidate",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "qbp-frames": "0+unreleased",
+    "venv": "ordinary isolated venv; no system-site packages"
+  },
+  "commands": [
+    "python -m venv .venv",
+    ".venv/bin/python -m pip install -e .",
+    ".venv/bin/python examples/flat_readout.py",
+    ".venv/bin/python examples/compile_large.py",
+    "/workspace/scratch/b51a1ab8cf8f/fresh-candidate/.venv/bin/python /workspace/scratch/b51a1ab8cf8f/fresh-candidate/examples/flat_readout.py (cwd=/tmp)",
+    "/workspace/scratch/b51a1ab8cf8f/fresh-candidate/.venv/bin/python /workspace/scratch/b51a1ab8cf8f/fresh-candidate/examples/compile_large.py (cwd=/tmp)"
+  ],
+  "flat_example": {
+    "system_qubits": 2,
+    "original_coordinates": 6,
+    "target_gradient": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "physical_outcome_order": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111"
+    ],
+    "probabilities": [
+      0.1875,
+      0.290170900631,
+      0.083333333333,
+      0.083333333333,
+      0.1875,
+      0.001495766036,
+      0.083333333333,
+      0.083333333333
+    ],
+    "zero_score_probability": 0.375,
+    "one_copy_trace_risk_at_this_response": 13.0,
+    "minimax_trace_risk": 16.0,
+    "no_mask_worst_trace_risk": 24,
+    "illustrative_record_counts": [
+      3,
+      7,
+      1,
+      1,
+      3,
+      0,
+      1,
+      0
+    ],
+    "total_records": 16,
+    "sample_gradient": [
+      0.0,
+      1.515544456623,
+      0.216506350946,
+      0.216506350946,
+      0.0,
+      1.515544456623
+    ],
+    "readout_gate_counts": {
+      "cx": 9,
+      "ry": 8,
+      "x": 2,
+      "h": 1
+    },
+    "checks": "passed"
+  },
+  "compiler_example": {
+    "mode": "compiler only; no Born simulation",
+    "system_qubits": 128,
+    "original_coordinates": 384,
+    "rank_at_zero": 192,
+    "tangent_scalars_stored": 1152,
+    "row_energy_scalars_stored": 192,
+    "program_gates_retained": 1658,
+    "readout_gate_counts": {
+      "cx": 891,
+      "ry": 764,
+      "x": 2,
+      "h": 1
+    },
+    "physical_bits_per_record": 129,
+    "flat_minimax_trace_risk": 1528.0,
+    "no_mask_worst_trace_risk": 1536,
+    "full_output_length": 384,
+    "global_state_allocated": false,
+    "checks": "passed"
+  },
+  "outside_source_results_byte_identical": true,
+  "clean_clone_after": true,
+  "citation_schema_validation": {
+    "status": "passed",
+    "schema": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
+    "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+    "schema_bytes": 63763,
+    "validator": "jsonschema.Draft7Validator with FORMAT_CHECKER",
+    "jsonschema_version": "4.26.0",
+    "pyyaml_version": "6.0.3",
+    "citation_sha256": "e1934c9606b00d8f67dabac02e23b8f8ff9bde804fab3eede097d847a9644188"
+  },
+  "limitations": "No full-suite duplication; this quickstart tested the unconstrained installer-selected NumPy 2.5.3. Pinned scientific validation is recorded separately."
+}
