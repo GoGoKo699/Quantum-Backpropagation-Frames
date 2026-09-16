@@ -1,26 +1,24 @@
-# Literature and attribution map
+# Primary-source map
 
-Start with the imported [source notes](../research/parity_frames/SOURCES.md)
-and the attribution section of the [matched audit](../research/matched_readout/README.md).
-Those notes identify what previous work was credited with during the source
-packet's preparation. The repository bootstrap did not reopen or independently
-verify those articles.
+[Home](../README.md) · [Theory](../docs/THEORY.md) · [Comparisons](../docs/COMPARISONS.md)
 
-## Priority for the next audit
+The tutorial and proofs are self-contained. These optional sources deepen the
+estimation and implementation background. Exact source versions and inspected
+locators are preserved in the [optimal-readout source audit](../results/PF-05/SOURCE_AUDIT.md),
+[compiler source notes](../results/PF-06/SOURCE_NOTES.md), and
+[overlap source audit](../results/PF-07/SOURCE_AUDIT.md).
 
-| Topic | Source identified in the supplied material | Question to verify |
+| Topic | Primary source | Relation to this repository |
 |---|---|---|
-| Stream-to-oracle and signed-overlap motivation | arXiv:2604.07639 | What access and readout guarantees are actually used here? |
-| Real equatorial shadows | arXiv:2311.14622 | Does its ensemble or moment analysis already imply the parity interpolation? |
-| Diagonal designs | arXiv:1206.4451; arXiv:1311.1128 | Which moments are needed, and which existing constructions reproduce them? |
-| Near-linear designs | arXiv:1501.04592 | Is the direct dense-CZ comparator unnecessarily costly? |
-| Shallow shadows | arXiv:2209.12924 | Compare total gate, decoding, and sample costs under matched structure. |
-| Dual-frame optimization | arXiv:2401.18071 | Distinguish decoder redundancy from conditional unbiasedness in our restricted family. |
-| Reversed gradient tests | arXiv:2408.05406 | Permit grouping and shorter suffixes in the baseline. |
-| Established gradient criteria | arXiv:2306.14962; arXiv:2305.13362 | Keep output norm, bias, memory, and coherent resources explicit. |
-| Coherent tomography background | arXiv:2207.08800; arXiv:2405.14765 | Earlier exploration only; not a dependency to assume proven by the current tests. |
+| Operator moment and estimation bounds | [Tsang, Albarelli and Datta, Quantum Semiparametric Estimation](https://arxiv.org/abs/1906.09871v7) | Established machinery behind the first lower bound; local nuisance-parameter guarantees have different quantifiers |
+| Real-state compatibility | [Miyazaki and Matsumoto, Imaginarity-free quantum multiparameter estimation](https://arxiv.org/abs/2010.15465v3) | State-independent Fisher-optimal measurements do not automatically give one finite globally unbiased score |
+| Measurement dominance | [Salmon, Strelchuk and Arvidsson-Shukur, Only Classical Parameterised States have Optimal Measurements under Least Squares Loss](https://arxiv.org/abs/2205.14142v2) | Pointwise dominance and minimax optimality are different claims |
+| Decoder choice | [Fischer et al., Dual frame optimization](https://arxiv.org/abs/2401.18071v2) | Canonical shadow scores need not be optimal; fixed-measurement decoder optimization differs from all-POVM minimax |
+| Equatorial and diagonal ensembles | [Real equatorial shadows](https://arxiv.org/abs/2311.14622), [diagonal-unitary designs](https://arxiv.org/abs/1206.4451) | Background for the narrower phase/Walsh route |
+| Gradient access and comparison | [Reversed gradient tests](https://arxiv.org/abs/2408.05406), [quantum backpropagation criteria](https://arxiv.org/abs/2306.14962) | Match output norm, controls, memory, grouping, and classical costs |
 
-For each new novelty entry, record the exact version, theorem/section, access
-model, output, error guarantee, and computational ledger. Distinguish a result
-quoted from a source from a new derivation combining known results. A search
-that finds no match is not a novelty certificate.
+The [preserved parity source notes](../research/parity_frames/SOURCES.md) and
+[matched-readout packet](../research/matched_readout/README.md) give the wider
+attribution record. They are historical source assessments, not a fresh
+exhaustive literature search or a novelty certificate. No cited article is
+redistributed under the repository's MIT license merely by being cited.

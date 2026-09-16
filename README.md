@@ -1,70 +1,110 @@
 # Quantum Backpropagation Frames
 
-Finite-copy measurement limits and explicit readout circuits for complete
-classical quantum gradients, with quantum and classical costs kept separate.
+**How accurately can one quantum experiment return a complete classical gradient?**
 
-## Current research focus
+A circuit's tangent directions are known, but its response to an objective is
+encoded in an unknown quantum state. Measuring the response directly loses the
+signs needed for a gradient. Interfering it with a known reference makes signed
+overlaps observable. Each measurement record contributes a vector of ordinary
+numbers; averaging records estimates **all original coordinate derivatives**.
 
-**Exploratory expansion is frozen for the candidate Letter.** The central result
-is the exact real-response, single-copy, universally unbiased gradient-readout
-limit when the nonzero tangent sensitivities are equal, together with its sparse
-attaining measurement and an explicit local-circuit realization.
+This repository gives an exact single-copy statistical limit, a measurement
+attaining it, and explicit circuits for two structured tangent families. It
+contains full proofs, supported Python implementations, executable examples,
+and preserved numerical evidence.
+
+## Choose a route
+
+| Goal | Start here |
+|---|---|
+| Understand in about five minutes | Continue below, then read [scope](docs/SCOPE.md) |
+| Learn in 20–30 minutes | [Worked tutorial](docs/TUTORIAL.md): probabilities, signed records, averaging |
+| Verify or reuse | [Theorem and proof](docs/THEORY.md), [circuits](docs/COMPILERS.md), [implementation](docs/IMPLEMENTATION.md), [reproduction](docs/REPRODUCIBILITY.md) |
+
+The [evidence index](docs/EVIDENCE.md) connects each claim to its proof, code,
+tests, fixed data, and qualifications. [Comparisons and limitations](docs/COMPARISONS.md)
+explain what the result establishes and where it stops.
+
+## The result
+
+Let the known real matrix $T$ have $N$ rows and $P$ columns, with a zero reference
+row. For an unknown real unit vector $q$, the output is the complete
+$P$-component gradient $g(q)=2T^{\mathsf T}q$. One experiment receives one copy of
 
 ```math
-\mathcal V(T)=\lambda\max\{2r,4(r-1)\},
-\qquad g(q)=2T^{\mathsf T}q.
+|\Omega(q)\rangle=
+\frac{|0\rangle|0\rangle+|1\rangle|q\rangle}{\sqrt 2}.
 ```
 
-The measurement uses at most 2r+1 outcomes. Circuit implementation is supplied
-for the existing local family rather than assumed as free basis access.
-An overlapping-interval extension supplies bounded-risk readout with explicit
-width-dependent cost. These are internally checked results, not externally
-reviewed novelty claims. Statistical optimality is not a runtime advantage.
+The first register is a reference qubit; the second has dimension $N$. A
+measurement and its classical decoder may depend on $T$, but are fixed
+independently of $q$. Their mean must equal $g(q)$ for **every real unit response**,
+and their second moments must be finite. Randomized settings and extra ancillas
+are included in this overall measurement; individual settings need not be
+unbiased separately.
 
-The original end-to-end improvement milestone remains unmet. The preserved
-PF-02 comparison has zero positive-round parity winners. This repository does
-not present a failed comparison as a success or a universal impossibility.
+If the $r$ nonzero eigenvalues of $T^{\mathsf T}T$ all equal $\lambda$, the smallest
+possible worst-response sum of coordinate variances is exactly
 
-## Reading routes
+```math
+\lambda\max\{2r,\,4(r-1)\}.
+```
 
-| Purpose | Document |
-|---|---|
-| Fixed question, main-paper content and stopping rule | [Paper scope](docs/PAPER_SCOPE.md) |
-| Compact technical result and assumptions | [Core result](results/PF-08/CORE_RESULT.md) |
-| Last cost comparison and decision | [PF-08 report](results/PF-08/REPORT.md) |
-| Full exact-limit proof and independent internal audit | [PF-04](results/PF-04/PROOF.md), [PF-05](results/PF-05/REPORT.md) |
-| Explicit optimal-readout implementation | [PF-06](results/PF-06/PROOF.md) |
-| Overlapping interval implementation | [PF-07](results/PF-07/PROOF.md) |
-| Original scope and current status | [Scope](docs/SCOPE.md), [status](docs/STATUS.md) |
-| Maintained numerical API and original repair evidence | [API](qbp_frames/README.md), [PF-02](results/PF-02/REPORT.md) |
-| Work boundary | [Current work order](work_orders/CURRENT.md) |
-| Reproduction and workspace instructions | [Reproducibility](REPRODUCIBILITY.md), [AGENTS.md](AGENTS.md) |
+A joint measurement with **at most $2r+1$ effects** attains it. The zero score for
+an inactive outcome is part of the experiment: it still counts in the sample
+average. The outcome count is an upper bound, not a minimality claim.
 
-## Checks
+For the existing disjoint one-layer circuit on an even number $n$ of system
+qubits ($N=2^n$), at zero angles $P=3n$, $r=P/2$,
+and $\lambda=2$. Its explicit linear-size realization has risk $4P-8$, compared
+with the no-mask benchmark $4P$. This additive constant gap is not an asymptotic
+runtime advantage. A separate overlapping-interval construction has logical
+circuit size $O(n2^w)$ and total variance at most
+$4\,\mathrm{tr}(T^{\mathsf T}T)$, where $w$ is maximum interval width; it is not a
+generic minimax compiler.
+
+## Run a complete example
+
+From a full clone, with Python 3.12 or 3.13:
 
 ```bash
-python -m pip install -r requirements.txt
-python tools/verify_inputs.py
-python -m unittest discover -s tests -v
-# Clean full checkout required; outputs must be new.
-python tools/integration_check.py --output runs/integration
-python results/PF-07/study.py --output runs/pf07-fixed
-python results/PF-08/compare.py --input runs/pf07-fixed/diagnostics.json --output runs/pf08-final
+git clone https://github.com/GoGoKo699/Quantum-Backpropagation-Frames.git
+cd Quantum-Backpropagation-Frames
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python examples/flat_readout.py
 ```
 
-Current CI is read-only and publishes run-specific artifacts. Prior scientific
-packets and their negative results are preserved. PACKAGE_MANIFEST.json remains
-the historical initialization snapshot, not a current tree inventory. New
-numerical work should use the maintained API where applicable, not assume that
-historical fixture code provides a validated public interface.
+The two-qubit example returns the six-coordinate mean
+`[0, 1, 0, 0, 0, 1]`, inactive probability `0.375`, and trace variance `13`;
+the worst-response value is `16`. These are exact moment calculations evaluated
+numerically, not a hardware experiment. The [tutorial](docs/TUTORIAL.md) works
+through the same calculation by hand. [Reproduction](docs/REPRODUCIBILITY.md)
+includes the larger compiler-only example and bounded full verification.
 
-No new research phase follows automatically from an interesting open question.
-Only correction and publication-critical assessment of the frozen contribution
-remain in scope. No manuscript, merge, public release or license selection is
-implied. See [license status](LICENSE_STATUS.md).
+## What remains limited
 
-## License
+The exact theorem concerns real pure responses, a supplied phase reference,
+one copy, universal unbiasedness, and trace variance in the original parameter
+normalization. It does not optimize biased estimators, collective measurements,
+extra coherent access, or high-confidence sample complexity. A concentration
+conversion gives a sufficient sample budget only. Circuit construction,
+physical bit processing, classical tables, program storage or regeneration,
+and final output all have costs.
+
+**No strongest-method end-to-end advantage or final novelty clearance is
+established.** The fixed parity comparison found zero positive-round parity
+winners in 144 scenarios; its negative result remains accessible. Research
+scope is frozen around the existing theorem and constructions.
+
+## Cite, contact, and reuse
+
+Use [CITATION.cff](CITATION.cff) and identify the commit you used. There is no
+associated release or article asserted by this citation. Questions and
+corrections belong in [GitHub Issues](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/issues).
 
 Original code and associated documentation are available under the
-[MIT License](LICENSE). Copyright (c) 2026 Ruge Lin.
-See [licensing details](LICENSE_STATUS.md) for preserved snapshots and third-party material.
+[MIT License](LICENSE), Copyright (c) 2026 Ruge Lin. Citation is appreciated,
+not an extra license condition. [Methods and provenance](docs/PROVENANCE.md)
+describe source preservation, attribution, and substantive AI assistance.

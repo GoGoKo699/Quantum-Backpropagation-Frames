@@ -1,68 +1,64 @@
-# Project scope and frozen paper boundary
+# Scope and assumptions
 
-## Agreed scientific goal
+[Home](../README.md) · [Tutorial](TUTORIAL.md) · [Proof](THEORY.md) · [Limitations](COMPARISONS.md)
 
-Develop frame-based quantum backpropagation by characterizing and compiling
-shared measurements for complete classical gradients. A first positive result
-may concern one concrete family with nonorthogonal tangents; arbitrary
-parameterized circuits are not required.
+The task is to extract a complete classical gradient from a supplied quantum
+response and known tangent directions. At a fixed parameter point, a real
+state-preparation circuit $U$ has Jacobian $J$. With
+$T=U^{\mathsf T}J$ and $q=U^{\mathsf T}OU|0\rangle$, the gradient is
+$g=2T^{\mathsf T}q$ when the objective and access meet the real-response contract.
+The abstract theorem starts with known $T$ and a supplied reference-response
+state; it does not grant an uncharged circuit for constructing either one.
 
-At a fixed parameter point the requested output is the complete classical raw
-gradient with explicit whole-vector error and confidence:
+## Exact statistical contract
+
+- $T$ is a known real $N$-by-$P$ matrix with $T^{\mathsf T}|0\rangle=0$.
+- $q$ ranges over the **entire real unit sphere** in dimension $N$.
+- One copy of $(|0,0\rangle+|1,q\rangle)/\sqrt2$ is supplied per record.
+- One fixed overall POVM and real vector score may depend on $T$, not $q$.
+  Unbiasedness holds for every allowed $q$; second moments are finite.
+- Random settings, their labels, ancillas, and decoder randomness are part of
+  the overall POVM. Unbiasedness is not imposed separately on each setting.
+- Loss is the trace of the single-copy covariance of the full original
+  $P$-vector. The exact formula additionally requires equal nonzero
+  eigenvalues of $T^{\mathsf T}T$.
+
+The [proof](THEORY.md) supplies all quantifiers, both lower bounds, and an
+attaining measurement. The [compiler route](COMPILERS.md) separately charges
+implementation for the existing disjoint and overlapping-interval families.
+The interval construction is a bounded-risk readout, not an exact minimax
+construction for arbitrary coordinate support.
+
+## Error and computational accounting
+
+For $K$ independent records, a trace-variance bound $B$ implies mean squared
+Euclidean error of the sample mean at most $B/K$. Markov's inequality gives
 
 ```math
-\Pr[\|\widehat g-g\|_2\le\varepsilon]\ge1-\delta.
+K\ge\frac{B}{\delta\varepsilon^2}
+\quad\Longrightarrow\quad
+\Pr\bigl[\|\widehat g-g\|_2\le\varepsilon\bigr]\ge1-\delta.
 ```
 
-Coordinatewise variance, infinity-norm accuracy, unbiasedness and single-copy
-trace risk are different contracts. A quantum gradient state or one directional
-derivative does not complete this output task. Parameter normalization cannot
-be changed silently to manufacture an improvement.
+This is a sufficient prescription, not an exact optimal confidence law.
+Coordinatewise, relative, and whole-vector error are different tasks.
+Full-angle parameter normalization is retained; changing units is not a speedup.
 
-The original ultimate success requirement includes a provable end-to-end
-improvement over an applicable strong existing gradient method under matched
-access, accuracy and costs. This milestone is UNMET. Neither the exact variance
-theorem nor the paper-scope freeze removes it or marks it completed.
+Count response preparation, controls and inverses, readout gates, measurements,
+physical bit scanning, classical decoding, tangent-table construction, precision,
+memory, program storage or regeneration, and $P$ output writes. Logical
+all-to-all arbitrary-rotation counts are not routed hardware timings. Dense
+simulators validate small identities; they are not the scalable compiler path.
 
-Count preparations, controls, inverses, reference phase, coherent resources,
-quantum gates, classical preprocessing/decoding, memory and all P output entries.
-Do not supply a gradient, eigenbasis, QRAM or equally expensive intermediate
-object for free. A weak comparator cannot establish the desired advantage.
+## Frozen boundary
 
-## Current mathematical results
+The current contribution is the exact theorem, sparse attainer, and existing
+charged realizations, with supporting comparisons. No new ansatz,
+arbitrary-spectrum exact optimum, complex or mixed-state extension, coherent
+reuse, optimizer analysis, hardware/noise/routing study, or favorable-price
+search is implied.
 
-PF-04/PF-05 analyze the real pure reference-response family with one supplied
-copy per experiment, a fixed overall POVM/decoder universally unbiased over all
-unit responses, and finite second moments. Their exact equal-spectrum all-POVM
-optimum is a single-copy trace-risk result, not an optimal confidence theorem.
-The sparse attaining measurement has at most 2r+1 outcomes; a generic eigenbasis
-is not a free input to an efficient implementation.
-
-PF-06 realizes the exact optimum on the existing one-layer flat local family.
-PF-07 gives a row-norm reference compiler for overlapping interval tangents with
-variance <=4 tr(G) and O(n2^w) logical gates. It does not extend exact anisotropic
-optimality or eliminate width-dependent work. These packet contracts, rather
-than the earlier parity-only scope paragraph, govern their own claims.
-
-The historical parity packet retains its narrower reference-preserving real
-frame/Walsh and quadratic-phase-rank bounds. Those are not general POVM or CNOT
-lower bounds. All original packets are preserved with their qualifications.
-
-## Candidate Letter and hard stopping rule
-
-Read PAPER_SCOPE.md. Exploration stops after PF-08's fixed comparison. The
-candidate core is the exact measurement limit, its attainer and a charged local
-realization. Extensions already obtained may support this story; further
-ansatz, complex/mixed/coherent, optimization or hardware programs are excluded.
-Only defects in the frozen claim, exact-source equivalence, significance and
-self-contained consolidation remain publication-critical work.
-
-PRL remains an ambition, not an acceptance prediction. Scope freeze is not a
-submission GO. A theorem-centered paper may be evaluated on its own merits,
-with the original unmet advantage milestone stated honestly. Do not launch more
-research automatically if that narrower contribution fails the novelty or
-significance test. Future explicit user instructions may change the boundary.
-
-No manuscript, merge, release, tag, visibility change or license selection is
-authorized merely by completing this packet or passing CI. Work stays in this
-repository; no source-of-inspiration project is a result dependency.
+The original goal of a strongest-method end-to-end improvement remains unmet.
+A complete presentation of the theorem does not replace that milestone.
+Novelty is unresolved beyond the bounded source comparisons already recorded.
+Manuscript preparation and submission are separate work.

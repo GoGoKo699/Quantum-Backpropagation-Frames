@@ -1,0 +1,2 @@
+# Optional figure regeneration only; not required to use qbp_frames.
+matplotlib==3.10.8

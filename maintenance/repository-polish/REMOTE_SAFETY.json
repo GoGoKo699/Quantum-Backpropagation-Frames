@@ -1,0 +1,1301 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-16T02:07:17.882Z",
+  "repository": "GoGoKo699/Quantum-Backpropagation-Frames",
+  "visibility": "public",
+  "github_license_spdx": "MIT",
+  "baseline_main": "40f60b4061d7cd7434552b7947f4d118750daf06",
+  "baseline_research": "a24bf0f182835416d87a4521fff2673b29431f81",
+  "refs": [
+    {
+      "ref": "refs/heads/audit/PF-01",
+      "sha": "79423bc1e68b16ec8f0e8a45969240b1aa1c1c9f"
+    },
+    {
+      "ref": "refs/heads/audit/PF-05-optimal-readout",
+      "sha": "070b2728dbdc022d35b9bb9a36bf8938e8bd9408"
+    },
+    {
+      "ref": "refs/heads/main",
+      "sha": "40f60b4061d7cd7434552b7947f4d118750daf06"
+    },
+    {
+      "ref": "refs/heads/repair/PF-02",
+      "sha": "8781c8fad5de5742b743178268b8e4f0e4b4f089"
+    },
+    {
+      "ref": "refs/heads/research/PF-04-boundary",
+      "sha": "996d60ab06e872ec44a0ab447917f2e198b4241b"
+    },
+    {
+      "ref": "refs/heads/research/PF-06-sparse-compiler",
+      "sha": "0633ff37de69debbad93b78b146bb128be12106e"
+    },
+    {
+      "ref": "refs/heads/research/PF-07-overlap-reference",
+      "sha": "a70b840c321ecfbea2f26fd40a459aef7153b068"
+    },
+    {
+      "ref": "refs/heads/review/PF-03-integration",
+      "sha": "1ad56b61a579db6e0bdb2c657c2887cc0ce2f6b9"
+    },
+    {
+      "ref": "refs/heads/review/PF-08-paper-scope",
+      "sha": "a24bf0f182835416d87a4521fff2673b29431f81"
+    },
+    {
+      "ref": "refs/pull/1/head",
+      "sha": "1ad56b61a579db6e0bdb2c657c2887cc0ce2f6b9"
+    }
+  ],
+  "releases": [],
+  "discussions_enabled": false,
+  "issues": {
+    "total_including_pr": 1,
+    "standalone_issues": 0,
+    "pull_requests": [
+      {
+        "number": 1,
+        "state": "merged",
+        "body_reviewed": true,
+        "issue_comments": [
+          5679549245,
+          5679609771
+        ],
+        "review_submissions": 0,
+        "inline_review_comments": 0
+      }
+    ]
+  },
+  "runs": [
+    {
+      "id": 35042485959,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "a24bf0f182835416d87a4521fff2673b29431f81",
+      "jobs": [
+        {
+          "id": 104625126037,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 185004,
+          "log_sha256": "3681b8de5a805a84508bdcec32a4db36fce66077771ac5d4fef0b0e24aa6f6f5"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10425384301,
+          "name": "integration-35042485959-1",
+          "expired": false,
+          "expires_at": "2026-10-16T01:03:29Z",
+          "size_in_bytes": 126368,
+          "sha256": "a1db2811d29e19833a7df71a90f63eb3461e836e5e431211e72fcc52d99e118d",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log",
+            "pf07-study/diagnostics.json",
+            "pf07-study/example_program.json",
+            "pf07-study.log",
+            "pf08-final/quantum_projection.json",
+            "pf08-final/scaling_tradeoff.csv",
+            "pf08-final/small_comparison.csv",
+            "pf08-final/summary.json",
+            "pf08-final/tests.log",
+            "pf08-final.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 35042241177,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "a16593730f570a33fb6c2ee6da6fd94ad4ac7500",
+      "jobs": [
+        {
+          "id": 104624394714,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 184933,
+          "log_sha256": "5bffdaa36c5a74c9693d260798d63306d1375f937b6183d23e2f09e855edf638"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10425249412,
+          "name": "integration-35042241177-1",
+          "expired": false,
+          "expires_at": "2026-10-16T01:00:00Z",
+          "size_in_bytes": 126362,
+          "sha256": "5c0510bff23b750bb4cd8eb9c775f4ed605c328c66d6cd82cc437fb8bc7667fc",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity.log",
+            "integration/parity/validation.json",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study.log",
+            "pf06-study/example_plan.json",
+            "pf07-study/diagnostics.json",
+            "pf07-study/example_program.json",
+            "pf07-study.log",
+            "pf08-final/quantum_projection.json",
+            "pf08-final/scaling_tradeoff.csv",
+            "pf08-final/small_comparison.csv",
+            "pf08-final/summary.json",
+            "pf08-final.log",
+            "pf08-final/tests.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 35041422193,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "bdedaba5191a12db189e4b01b1d299547f348cbb",
+      "jobs": [
+        {
+          "id": 104621917756,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 190442,
+          "log_sha256": "779a5e6b6906350628f876579026891d8c5149ac383a4656755a0bf4150a0591"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10425108650,
+          "name": "integration-35041422193-1",
+          "expired": false,
+          "expires_at": "2026-10-16T00:47:43Z",
+          "size_in_bytes": 120716,
+          "sha256": "79bed3edcc55538a1786215dbb09c734d6bfa1f6c9991aacf2e1feab2b5f94f9",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log",
+            "pf07-study/diagnostics.json",
+            "pf07-study/example_program.json",
+            "pf07-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 35041392867,
+      "attempt": 1,
+      "conclusion": "cancelled",
+      "head_sha": "a70b840c321ecfbea2f26fd40a459aef7153b068",
+      "jobs": [
+        {
+          "id": 104621809999,
+          "conclusion": "cancelled",
+          "log_available": true,
+          "log_bytes": 108162,
+          "log_sha256": "273bde6db9ecf11e284e0d469aba3e2a1679f9c03dfbb9123228ed22e8525553"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10425675707,
+          "name": "integration-35041392867-1",
+          "expired": false,
+          "expires_at": "2026-10-16T00:47:01Z",
+          "size_in_bytes": 111131,
+          "sha256": "3974a7fe5f78ce213c38ddafaa559cd363c836297bcf606622443a30615ebff5",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34996003264,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "a70b840c321ecfbea2f26fd40a459aef7153b068",
+      "jobs": [
+        {
+          "id": 104472269436,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 190382,
+          "log_sha256": "97e102384b112d7c089c3fa697d85790cd5a9401fe4d6e287609ce91eea18b51"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10406659216,
+          "name": "integration-34996003264-1",
+          "expired": false,
+          "expires_at": "2026-10-15T16:36:26Z",
+          "size_in_bytes": 120705,
+          "sha256": "f4a0731c40621d76bbfaa6e3d8a85046d0fd3274ba0eb9cd122d2ca7c0f95766",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/RUN.json",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log",
+            "pf07-study/diagnostics.json",
+            "pf07-study/example_program.json",
+            "pf07-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34995694899,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "7f9e9c0aadeba872af8012691e88a47df5c9a361",
+      "jobs": [
+        {
+          "id": 104471232631,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 190326,
+          "log_sha256": "a38ede3188d4d64d0d58d008dc8708cf902e8ca8ffdaf0440ea0d0b3740cbcec"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10407601098,
+          "name": "integration-34995694899-1",
+          "expired": false,
+          "expires_at": "2026-10-15T16:33:52Z",
+          "size_in_bytes": 120621,
+          "sha256": "5c9e18e2b55d168e44c87cf68f8993aff99c00cc2fc6e4c086c33a2d59db1ef6",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log",
+            "pf07-study/diagnostics.json",
+            "pf07-study/example_program.json",
+            "pf07-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34991309624,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "0633ff37de69debbad93b78b146bb128be12106e",
+      "jobs": [
+        {
+          "id": 104456370150,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 108729,
+          "log_sha256": "33f389e5ca1b483240921677a2f3f699ebfd373cdef29c8efb0ad81e4e830968"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10405274516,
+          "name": "integration-34991309624-1",
+          "expired": false,
+          "expires_at": "2026-10-15T15:52:41Z",
+          "size_in_bytes": 111000,
+          "sha256": "bf020f14b45709f3ba309411c71769ee8e551df9080a3434cafd7af61ce2acd0",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34990914564,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "664d1a1db95a20d6a8bd356acbedd296869fcf5e",
+      "jobs": [
+        {
+          "id": 104455018629,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 108721,
+          "log_sha256": "844ef4424a52c6c74cec0a672fdf5073345defb460f2725becaeffa0f06ee8f9"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10405976011,
+          "name": "integration-34990914564-1",
+          "expired": false,
+          "expires_at": "2026-10-15T15:49:06Z",
+          "size_in_bytes": 110994,
+          "sha256": "64fb940c50b4c5ee52f1f3956716f4bf1280a98a81de5299e458a89b8a33299d",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34990351513,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "96fdb65a8d15853af333acb0654aacd6cca62374",
+      "jobs": [
+        {
+          "id": 104453077290,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 108725,
+          "log_sha256": "97adc1ffe9d82483d00e2212c8a028c0227b0e1c42d7358a751faa175089a49e"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10404708544,
+          "name": "integration-34990351513-1",
+          "expired": false,
+          "expires_at": "2026-10-15T15:44:00Z",
+          "size_in_bytes": 110984,
+          "sha256": "18a1a6c59cca896e86c477ae75165ba9fcd79a4b1b5f9a2d914fb8ab154cc23e",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34989964380,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "02f6a689bc3a929e99f0d79537698e291c082348",
+      "jobs": [
+        {
+          "id": 104451763981,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 108719,
+          "log_sha256": "7e92dbfe08662058c7e2d3bd6b89f86c360d681fb333b3337474edbf533795cf"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10404762862,
+          "name": "integration-34989964380-1",
+          "expired": false,
+          "expires_at": "2026-10-15T15:40:31Z",
+          "size_in_bytes": 110999,
+          "sha256": "fa41dc2fa0a7c5556e32ae864010cc5bdac91159058c17515d6d122a0457cf16",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log",
+            "pf06-study/diagnostics.json",
+            "pf06-study/example_plan.json",
+            "pf06-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34982986275,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "070b2728dbdc022d35b9bb9a36bf8938e8bd9408",
+      "jobs": [
+        {
+          "id": 104427783295,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 70514,
+          "log_sha256": "037787f1d57dd8913587a4eb6c6a437ce6f5d2c76108998714843fe587002c28"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10402296501,
+          "name": "integration-34982986275-1",
+          "expired": false,
+          "expires_at": "2026-10-15T14:38:36Z",
+          "size_in_bytes": 104114,
+          "sha256": "5a8e29591992552a588185b1399064805eced0ad3dedf8abe1f70304910ab09c",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34982605443,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "e589d9efbab9ac32639cdafba32b3a9d5a337ae7",
+      "jobs": [
+        {
+          "id": 104426472940,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 70506,
+          "log_sha256": "904492bd3e7d34cc3a717ae906a2d42ab86041ce98bb04a12c762e056dcc6e42"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10401993467,
+          "name": "integration-34982605443-1",
+          "expired": false,
+          "expires_at": "2026-10-15T14:35:16Z",
+          "size_in_bytes": 104112,
+          "sha256": "8479ab79a186f412b0b7c8a0c03127c08fcb4afed49fc344fe74da596bb14e51",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log",
+            "pf05-audit/diagnostics.json",
+            "pf05-audit.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34973637462,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "996d60ab06e872ec44a0ab447917f2e198b4241b",
+      "jobs": [
+        {
+          "id": 104395778720,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 46390,
+          "log_sha256": "2edd810d8c73101a359829d8233ab3da69d7b5032f13dda1e3355a2db58080f7"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10397992570,
+          "name": "integration-34973637462-1",
+          "expired": false,
+          "expires_at": "2026-10-15T13:13:59Z",
+          "size_in_bytes": 100044,
+          "sha256": "a6ed5dd9da6023947a33d0e14f30ad9783f791236131f9da599e28fcc9806f3a",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/run.json",
+            "integration/matched/validation.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/validation.json",
+            "integration/parity/run.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/tests.log",
+            "integration/pf01.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34973342356,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "7aa35c1b2559276892df43baed52c4448b632bfa",
+      "jobs": [
+        {
+          "id": 104394779911,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 46384,
+          "log_sha256": "5b4d3ad18b402f175822968273785d7eaca8ed64eeff12af0efecaf2d7b23480"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10398581904,
+          "name": "integration-34973342356-1",
+          "expired": false,
+          "expires_at": "2026-10-15T13:11:02Z",
+          "size_in_bytes": 100046,
+          "sha256": "8c7d132352faff76925570c58973295c3537f13f0fa306ee51ea0deff158b8a4",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "integration/RUN.json",
+            "integration/acceptance/candidates.csv",
+            "integration/acceptance/scenarios.csv",
+            "integration/acceptance/summary.json",
+            "integration/acceptance.log",
+            "integration/frozen-files.json",
+            "integration/integrity-after.log",
+            "integration/integrity-before.log",
+            "integration/matched/01-validate.log",
+            "integration/matched/validation.json",
+            "integration/matched/run.json",
+            "integration/matched.log",
+            "integration/parity/01-validate.log",
+            "integration/parity/run.json",
+            "integration/parity/validation.json",
+            "integration/parity.log",
+            "integration/pf01-diagnostics.json",
+            "integration/pf01.log",
+            "integration/tests.log",
+            "pf04-study/diagnostics.json",
+            "pf04-study.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34964729994,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "1986fe53a65062120f1be9da14c28fa48b12484d",
+      "jobs": [
+        {
+          "id": 104366393032,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 29436,
+          "log_sha256": "2264bfcbec3531dd8e0a3fcdd93c62fa3efe03e1972ae71567e6e6bab1b44bac"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10395275898,
+          "name": "integration-34964729994-1",
+          "expired": false,
+          "expires_at": "2026-10-15T11:42:40Z",
+          "size_in_bytes": 95885,
+          "sha256": "10bbee19e24fbce9a3a5ba8add31eff744f963181f145a4a782b84277b586da0",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "RUN.json",
+            "acceptance/scenarios.csv",
+            "acceptance/summary.json",
+            "acceptance/candidates.csv",
+            "acceptance.log",
+            "frozen-files.json",
+            "integrity-after.log",
+            "integrity-before.log",
+            "matched/01-validate.log",
+            "matched/run.json",
+            "matched/validation.json",
+            "parity/01-validate.log",
+            "matched.log",
+            "parity/run.json",
+            "parity/validation.json",
+            "parity.log",
+            "pf01-diagnostics.json",
+            "pf01.log",
+            "tests.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34964291732,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "1ad56b61a579db6e0bdb2c657c2887cc0ce2f6b9",
+      "jobs": [
+        {
+          "id": 104364979934,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 30486,
+          "log_sha256": "de17c1902e14b9e0bd7005a0f9a7c7ab93252c835df43b7b27fbdd5448e01cc8"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10394536064,
+          "name": "integration-34964291732-1",
+          "expired": false,
+          "expires_at": "2026-10-15T11:37:51Z",
+          "size_in_bytes": 95812,
+          "sha256": "2128554d9cbbe8afd06772610c235517064c8e09c64ddb310db270d670802eed",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "RUN.json",
+            "acceptance/candidates.csv",
+            "acceptance/scenarios.csv",
+            "acceptance/summary.json",
+            "acceptance.log",
+            "frozen-files.json",
+            "integrity-after.log",
+            "integrity-before.log",
+            "matched/01-validate.log",
+            "matched/run.json",
+            "matched/validation.json",
+            "matched.log",
+            "parity/01-validate.log",
+            "parity/run.json",
+            "parity/validation.json",
+            "parity.log",
+            "pf01-diagnostics.json",
+            "pf01.log",
+            "tests.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34964244140,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "1ad56b61a579db6e0bdb2c657c2887cc0ce2f6b9",
+      "jobs": [
+        {
+          "id": 104364828062,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 29939,
+          "log_sha256": "027513335eb54b998204b5409569cc9f90f6978d1f104e0075ab6c5dab7887ee"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10394761278,
+          "name": "integration-34964244140-1",
+          "expired": false,
+          "expires_at": "2026-10-15T11:37:21Z",
+          "size_in_bytes": 95875,
+          "sha256": "fec478838b7fbad92207bfad429384b3dc7eb9aed4ccf1fb3ec0580c35a926c0",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "RUN.json",
+            "acceptance/scenarios.csv",
+            "acceptance/candidates.csv",
+            "acceptance/summary.json",
+            "acceptance.log",
+            "frozen-files.json",
+            "integrity-after.log",
+            "integrity-before.log",
+            "matched/01-validate.log",
+            "matched/run.json",
+            "matched/validation.json",
+            "matched.log",
+            "parity/01-validate.log",
+            "parity/run.json",
+            "parity/validation.json",
+            "parity.log",
+            "pf01-diagnostics.json",
+            "pf01.log",
+            "tests.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34963997457,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "739a84854e467450586fc07493171152c418f205",
+      "jobs": [
+        {
+          "id": 104364016530,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 30018,
+          "log_sha256": "dfda0150b86035726b54000fbbf7344ac55c59a16c230e1de3006628c1e92224"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 10394815160,
+          "name": "integration-34963997457-1",
+          "expired": false,
+          "expires_at": "2026-10-15T11:34:35Z",
+          "size_in_bytes": 95888,
+          "sha256": "028e98552aaefee1ccc23fac9a4bb7701078459bf7574aa342291bdda95e5254",
+          "downloaded": true,
+          "digest_matches": true,
+          "files": [
+            "RUN.json",
+            "acceptance/candidates.csv",
+            "acceptance/scenarios.csv",
+            "acceptance/summary.json",
+            "acceptance.log",
+            "frozen-files.json",
+            "integrity-after.log",
+            "integrity-before.log",
+            "matched/01-validate.log",
+            "matched/run.json",
+            "matched/validation.json",
+            "matched.log",
+            "parity/01-validate.log",
+            "parity/validation.json",
+            "parity.log",
+            "pf01-diagnostics.json",
+            "parity/run.json",
+            "tests.log",
+            "pf01.log"
+          ],
+          "pattern_findings": []
+        }
+      ]
+    },
+    {
+      "id": 34963186953,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "8702e2d8e785227181ed484b771e2a801512847f",
+      "jobs": [
+        {
+          "id": 104361382736,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 26927,
+          "log_sha256": "87185456de74203ec798d6cf733cd3b07ac60d30401c08a0d5addd0ddd69096a"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34963072859,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "8781c8fad5de5742b743178268b8e4f0e4b4f089",
+      "jobs": [
+        {
+          "id": 104361016724,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 26510,
+          "log_sha256": "2870ce6f7f4a2fc6943e37dff15d5b99622270a2adbc4e382d608e7adfedbb2a"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34956367799,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "ebcbc8f1e378df05920c560229ba20c9dfa5916d",
+      "jobs": [
+        {
+          "id": 104339276157,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 26340,
+          "log_sha256": "771646b0ea443922157508f4e708b649e82715ed801e69f8eb93066ea09c1f00"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34956367754,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "ebcbc8f1e378df05920c560229ba20c9dfa5916d",
+      "jobs": [
+        {
+          "id": 104339276207,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 26765,
+          "log_sha256": "66f3fecff408450f2e7098aa4a0c211202253300a3622a851c3230ad3a9e36ca"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34954232737,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "47f6232f6b5e2609ca7905c0f951a98fe286f647",
+      "jobs": [
+        {
+          "id": 104332280761,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 24426,
+          "log_sha256": "745bbc961509908a5155af73590639c3734807a34e20dd9878ca314b9d1e3cac"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34954127389,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "79423bc1e68b16ec8f0e8a45969240b1aa1c1c9f",
+      "jobs": [
+        {
+          "id": 104331933661,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 24089,
+          "log_sha256": "796c1037257cda3dc7e0486efeb6df31b6c4f9b0a3ec027f248edb8e6ca643e9"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34946453499,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "e32667eca5033c8040a008ef84a3010fe1eae2d6",
+      "jobs": [
+        {
+          "id": 104306899092,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 24410,
+          "log_sha256": "8f55751732189fda409d93c6d2fefae4e2a1d4fdf504b74b4a00f2894366c6c1"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34946453444,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "e32667eca5033c8040a008ef84a3010fe1eae2d6",
+      "jobs": [
+        {
+          "id": 104306898798,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 27812,
+          "log_sha256": "6e0363fc9e7d9c8ec4ac5c322ee165e38d736ef0f8952b4ea2e4238bae735cc2"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34943294911,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "2a5d77cac017a4e2e330ed1d5b7c12ba8e492476",
+      "jobs": [
+        {
+          "id": 104296733542,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 24415,
+          "log_sha256": "75263e13ccf3404f511ab1eb18571e0d70623aaf583f9f3978904a3271c88d9c"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34943156253,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "da0d8c771350b695206b6f06194277538833adb4",
+      "jobs": [
+        {
+          "id": 104296280315,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 24082,
+          "log_sha256": "9669a494f430e1909b0293403d2a206f0a457e81b3ed31ece1d1aece1d9bd29a"
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34941928929,
+      "attempt": 1,
+      "conclusion": "skipped",
+      "head_sha": "c3abafc356e3d1c941b8a1eb3ed2578e49636b3b",
+      "jobs": [
+        {
+          "id": 104292371080,
+          "conclusion": "skipped",
+          "log_available": false,
+          "log_bytes": 0
+        }
+      ],
+      "artifacts": []
+    },
+    {
+      "id": 34941928874,
+      "attempt": 1,
+      "conclusion": "success",
+      "head_sha": "c3abafc356e3d1c941b8a1eb3ed2578e49636b3b",
+      "jobs": [
+        {
+          "id": 104292368985,
+          "conclusion": "success",
+          "log_available": true,
+          "log_bytes": 30998,
+          "log_sha256": "cde2f8a89eabde0102fbad87ba64343c3946e65a68939ac39842c43090dabc11"
+        }
+      ],
+      "artifacts": []
+    }
+  ],
+  "pattern_classes": [
+    "private_key",
+    "github_token",
+    "openai_token",
+    "aws_key",
+    "signed_url",
+    "credential_assignment"
+  ],
+  "scan_findings": [],
+  "limitations": [
+    "Skipped initialization job 104292371080 (run 34941928929) log endpoint returned 404 BlobNotFound; job has no steps and run has no artifact.",
+    "Pattern scans and contextual inspection are not a guarantee that no secret or rights issue exists.",
+    "Coverage is the live retained surface at the stated timestamp; deleted or previously expired remote material cannot be recovered from the returned collections.",
+    "Commit-comment collection endpoint is not supported by the GitHub connector and was not reviewed in this remote-surface subtask."
+  ],
+  "contextual_review": [
+    "PR body and both comments concern repository integration and validation, with no private correspondence or third-party material found.",
+    "Actions logs use masked GitHub credentials; runner paths and scientific validation output are expected.",
+    "Artifact member names and sampled record bodies are validation logs, manifests, small compiler plans, JSON diagnostics, CSV numerical records; no contact details, proprietary notices, copied publication text or credentials were identified.",
+    "Repository metadata includes the owner's existing Git commit authorship identity; no unrelated personal data was found."
+  ],
+  "outcome": "No exposure or redistribution concern found in the reviewed remote surfaces; root must combine with full reachable-history and tracked-tree checks.",
+  "mutations_performed": false,
+  "discussion_pattern_findings": [],
+  "summary": {
+    "branches": 9,
+    "tags": 0,
+    "releases": 0,
+    "issues": 0,
+    "pull_requests": 1,
+    "pr_comments": 2,
+    "runs": 30,
+    "logs_reviewed": 29,
+    "logs_unavailable": 1,
+    "artifacts_downloaded_and_digest_verified": 18,
+    "artifact_member_count": 451,
+    "credential_pattern_findings": 0
+  },
+  "rights_provenance": {
+    "reviewed": [
+      "provenance/ORIGIN.md",
+      "provenance/INPUTS.json",
+      "research/parity_frames/SOURCES.md",
+      "research/matched_readout/README.md"
+    ],
+    "findings": "The supplied archives identify project-original calculations/code and cite primary papers as context. No external paper copy, imported third-party license notice, or private correspondence was found on the reviewed remote surfaces. Full tracked/archive/history review is separate. Citation does not license an external paper."
+  }
+}

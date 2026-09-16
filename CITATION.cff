@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this research or software, cite this repository and identify the commit used."
+type: software
+title: "Quantum Backpropagation Frames"
+authors:
+  - family-names: Lin
+    given-names: Ruge
+repository-code: "https://github.com/GoGoKo699/Quantum-Backpropagation-Frames"
+url: "https://github.com/GoGoKo699/Quantum-Backpropagation-Frames"
+license: MIT
+keywords:
+  - quantum information
+  - quantum gradients
+  - quantum estimation
+  - quantum measurements
+  - reproducible research
