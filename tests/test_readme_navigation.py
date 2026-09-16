@@ -144,7 +144,7 @@ class ReadmeNavigationTests(unittest.TestCase):
         print(json.dumps({"readme_navigation": "passed", "required_guides": len(pages),
                           "required_destinations": len(required),
                           "maximum_link_steps": max(len(routes[name])-1 for name in required),
-                          "routes": {name: routes[name] for name in sorted(required)}}, indent=2))
+                          "routes": {name: routes[name] for name in sorted(required)}}, indent=2), file=sys.stderr)
 
     def test_tutorial_prior_work_and_hopf_are_visible_from_readme(self):
         links = set(destinations((ROOT / "README.md").read_text(encoding="utf-8")))
