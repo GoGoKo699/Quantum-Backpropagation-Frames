@@ -7,6 +7,21 @@ and explicit logical circuit compilers. Numerical checks establish the tested
 identities and regressions within declared tolerances. They do not replace
 proofs, exhaustive source review, or hardware measurements.
 
+## Research origin and related repository
+
+Work on [Hopf-QBP](https://github.com/GoGoKo699/Hopf-QBP) motivated the initial
+question of using known tangent structure for complete-gradient readout.
+That project develops an ansatz-specific construction; the present repository
+studies a separate reference-response estimation problem. Its theorem and
+compiler arguments are stated here without assuming the Hopf parameterization
+or results from an accompanying manuscript.
+
+The link records research provenance, not a publication claim or a prerequisite
+for understanding, verifying, or using this work. The
+[relationship to established measurement and estimation research](RELATED_WORK.md)
+is assessed through the actual tasks, assumptions, and costs, rather than the
+history of the project.
+
 ## Scientific sources and records
 
 The original inputs are two supplied project archives. Their exact bytes and
