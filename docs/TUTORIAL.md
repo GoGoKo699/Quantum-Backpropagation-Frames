@@ -61,12 +61,12 @@ Take one existing two-qubit circuit block with six rotations, in this order:
 
 | Parameter | Pauli generator | Tangent at zero angles |
 |---|---|---|
-| `θ₁` | `YI` | `|10⟩` |
-| `θ₂` | `IY` | `|01⟩` |
-| `θ₃` | `YX` | `|11⟩` |
-| `θ₄` | `XY` | `|11⟩` |
-| `θ₅` | `YZ` | `|10⟩` |
-| `θ₆` | `ZY` | `|01⟩` |
+| `θ₁` | `YI` | `\|10⟩` |
+| `θ₂` | `IY` | `\|01⟩` |
+| `θ₃` | `YX` | `\|11⟩` |
+| `θ₄` | `XY` | `\|11⟩` |
+| `θ₅` | `YZ` | `\|10⟩` |
+| `θ₆` | `ZY` | `\|01⟩` |
 
 `AB` means `A ⊗ B`, with the left bit first. Each rotation is
 `R_A(θ)=exp(−iθA)`: these are **full angles**. A library's conventional
