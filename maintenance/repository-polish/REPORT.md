@@ -216,3 +216,27 @@ The TeX expressions themselves are byte-identical. No scientific code, formula,
 data, or archived evidence changes. The follow-up receives the documentation
 gate and direct GitHub rendering inspection; the full main run above remains
 the validation of its unchanged executable and scientific-data tree.
+
+## Visible math-error panels
+
+A subsequent reader report exposed an error missed by the earlier automated
+browser inspection: GitHub emits some math failures as a `flash-error` panel
+inside `math-renderer`, rather than as `mjx-merror` or `MathJax_Error`. The
+earlier absence of those two selectors was therefore insufficient evidence of
+successful rendering. Direct inspection reproduced the canonical disjoint
+tangent formula failure and six failures in its archived proof.
+
+The canonical math now uses the TeX less-than command instead of a literal
+less-than character. Four directly linked source documents have reproducible
+reading copies under `docs/source-readings/`; their only content changes are
+renderer-compatible mathematical markup. The original packets, source hashes,
+historical manifests, and numerical evidence remain byte-identical. Active
+proof links lead to the reading copies, which identify and expose their
+original source text. `tools/render_source_readings.py --check` verifies the
+exact derivation from pinned source hashes.
+
+The documentation gate now checks fenced math as well as inline math for the
+reported hazards. Regression cases cover the actual forbidden macro and
+less-than failures. Browser review must check `math-renderer .flash-error`,
+ordinary MathJax errors, and unfinished renderers, then inspect the affected
+formulas visually. Source lint alone is not a successful rendering check.

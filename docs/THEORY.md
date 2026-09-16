@@ -62,7 +62,7 @@ The requirements are
 
 ```math
 \mathbb E_q Z=g(q)\quad\text{for every real unit }q,
-\qquad \mathbb E_q\|Z\|_2^2<\infty.
+\qquad \mathbb E_q\|Z\|_2^2\lt \infty.
 ```
 
 A random setting and its result together form one POVM outcome. **Only the
@@ -417,7 +417,7 @@ K\ge\frac{B}{\delta\varepsilon^2}
 \Pr_q\{\|\widehat g-g(q)\|_2>\varepsilon\}\le\delta.
 ```
 
-Here $\varepsilon>0$ is whole-vector Euclidean error and $0<\delta<1$ is failure
+Here $\varepsilon>0$ is whole-vector Euclidean error and $0\lt \delta\lt 1$ is failure
 probability. This conversion is sufficient, not an exact optimum for tails or
 sample complexity. It proves no lower bound against arbitrary biased,
 adaptive, collective, or extra-coherent-access algorithms. For example, the
@@ -434,7 +434,7 @@ negative acceptance evidence and the narrower phase/Walsh estimator class.
 This canonical proof consolidates the unchanged
 [original derivation](../results/PF-04/PROOF.md) and
 [independent internal audit with sparse attainer](../results/PF-05/PROOF_AUDIT.md).
-The [frozen result synopsis](../results/PF-08/CORE_RESULT.md) specifies its scope.
+The [frozen result synopsis](source-readings/core-result.md) specifies its scope.
 The [source audit](../results/PF-05/SOURCE_AUDIT.md) records exact primary-source
 versions and the distinction from local quantum estimation. In particular,
 the moment inequality is established estimation machinery; neither it nor

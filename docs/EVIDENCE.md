@@ -6,6 +6,11 @@ The canonical proof route is self-contained. Original packets below are retained
 for checking source identity, independent derivations, and numerical records;
 their development labels are not prerequisites for reading the result.
 
+Where an original packet uses math markup that GitHub cannot render, its proof
+link opens a faithful reading copy. These copies change mathematical markup
+only, record the original SHA-256, and link to the preserved source text. Their
+reproducible derivation is checked alongside the original evidence hashes.
+
 ## Exact statistical limit
 
 **Claim.** Equal nonzero eigenvalues give exact single-copy minimax trace risk
@@ -29,7 +34,7 @@ realization with full-coordinate risk 4P-8 versus the no-mask value 4P. This is
 an additive variance gap, not an asymptotic end-to-end advantage.
 
 - Canonical: [constructive proof and costs](COMPILERS.md).
-- Originals: [local realization proof](../results/PF-06/PROOF.md),
+- Originals: [local realization proof](source-readings/disjoint-proof.md),
   [physical-bit scanner correction](../results/PF-06/SCANNER_NOTE.md),
   [resource contract](../results/PF-06/RESOURCES.md).
 - Code: [maintained disjoint module](../qbp_frames/disjoint.py),
@@ -45,9 +50,9 @@ Gram trace, with an explicit width-dependent logical circuit. Its coordinate
 support need not equal tangent span; generic exact minimax is not claimed.
 
 - Canonical: [interval proof, preparation, and decoder](COMPILERS.md).
-- Originals: [proof](../results/PF-07/PROOF.md),
+- Originals: [proof](source-readings/interval-proof.md),
   [resources](../results/PF-07/RESOURCES.md),
-  [source-table construction](../results/PF-04/STRUCTURE.md).
+  [source-table construction](source-readings/local-tangent-structure.md).
 - Maintained code: [intervals](../qbp_frames/intervals.py),
   [local tangent tables](../qbp_frames/local.py); original
   [compiler](../results/PF-07/compiler.py) and [study](../results/PF-07/study.py).

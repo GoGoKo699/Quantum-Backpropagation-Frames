@@ -72,12 +72,12 @@ A_0=YI,\quad A_1=IY,\quad A_2=YX,\quad
 A_3=XY,\quad A_4=YZ,\quad A_5=ZY,
 ```
 
-with rotations $\exp(-i\theta_jA_j)$. These gates are real. If $U_{b,<j}$ is the
+with rotations $\exp(-i\theta_jA_j)$. These gates are real. If $U_{b,\lt j}$ is the
 product of earlier gates in block $b$, cancellation of the later gates in the
 reversed tangent gives
 
 ```math
-t_{b,j}=\left[U_{b,<j}^{\mathsf T}(-iA_j)U_{b,<j}|00\rangle\right]
+t_{b,j}=\left[U_{b,\lt j}^{\mathsf T}(-iA_j)U_{b,\lt j}|00\rangle\right]
                    \otimes|0\rangle_{\text{other blocks}}.
 ```
 
@@ -233,13 +233,13 @@ lose derivatives. The retained diagnostic includes such a four-qubit case.
 The nearby-spectrum comparison is also preserved. If all six block angles
 have magnitude at most $h$, column $j$, indexed from zero, changes from its
 zero-angle value by at most $2jh$. The bound follows from the two occurrences
-of the orthogonal prefix and $`\|U_{b,<j}-I\|\le jh`$. Summing column squares gives
+of the orthogonal prefix and $`\|U_{b,\lt j}-I\|\le jh`$. Summing column squares gives
 
 ```math
 \|K_b-K_b(0)\|\le\sqrt{220}\,h.
 ```
 
-For $h<1/\sqrt{110}$ the three singular values remain positive, between
+For $h\lt 1/\sqrt{110}$ the three singular values remain positive, between
 $\sqrt2-\sqrt{220}h$ and $\sqrt2+\sqrt{220}h$. Different blocks retain disjoint
 nonvacuum support. The [spectral comparison](THEORY.md#general-bounds-and-nearby-spectra)
 therefore applies uniformly in the number of blocks. This stability statement
@@ -279,7 +279,7 @@ counting from the left. A local tangent contributes to its row only if its
 interval contains every nonzero bit. Define
 
 ```math
-R_a=\max\bigl(\{a+1\}\cup\{r_j:l_j\le a<r_j\}\bigr),
+R_a=\max\bigl(\{a+1\}\cup\{r_j:l_j\le a\lt r_j\}\bigr),
 \qquad \ell_a=R_a-a-1\le w-1.
 ```
 
@@ -330,7 +330,7 @@ on reference zero and marker $a$ being one, prepare
 on the next $\ell_a$ sites. To prove this control suffices, consider each branch
 just before processing $a$:
 
-- An original marker $b<a$ has not yet been filled, so its bit at $a$ is zero.
+- An original marker $b\lt a$ has not yet been filled, so its bit at $a$ is zero.
 - An original marker $b>a$ was filled only to the right of $b$, so its bit at
   $a$ is still zero.
 - The branch with marker $a$ has an all-zero suffix and is the only branch
@@ -506,8 +506,10 @@ interval certificates.
 
 ## Sources and evidence
 
-The original [disjoint construction](../results/PF-06/PROOF.md) and
-[overlapping-interval proof](../results/PF-07/PROOF.md) remain unchanged.
+The [disjoint construction](source-readings/disjoint-proof.md) and
+[overlapping-interval proof](source-readings/interval-proof.md) have reading
+copies with GitHub-compatible mathematical notation. Each copy links to its
+unchanged original and records its source hash.
 Their [disjoint source notes](../results/PF-06/SOURCE_NOTES.md) and
 [interval source audit](../results/PF-07/SOURCE_AUDIT.md) attribute the established
 W-state, Gray-code rotation and sparse-preparation ingredients. These
