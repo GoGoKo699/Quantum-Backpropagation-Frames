@@ -1,10 +1,20 @@
-# License status
+# Licensing
 
-No reuse license has been selected for this new research repository.
-Do not inherit another project's license or attach one automatically. The original
-ZIPs are retained for provenance; their inclusion does not decide a license for
-the new work. Resolve ownership, attribution, any inherited-code requirements,
-and the user's licensing choice before public release.
+The original code and associated documentation in this repository are licensed
+under the [MIT License](LICENSE).
 
-This file is a status note, not a license. No release, version tag, or endorsed
-paper citation is implied by the repository name or date.
+Copyright (c) 2026 Ruge Lin.
+
+The root license applies to original project material, including original
+material preserved in the research packets and provenance archives, unless a
+file carries a different applicable notice. Historical statements that no
+license had yet been selected describe their original snapshots; they do not
+replace the current root license.
+
+Third-party material retains its applicable rights and notices. References to
+scientific papers do not relicense those papers. The repository license does
+not replace the licenses of dependencies installed separately.
+
+Scientific citation is appreciated but is not an additional legal condition
+of the MIT License. Licensing does not assert novelty, external review, or
+journal publication.

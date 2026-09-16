@@ -90,5 +90,12 @@ benchmarks. Earlier exploratory spectral/coherence claims are not adopted by
 this integration. The project is self-contained; historical inspiration is not
 a result dependency.
 
-No publication, release tag, reuse license, or merge is implied by a passing
-check. See [License status](LICENSE_STATUS.md) and [setup](SETUP_GITHUB.md).
+## License
+
+Original code and associated documentation are available under the
+[MIT License](LICENSE). Copyright (c) 2026 Ruge Lin.
+See [licensing details](LICENSE_STATUS.md) for the treatment of preserved
+snapshots and third-party material.
+
+A passing check does not imply journal publication or a versioned release.
+Repository setup is described in [setup](SETUP_GITHUB.md).

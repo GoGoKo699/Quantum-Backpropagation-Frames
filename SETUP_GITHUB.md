@@ -2,13 +2,15 @@
 
 Repository: `GoGoKo699/Quantum-Backpropagation-Frames`.
 
-The user created the private remote on 2026-09-15. Its description is:
+The repository description is:
 
 > Frame-based quantum gradient readout: representation theorems,
 > parity-phase compilation, and reproducible resource analysis.
 
-The default branch is `main`. No reuse license, release, or version tag has been
-selected. Do not change visibility or licensing as part of ordinary research.
+The default branch is `main`. Original code and associated documentation use
+the [MIT License](LICENSE), Copyright (c) 2026 Ruge Lin. No release or version
+tag has been created by adding the license. Visibility and public-readiness
+must be verified separately; a license is not a security review.
 
 ## Use an existing checkout
 
