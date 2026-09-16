@@ -246,13 +246,14 @@ def check_citation(path: Path) -> None:
 
 def check(root: Path = ROOT) -> dict:
     from render_source_readings import check_source_readings
+    from check_table_cells import check_tables
 
     # Normalize only whitespace, allowing standard MIT line wrapping.
     if " ".join((root / "LICENSE").read_text().split()) != " ".join(MIT.split()):
         raise ValueError("LICENSE differs from standard MIT text and approved copyright")
     check_citation(root / "CITATION.cff")
     source_readings = check_source_readings(root)
-    pages, links, math_count = active_pages(root), 0, 0
+    pages, links, math_count, table_count = active_pages(root), 0, 0, 0
     for path in pages:
         source = path.read_text(encoding="utf-8")
         try:
@@ -260,6 +261,7 @@ def check(root: Path = ROOT) -> dict:
             for heading in re.findall(r"^#{1,6}\s+(.+)$", text, re.MULTILINE):
                 if "$" in heading or r"\(" in heading:
                     raise ValueError("Math in a heading makes navigation fragile")
+            table_count += check_tables(source)
             math_count += check_math(source)
             if sum(line.strip() == "$$" for line in text.splitlines()) % 2:
                 raise ValueError("Unpaired display-math delimiter")
@@ -269,7 +271,8 @@ def check(root: Path = ROOT) -> dict:
         except ValueError as exc:
             raise ValueError(f"{path.relative_to(root)}: {exc}") from exc
     return {"status": "passed", "active_pages": len(pages), "links_checked": links,
-            "math_fragments_checked": math_count, "source_readings": source_readings,
+            "math_fragments_checked": math_count, "table_rows_checked": table_count,
+            "source_readings": source_readings,
             "license": "MIT", "citation": "CFF 1.2.0 required fields checked",
             "scope": "Active Markdown source and local targets; no visual or external-URL claim."}
 
