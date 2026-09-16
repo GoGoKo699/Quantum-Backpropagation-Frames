@@ -60,7 +60,7 @@ and $\lambda=2$. Its explicit linear-size realization has risk $4P-8$, compared
 with the no-mask benchmark $4P$. This additive constant gap is not an asymptotic
 runtime advantage. A separate overlapping-interval construction has logical
 circuit size $O(n2^w)$ and total variance at most
-$4\,\mathrm{tr}(T^{\mathsf T}T)$, where $w$ is maximum interval width; it is not a
+$`4\,\mathrm{tr}(T^{\mathsf T}T)`$, where $w$ is maximum interval width; it is not a
 generic minimax compiler.
 
 ## Run a complete example
