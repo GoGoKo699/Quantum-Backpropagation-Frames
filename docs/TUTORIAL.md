@@ -432,7 +432,7 @@ Keep four further boundaries in mind:
   errors. Gate synthesis, classical table errors, state preparation, and noise
   need their own budgets; the software's numerical checks are not interval
   certificates.
-- The phase/Walsh measurement family has a narrower access and decoder contract
+- The phase/Walsh measurement family has a narrower measurement and decoder contract
   than arbitrary POVMs. A bound for that family is not an all-measurement bound.
 - No strongest-method end-to-end advantage or final novelty clearance is
   established. The retained parity comparison found no accepted positive-round
