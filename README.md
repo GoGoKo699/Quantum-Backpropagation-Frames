@@ -65,7 +65,8 @@ possible worst-response sum of coordinate variances is exactly
 ```
 
 A measurement with **at most $2r+1$ effects** attains it. An explicit disjoint
-local-circuit family realizes the optimum with linear-size logical circuits.
+local-circuit family realizes the optimum at its zero-angle flat point with
+linear-size logical circuits.
 A separate overlapping-interval compiler has size $O(n2^w)$ and variance at
 most $`4\,\mathrm{tr}(T^{\mathsf T}T)`$, where $n$ is the number of system qubits
 and $w$ is maximum tangent interval width; it is not a generic minimax compiler.
