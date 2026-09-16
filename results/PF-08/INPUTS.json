@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-16",
+  "baseline": "a70b840c321ecfbea2f26fd40a459aef7153b068",
+  "input_artifact": "PF-07-remote-verification-34995694899.zip",
+  "artifact_sha256": "5c9e18e2b55d168e44c87cf68f8993aff99c00cc2fc6e4c086c33a2d59db1ef6",
+  "artifact_workflow_run": 34995694899,
+  "artifact_code_commit": "7f9e9c0aadeba872af8012691e88a47df5c9a361",
+  "analysis_input": "pf07-study/diagnostics.json",
+  "analysis_input_sha256": "7abcdb16c3db62c69a2d420369cb30afa6d720bdcae6f02d7e1e14bd1cf895cd",
+  "local_full_checkout": false,
+  "direct_git_attempt": "failed: Could not resolve host github.com",
+  "changes_to_prior_packets": false
+}

@@ -1,50 +1,54 @@
 # Research workspace instructions
 
-Read README.md, docs/SCOPE.md, docs/STATUS.md, docs/CLAIMS.md, and
-work_orders/CURRENT.md before work. These files provide project context;
-explicit current user instructions take precedence.
+Read README.md, docs/SCOPE.md, docs/STATUS.md, docs/CLAIMS.md,
+docs/PAPER_SCOPE.md and work_orders/CURRENT.md before work. Explicit current
+user instructions take precedence over repository instructions.
+
+## Publication-scope freeze
+
+Exploratory expansion stops at PF-08 for the candidate Letter. Do not dispatch
+automatic follow-on research from open questions in older reports. Keep one
+central claim: the exact real single-copy universally unbiased readout limit,
+its attaining measurement and the existing charged local realization. Further
+ansatz, arbitrary-spectrum, coherent/complex/mixed, hardware/noise and compiler
+campaigns require explicit new authorization. Publication-critical corrections,
+exact prior-art equivalence and consolidation of the SAME result remain allowed.
+The original end-to-end advantage milestone is unmet and must not be deleted or
+silently replaced. Scope freeze is not proof of novelty or submission readiness.
 
 ## Scientific discipline
 
-Keep the complete classical gradient and the stated error norm fixed during
-comparisons. Do not silently weaken assumptions, change parameter normalization,
-replace whole-vector accuracy by coordinatewise variance, or supply preprocessing
-or oracle access for free. Separate algebra, finite computation, asymptotics,
-novelty, logical cost, and hardware claims.
-
-The source packets are working evidence, not blanket proof certificates.
-Results must be self-contained: state their assumptions and cite the scientific
-sources actually used. Do not frame the project as an extension of, or contrast
-with, another ansatz merely because that work inspired the discussion.
-Earlier conversation-level claims have not all been imported. Do not invent
-missing files, tests, source matches, external review, or remote operations.
+Keep output, error norm, parameter normalization and access fixed in comparisons.
+Distinguish raw whole-vector accuracy, per-coordinate variance, universal and
+local unbiasedness, and single-copy risk. Separate algebra, numerical evidence,
+asymptotics, novelty, logical costs and hardware claims. Do not turn successful
+regressions into an expanded theorem or reinterpret a negative result as a win.
+Results must be self-contained and cite sources actually used. Background
+inspiration is not a mathematical or software dependency. Do not invent absent
+files, external reviews, experiments, source matches or successful remote writes.
 
 ## Files and reproducibility
 
-- Preserve provenance/input_archives and the imported research directories
-  byte-for-byte. Their hashes are recorded in provenance/INPUTS.json.
-- Reproduce imported scripts through tools/reproduce.py, which uses isolated
-  copies. Never overwrite imported validation.json files with a rerun.
-- Put new scientific changes on a descriptive branch. Preserve interim reports,
-  source versions, seeds, commands, and negative results. Do not force-push.
-- New experiments belong in a new explicit workstream directory. A later
-  migration to a shared package needs a file map and equivalence checks.
-- Run the integrity and repository tests before reporting completion.
-- A local test is not a GitHub Actions run. A small residual is not an interval
-  proof or novelty check. Inspect logs and outputs, not just process exit codes.
+Preserve provenance/input_archives and the imported research directories
+byte-for-byte. Preserve completed PF-01 through PF-07 packets and their
+manifests. Corrections need a separate explicit record and equivalence checks.
+Use tools/reproduce.py to rerun imported diagnostics in isolated copies; never
+overwrite their original validation.json. New generated output goes under a
+fresh runs/ directory. Record commands, seeds, environment and source hashes.
+A local test is not a GitHub Actions run; inspect actual logs and artifacts.
+CI remains read-only and never pushes evidence. Do not force-push or alter prior
+branches. Run the integrity and repository tests before reporting completion.
 
-## Authority and work bounds
+## Authority
 
-Work only in the repository and branch authorized for the current task. No public release, tag,
-license selection, or manuscript is implied by this import. Execute the current
-bounded work order and report its status rather than expanding into unrelated
-research. For requested remote changes, confirm real repository and branch
-state through the available connection; never infer successful writes.
+Only operate on the authorized repository and branch. No merge, publication,
+release tag, license, manuscript or visibility change follows from green tests.
+The current bounded work order must end with its recorded decision, not an
+unrequested expansion. Stop when the frozen contribution is ready for a
+novelty/significance decision; do not manufacture breadth with unrelated work.
 
-## Reporting style
+## Reporting
 
-State the task, concrete result, evidence, limitation, and next decision. Explain
-operations before abstract labels when it improves understanding. Preserve all
-scientific qualifications. Use standard GitHub math blocks in new documents;
-avoid fragile math in headings. Do not rewrite unchanged source artifacts merely
-to make their style uniform.
+State the actual result, evidence and limitation. Explain the operation before
+abstract terminology where useful. Use standard GitHub math blocks and avoid
+math in headings. Keep every scientific qualification attached to its claim.

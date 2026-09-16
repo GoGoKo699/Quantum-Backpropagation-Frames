@@ -1,28 +1,27 @@
-# Claim register
+# Claim register at the paper-scope freeze
 
-Scientific dispositions are recorded in the immutable
-[PF-01 audit](../results/PF-01/CLAIM_DISPOSITIONS.json), with its
-[proof notes](../results/PF-01/PROOF_AUDIT.md). The original proof packet is
-working evidence; successful tests do not expand its theorem class.
+This register summarizes preserved evidence; it does not re-prove or promote
+historical claims. Read the named proof/audit for every assumption. The current
+candidate Letter is restricted by PAPER_SCOPE.md.
 
-| Claim | Current disposition | Boundary |
+| Claim | Evidence and disposition | Boundary |
 |---|---|---|
-| Reference-restricted observable characterization | KEEP, PF-01 | Real reference family; not global operator equality |
-| Fixed-measurement decoder uniqueness | KEEP with restricted use | Conditional universal unbiasedness; not arbitrary ensemble duals |
-| 4 tr(G) variance benchmark | KEEP with restricted use | Reference-preserving real frame/Walsh class only |
-| Compute-phase-uncompute gadget | KEEP; established ingredients | Displayed implementation, not optimal synthesis |
-| Exact 4^(-k) covariance interpolation | KEEP; novelty OPEN | Real normalized response and independent masks |
-| Local shifted-Walsh decoder | KEEP as explicit upper implementation | Width-dependent work remains |
-| Quadratic-rank witness | KEEP with restricted use | Bilinear rank, not general CNOT/depth/POVM lower bound |
-| Maintained input validation | Accepted with PF-03 boundary correction | Real finite arrays, documented float tolerance, no implicit projection |
-| Exact terminal-readout plans | Accepted, PF-02 | Affine outcome map mandatory; not a coherent-unitary substitution |
-| Positive-round parity advantage in PF-02 | NOT ACCEPTED | Zero winners in the 144 declared scenarios; no universal impossibility |
-| Exact minimum round helper | PF-03 regression-tested correction | Exact comparison for validated binary64 beta/eta; no interval guarantee for estimated beta |
-| Strongest-method end-to-end advantage | OPEN | Optimized alternatives and full resource accounting remain required |
-| Earlier spectral/coherent minimax exploration | NOT ADOPTED | No corresponding audited packet integrated here |
+| Exact equal-spectrum optimum lambda max(2r,4(r-1)) | PF-04 proof, PF-05 independent internal audit: KEEP | Real pure response, one supplied reference copy, overall universal unbiasedness, finite second moments; novelty OPEN |
+| Sparse attaining joint measurement | PF-05: KEEP | At most 2r+1 outcomes, not a minimal-outcome theorem or free generic basis compiler |
+| Explicit local realization | PF-06: KEEP | Existing disjoint one-layer family; exact minimax at its flat point, nonzero-angle extension only bounded-risk |
+| Overlapping interval reference compiler | PF-07: KEEP as supporting implementation | O(n2^w) gates from charged local tables, sparse original-coordinate decoding, trace risk <=4s; not anisotropic optimality |
+| One-copy general bracket 2s to 4s | PF-04/PF-05 and constructions: KEEP | Universally unbiased real reference-state task, not biased/collective/coherent/high-confidence minimax |
+| Reference-preserving frame/Walsh benchmark 4s | PF-01 restricted audit: KEEP | Not unrestricted POVM optimality |
+| Parity covariance interpolation | PF-01: KEEP, novelty OPEN | Specified real mask/decoder family; phase-rank lower bound is not a general CNOT bound |
+| Maintained API and terminal compiler repairs | PF-02/PF-03: KEEP | Historical fixture behavior is preserved; terminal output map is part of the contract |
+| Positive-round parity advantage in PF-02 | NOT ACCEPTED | Zero wins in 144 declared scenarios; not a universal impossibility |
+| PF-08 final cost analysis | Reanalysis of fixed PF-07 grid | Quantum-only projections are not total-work wins; missing implementation terms stay explicit |
+| Strongest-method end-to-end advantage | OPEN / UNMET | Not supplied by an improved variance constant or one comparator's upper bound |
+| Submission readiness | NOT ESTABLISHED | Exact novelty, physical significance and original-goal reconciliation remain |
 
-The PF-02 result and its cost-model qualifications must accompany any use of its
-comparison. PF-03 reruns the same grid as a regression; it does not change the
-prices, objectives, estimator formulas, or acceptance rule. Historical sources
-and logs remain unchanged. Retired workflow files preserve the exact code that
-created prior evidence; current CI has no repository write permission.
+No arbitrary-spectrum optimum, complex/mixed/coherent extension, optimizer
+convergence, hardware advantage or new ansatz is adopted by the freeze. Earlier
+conversation-level spectral/coherence claims remain outside the audited paper.
+The source packets and negative data are not removed because they are secondary
+to the main-paper story. Completed results are preserved; repeated passing tests
+do not constitute another independent external review.

@@ -30,92 +30,38 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python tools/integration_check.py --output runs/integration
-      - name: Verify PF-04 packet identity
+      - name: Verify all prior scientific packets and frozen paths
+        shell: bash
         run: |
-          python - <<'PY'
+          set -euo pipefail
+          git diff --exit-code a70b840c321ecfbea2f26fd40a459aef7153b068 -- research provenance qbp_frames tests tools validation PACKAGE_MANIFEST.json results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06 results/PF-07
+          python - <<'PYCHECK'
           from pathlib import Path
           import hashlib, json
-          root = Path('results/PF-04')
-          for name, expected in json.loads((root/'MANIFEST.json').read_text())['sha256'].items():
-              actual = hashlib.sha256((root/name).read_bytes()).hexdigest()
-              if actual != expected:
-                  raise SystemExit(f'PF-04 file identity mismatch: {name}')
-          print('All nine PF-04 packet file hashes verified')
-          PY
-      - name: Execute PF-04 finite diagnostics
+          for packet, count in [('PF-04',9),('PF-05',9),('PF-06',12),('PF-07',11),('PF-08',8)]:
+              root = Path('results')/packet
+              entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
+              if len(entries) != count:
+                  raise SystemExit(f'{packet}: unexpected manifest coverage')
+              for name, expected in entries.items():
+                  if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
+                      raise SystemExit(f'{packet} identity mismatch: {name}')
+              print(f'{packet}: all {count} file hashes verified')
+          PYCHECK
+      - name: Rerun the unchanged PF-04 through PF-07 diagnostics
         shell: bash
         run: |
           set -euo pipefail
           python results/PF-04/study.py --output runs/pf04-study | tee runs/pf04-study.log
-          git diff --exit-code
-          test -z "$(git status --porcelain --untracked-files=all)"
-      - name: Verify PF-05 packet and preserve previous sources
-        shell: bash
-        run: |
-          set -euo pipefail
-          git diff --exit-code 996d60ab06e872ec44a0ab447917f2e198b4241b -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib, json
-          root = Path('results/PF-05')
-          entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
-          for name, expected in entries.items():
-              if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
-                  raise SystemExit(f'PF-05 file identity mismatch: {name}')
-          print(f'All {len(entries)} PF-05 packet file hashes verified')
-          PY
-      - name: Execute independent PF-05 audit
-        shell: bash
-        run: |
-          set -euo pipefail
           python results/PF-05/audit.py --output runs/pf05-audit | tee runs/pf05-audit.log
-          git diff --exit-code 996d60ab06e872ec44a0ab447917f2e198b4241b -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04
-          git diff --exit-code
-          test -z "$(git status --porcelain --untracked-files=all)"
-      - name: Verify PF-06 packet and preserve the audited baseline
-        shell: bash
-        run: |
-          set -euo pipefail
-          git diff --exit-code 070b2728dbdc022d35b9bb9a36bf8938e8bd9408 -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib, json
-          root = Path('results/PF-06')
-          entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
-          for name, expected in entries.items():
-              if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
-                  raise SystemExit(f'PF-06 file identity mismatch: {name}')
-          print(f'All {len(entries)} PF-06 packet file hashes verified')
-          PY
-      - name: Execute PF-06 elementary circuit and gradient checks
-        shell: bash
-        run: |
-          set -euo pipefail
           python results/PF-06/study.py --output runs/pf06-study | tee runs/pf06-study.log
-          git diff --exit-code 070b2728dbdc022d35b9bb9a36bf8938e8bd9408 -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05
-          git diff --exit-code
-          test -z "$(git status --porcelain --untracked-files=all)"
-      - name: Verify PF-07 packet and preserve completed sources
-        shell: bash
-        run: |
-          set -euo pipefail
-          git diff --exit-code 0633ff37de69debbad93b78b146bb128be12106e -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib, json
-          root = Path('results/PF-07')
-          entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
-          for name, expected in entries.items():
-              if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
-                  raise SystemExit(f'PF-07 file identity mismatch: {name}')
-          print(f'All {len(entries)} PF-07 packet file hashes verified')
-          PY
-      - name: Execute PF-07 overlapping-interval gate and gradient checks
-        shell: bash
-        run: |
-          set -euo pipefail
           python results/PF-07/study.py --output runs/pf07-study | tee runs/pf07-study.log
-          git diff --exit-code 0633ff37de69debbad93b78b146bb128be12106e -- research provenance qbp_frames tests tools validation results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06
+      - name: Execute the final fixed-data comparison
+        shell: bash
+        run: |
+          set -euo pipefail
+          python results/PF-08/compare.py --input runs/pf07-study/diagnostics.json --output runs/pf08-final | tee runs/pf08-final.log
+          git diff --exit-code a70b840c321ecfbea2f26fd40a459aef7153b068 -- research provenance qbp_frames tests tools validation PACKAGE_MANIFEST.json results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06 results/PF-07
           git diff --exit-code
           test -z "$(git status --porcelain --untracked-files=all)"
       - uses: actions/upload-artifact@v4
