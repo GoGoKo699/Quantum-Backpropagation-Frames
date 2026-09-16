@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "baseline": "1986fe53a65062120f1be9da14c28fa48b12484d",
+  "contract": {
+    "state": "one copy (|0,0>+|1,q>)/sqrt(2), q real unit",
+    "output": "full raw classical P-vector; universally unbiased fixed one-copy estimator",
+    "loss": "trace covariance, equivalently one-record squared Euclidean risk",
+    "confidence": "Only sufficient Markov K>=Vmax/(delta*epsilon^2) for unchanged independent sample mean; not an optimal high-confidence lower bound",
+    "work": "formulas and representation sizes; no calibrated price winner"
+  },
+  "statistics": {
+    "general_lower": "2s",
+    "general_upper": "4s",
+    "flat_exact": "lambda*max(2r,4r-4)",
+    "near_flat_lower": "lambda_min*max(2r,4r-4)",
+    "near_flat_upper": "lambda_max*max(2r,4r-4)"
+  },
+  "implementations": [
+    {
+      "name": "full quadratic mask",
+      "variance": "<=4s",
+      "quantum": "direct expected n(n-1)/4 CZ; terminal optimized synthesis permitted",
+      "classical": "sample/synthesize mask; local Gray characters O(sum_I (2^|I|+poly(|I|))); aggregate before contractions",
+      "missing": "global fastest exact compiler not supplied"
+    },
+    {
+      "name": "k parity rounds",
+      "variance": "<=4s+2s(beta-1)4^-k",
+      "quantum": "clean 2nk expected CNOT+k CZ; terminal nk CNOT+k CZ+2k work measurements/resets",
+      "classical": "mask generation+min(shift expansion, local masked-table kernel), with shared-support aggregation",
+      "warning": "4^k is an implementation bound, not universal decoding lower bound"
+    },
+    {
+      "name": "grouped suffix reversed tests",
+      "variance_budget": "<=4*(sum_group sqrt(P_group))^2<=12dP for unweighted shot counts",
+      "quantum": "one response objective call per group shot with shorter suffix; three groups per layer",
+      "classical": "group outcome sums; no required tangent-table preprocessing",
+      "missing": "new cost-aware numeric sweep deliberately not run"
+    },
+    {
+      "name": "rank-two block shadows",
+      "variance": "<=32s for the retained two-partition construction",
+      "quantum": "blocks of length<=2w; conventional Clifford synthesis O(nw) gates in aggregate, no routing",
+      "classical": "table preparation, Clifford sampling/synthesis, needed stabilizer amplitudes and signed-zero-column accumulation; polynomial(w) per queried address, no dense density matrix",
+      "missing": "optimized total constants not fixed"
+    },
+    {
+      "name": "flat-spectrum optimal POVM",
+      "variance": "exact lambda*max(2r,4r-4)",
+      "outcomes": "<=4r+1",
+      "quantum": "tangent-basis isometry and fixed character transform; isometry NOT free",
+      "classical": "construct state/parameter singular basis, then multiply returned vector by output map; generic dense storage Nr+Pr",
+      "missing": "efficient isometry/decoder from arbitrary local ansatz not proved"
+    }
+  ],
+  "structure": {
+    "family": "existing real nearest-neighbor six-generator blocks",
+    "regime": "d=ceil(log2(n)/2), w<=2d, P=Theta(nd)",
+    "explicit_table_entries": "L=sum_j 2^|I_j|",
+    "compiler_upper": "O(d^2 L) scalar operations plus heap/index overhead; O(L+P) storage",
+    "compiler_lower": "Omega(L) writes only if L entries must be materialized",
+    "full_output": "at least P scalar writes",
+    "matrix_free_or_tensor_network": "not excluded by table-size bound"
+  },
+  "cost_formula": "F_pre+K*(C_response+C_readout+C_stream)+C_final+C_output",
+  "winners": null,
+  "decision": "NO-SEPARATION-ESTABLISHED; do not overwrite PF02 prices, rows, or negative result"
+}

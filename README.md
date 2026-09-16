@@ -1,101 +1,110 @@
 # Quantum Backpropagation Frames
 
-Research on converting known ansatz tangent queries into shared quantum
-measurements for a complete classical gradient, with explicit quantum,
-statistical, classical-processing, memory, and output costs.
+**How accurately can one quantum experiment return a complete classical gradient?**
 
-## Current conclusion
+A circuit's tangent directions are known, but its response to an objective is
+encoded in an unknown quantum state. Measuring the response directly loses the
+signs needed for a gradient. Interfering it with a known reference makes signed
+overlaps observable. Each measurement record contributes a vector of ordinary
+numbers; averaging records estimates **all original coordinate derivatives**.
 
-The parity-frame algebra is retained **within its audited real-response,
-phase-calibrated, conditionally unbiased frame/Walsh setting**. Its restricted
-variance benchmark is not universal measurement optimality, and its phase-rank
-witness is not a general gate-count lower bound.
+This repository gives an exact single-copy statistical limit, a measurement
+attaining it, and explicit circuits for two structured tangent families. It
+contains full proofs, supported Python implementations, executable examples,
+and preserved numerical evidence.
 
-PF-02 provides a maintained input interface and exact terminal-readout
-compilers. In its 144 declared small-system cost scenarios, positive-round
-parity won **zero** scenarios. Full direct masking won 96, greedy full masking
-24, and no mask 24. These are outcomes of specified sufficient budgets and a
-normalized work model, not measured hardware runtimes or an impossibility
-result. Keep parity as a baseline, not an established flagship advantage.
+## Choose a route
 
-PF-03 reviews these changes for integration. It adds exact round-threshold
-selection, consistent scalar errors, and read-only regression CI. The audit and
-repair branches remain preserved; integration does not re-audit novelty or
-establish the project's end-to-end advantage goal.
+| Goal | Start here |
+|---|---|
+| Understand in about five minutes | Continue below, then read [scope](docs/SCOPE.md) |
+| Learn in 20–30 minutes | [Worked tutorial](docs/TUTORIAL.md): probabilities, signed records, averaging |
+| Verify or reuse | [Theorem and proof](docs/THEORY.md), [circuits](docs/COMPILERS.md), [implementation](docs/IMPLEMENTATION.md), [reproduction](docs/REPRODUCIBILITY.md) |
 
-## The task
+The [evidence index](docs/EVIDENCE.md) connects each claim to its proof, code,
+tests, fixed data, and qualifications. [Comparisons and limitations](docs/COMPARISONS.md)
+explain what the result establishes and where it stops.
 
-At a fixed parameter point, the current real-response packet studies
+## The result
+
+Let the known real matrix $T$ have $N$ rows and $P$ columns, with a zero reference
+row. For an unknown real unit vector $q$, the output is the complete
+$P$-component gradient $g(q)=2T^{\mathsf T}q$. One experiment receives one copy of
 
 ```math
-g=2T^{\mathsf T}q,\qquad T=U^{\mathsf T}J,\qquad
-q=U^{\mathsf T}OU|0\rangle.
+|\Omega(q)\rangle=
+\frac{|0\rangle|0\rangle+|1\rangle|q\rangle}{\sqrt 2}.
 ```
 
-The output is all raw coordinate-gradient entries, with explicit whole-vector
-error and confidence. Access, parameter normalization, unbiasedness, and
-coordinatewise versus whole-vector accuracy must not be silently interchanged.
-See [Scope](docs/SCOPE.md) for the project contract.
+The first register is a reference qubit; the second has dimension $N$. A
+measurement and its classical decoder may depend on $T$, but are fixed
+independently of $q$. Their mean must equal $g(q)$ for **every real unit response**,
+and their second moments must be finite. Randomized settings and extra ancillas
+are included in this overall measurement; individual settings need not be
+unbiased separately.
 
-## Reader and workspace routes
+If the $r$ nonzero eigenvalues of $T^{\mathsf T}T$ all equal $\lambda$, the smallest
+possible worst-response sum of coordinate variances is exactly
 
-| Purpose | Start here |
-|---|---|
-| Current evidence and limitations | [Status](docs/STATUS.md) |
-| Claim dispositions | [Claim register](docs/CLAIMS.md) |
-| Supported numerical API and compiler contract | [Maintained interface](qbp_frames/README.md) |
-| Independent restricted-proof/source audit | [PF-01 report](results/PF-01/REPORT.md) |
-| Input repair and negative cost result | [PF-02 report](results/PF-02/REPORT.md) |
-| Integration review and corrections | [PF-03 report](results/PF-03/REPORT.md) |
-| Reproduce tests and the same acceptance grid | [Reproducibility](REPRODUCIBILITY.md) |
-| Work boundary and next decision | [Current work order](work_orders/CURRENT.md) |
-| Candidate proof, unchanged as supplied | [Parity proof](research/parity_frames/PROOF.md) |
-| Baselines and imported comparison evidence | [Matched-readout packet](research/matched_readout/README.md) |
-| Sources and earlier directions | [Literature](literature/README.md), [research map](docs/RESEARCH_MAP.md) |
-| Workspace rules | [AGENTS.md](AGENTS.md) |
+```math
+\lambda\max\{2r,\,4(r-1)\}.
+```
 
-## Run
+A joint measurement with **at most $2r+1$ effects** attains it. The zero score for
+an inactive outcome is part of the experiment: it still counts in the sample
+average. The outcome count is an upper bound, not a minimality claim.
+
+For the existing disjoint one-layer circuit on an even number $n$ of system
+qubits ($N=2^n$), at zero angles $P=3n$, $r=P/2$,
+and $\lambda=2$. Its explicit linear-size realization has risk $4P-8$, compared
+with the no-mask benchmark $4P$. This additive constant gap is not an asymptotic
+runtime advantage. A separate overlapping-interval construction has logical
+circuit size $O(n2^w)$ and total variance at most
+$4\,\mathrm{tr}(T^{\mathsf T}T)$, where $w$ is maximum interval width; it is not a
+generic minimax compiler.
+
+## Run a complete example
+
+From a full clone, with Python 3.12 or 3.13:
 
 ```bash
+git clone https://github.com/GoGoKo699/Quantum-Backpropagation-Frames.git
+cd Quantum-Backpropagation-Frames
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
-python tools/verify_inputs.py
-python -m unittest discover -s tests -v
-# Clean full Git checkout required; output directory must be new.
-python tools/integration_check.py --output runs/integration-01
+python -m pip install -e .
+python examples/flat_readout.py
 ```
 
-Use the maintained interface:
+The two-qubit example returns the six-coordinate mean
+`[0, 1, 0, 0, 0, 1]`, inactive probability `0.375`, and trace variance `13`;
+the worst-response value is `16`. These are exact moment calculations evaluated
+numerically, not a hardware experiment. The [tutorial](docs/TUTORIAL.md) works
+through the same calculation by hand. [Reproduction](docs/REPRODUCIBILITY.md)
+includes the larger compiler-only example and bounded full verification.
 
-```python
-from qbp_frames import parity
-```
+## What remains limited
 
-Do not directly import the historical parity core for new input handling. Its
-original invalid-input behavior is intentionally preserved for reproducibility.
-The maintained interface rejects unsupported complex and nonfinite inputs. Its
-realness and numerical tolerance contracts are documented in the API guide.
+The exact theorem concerns real pure responses, a supplied phase reference,
+one copy, universal unbiasedness, and trace variance in the original parameter
+normalization. It does not optimize biased estimators, collective measurements,
+extra coherent access, or high-confidence sample complexity. A concentration
+conversion gives a sufficient sample budget only. Circuit construction,
+physical bit processing, classical tables, program storage or regeneration,
+and final output all have costs.
 
-## Evidence and permissions
+**No strongest-method end-to-end advantage or final novelty clearance is
+established.** The fixed parity comparison found zero positive-round parity
+winners in 144 scenarios; its negative result remains accessible. Research
+scope is frozen around the existing theorem and constructions.
 
-`research/`, `provenance/`, PF-01/PF-02 results, and initialization records are
-preserved. `PACKAGE_MANIFEST.json` is the historical initialization snapshot,
-not a current-file manifest. CI verifies the frozen history against the pinned
-PF-02 commit and writes fresh logs only under `runs/`, uploaded as artifacts.
-CI has read-only repository permissions and never pushes generated results.
+## Cite, contact, and reuse
 
-Numerical residuals are not proofs, source-novelty certificates, or hardware
-benchmarks. Earlier exploratory spectral/coherence claims are not adopted by
-this integration. The project is self-contained; historical inspiration is not
-a result dependency.
-
-## License
+Use [CITATION.cff](CITATION.cff) and identify the commit you used. There is no
+associated release or article asserted by this citation. Questions and
+corrections belong in [GitHub Issues](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/issues).
 
 Original code and associated documentation are available under the
-[MIT License](LICENSE). Copyright (c) 2026 Ruge Lin.
-See [licensing details](LICENSE_STATUS.md) for the treatment of preserved
-snapshots and third-party material.
-
-A passing check does not imply journal publication or a versioned release.
-Repository setup is described in [setup](SETUP_GITHUB.md).
+[MIT License](LICENSE), Copyright (c) 2026 Ruge Lin. Citation is appreciated,
+not an extra license condition. [Methods and provenance](docs/PROVENANCE.md)
+describe source preservation, attribution, and substantive AI assistance.

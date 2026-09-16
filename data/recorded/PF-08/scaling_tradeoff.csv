@@ -1,0 +1,11 @@
+regime,n,depth,P,w,cnot,ry,local_tangent_entries,word_model_stream_bound,max_intervals_per_site,shots_reference_and_full,direct_full_expected_CZ,additional_quantum_projection,response_cost_difference_coefficient,required_classical_saving_per_record,extra_fixed_cost_term,oneq_price,entangling_price,actual_stream_operations_not_benchmarked
+depth2,16,2,90,4,375,344,664,76,15,360000,60.0,348.0,0,348.0,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+depth2,32,2,186,4,791,728,1400,92,15,744000,248.0,612.8,0,612.8,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+depth2,64,2,378,4,1623,1496,2872,124,15,1512000,1008.0,758.4000000000001,0,758.4000000000001,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+depth2,128,2,762,4,3287,3032,5816,188,15,3048000,4064.0,-486.39999999999964,0,-486.39999999999964,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+depth2,256,2,1530,4,6615,6104,11704,316,15,6120000,16320.0,-9120.0,0,-9120.0,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+growing,16,2,90,4,375,344,664,76,15,360000,60.0,348.0,0,348.0,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+growing,32,3,282,6,2807,2744,5600,218,31,1128000,248.0,2830.3999999999996,0,2830.3999999999996,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+growing,64,3,570,6,5943,5816,11680,250,31,2280000,1008.0,5510.4,0,5510.4,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+growing,128,4,1524,8,47351,47096,94784,552,53,6096000,4064.0,47984.0,0,47984.0,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True
+growing,256,4,3060,8,96759,96248,192832,680,53,12240000,16320.0,90038.40000000001,0,90038.40000000001,+(F_reference-F_full)/K; F includes final output,0.1,1.0,True

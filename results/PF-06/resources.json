@@ -1,0 +1,175 @@
+{
+  "model": "single-copy universally unbiased full original gradient; arbitrary-angle all-to-all logical circuit",
+  "family": {
+    "system_qubits": "n=2m",
+    "parameters": "P=6m",
+    "rank_at_zero": "r=3m",
+    "zero_singular_value_squared": 2
+  },
+  "new_readout": {
+    "cnot": "14m-5",
+    "full_angle_Ry": "12m-4",
+    "X": 2,
+    "H": 1,
+    "extra_work_qubits": 0,
+    "physical_measurements": "2m+1",
+    "intermediate_measurements": 0,
+    "resets": 0,
+    "preprocessing": "O(P), including local tangent tables and reference angles",
+    "stored_tangent_scalars": "18m",
+    "signed_counter_bins": "3m",
+    "outcome_scan": "O(n) bit operations, <=m two-bit blocks",
+    "stream_updates": "at most one counter per outcome, not free bit acquisition",
+    "final_map": "18m multiplies + 12m adds plus stated normalization/scaling, O(P)",
+    "classical_total": "O(Kn+P)",
+    "variance_zero": "4P-8 (exact all-POVM minimax on flat model)",
+    "variance_full_row_rank": "max(2s,4s-4 mu_min)"
+  },
+  "baselines": {
+    "no_mask": {
+      "variance_zero": "4P",
+      "quantum_readout": "n+1 H; zero entangling gates",
+      "classical_total": "O(Kn+P), aggregate-first"
+    },
+    "full_mask": {
+      "variance": "<=4P",
+      "quantum_readout": "minimum-priced permitted direct/pivot/greedy plans, all synthesis/relabeling charged",
+      "classical": "local Gray moments, aggregate-first; no dense state"
+    },
+    "grouped_reverse": {
+      "groups": 3,
+      "sufficient_budget_coefficient": "12P",
+      "execution_cost": "actual suffix and group measurement, optimal charged shot allocation"
+    },
+    "aligned_block_shadow": {
+      "partitions": 1,
+      "block_qubits": 2,
+      "sufficient_budget_coefficient": "(40/3)P",
+      "readout_and_classical": "O(n), with per-block constant-size Clifford operations and aggregate-first zero columns"
+    }
+  },
+  "common_confidence": "K=ceil(B/(delta epsilon^2)); sufficient Markov, not optimal tails",
+  "full_cost": "F_j+ceil(B_j/(delta epsilon^2))*(C+Q_j+L_j)+D_j",
+  "flat_crossover": "8C>(24m-8)(Q_S+L_S)-24m(Q_X+L_X)+delta epsilon^2(F_S+D_S-F_X-D_X)",
+  "CNOT_only_crossover": "C>(3m-1)(14m-5); deliberately excludes one-qubit/classical/measurement costs",
+  "compiled_size_records": [
+    {
+      "blocks": 1,
+      "n": 2,
+      "P": 6,
+      "stored_tangent_scalars": 18,
+      "readout_gates": {
+        "cx": 9,
+        "ry": 8,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 18
+    },
+    {
+      "blocks": 2,
+      "n": 4,
+      "P": 12,
+      "stored_tangent_scalars": 36,
+      "readout_gates": {
+        "cx": 23,
+        "ry": 20,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 115
+    },
+    {
+      "blocks": 4,
+      "n": 8,
+      "P": 24,
+      "stored_tangent_scalars": 72,
+      "readout_gates": {
+        "cx": 51,
+        "ry": 44,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 561
+    },
+    {
+      "blocks": 8,
+      "n": 16,
+      "P": 48,
+      "stored_tangent_scalars": 144,
+      "readout_gates": {
+        "cx": 107,
+        "ry": 92,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 2461
+    },
+    {
+      "blocks": 16,
+      "n": 32,
+      "P": 96,
+      "stored_tangent_scalars": 288,
+      "readout_gates": {
+        "cx": 219,
+        "ry": 188,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 10293
+    },
+    {
+      "blocks": 32,
+      "n": 64,
+      "P": 192,
+      "stored_tangent_scalars": 576,
+      "readout_gates": {
+        "cx": 443,
+        "ry": 380,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 42085
+    },
+    {
+      "blocks": 64,
+      "n": 128,
+      "P": 384,
+      "stored_tangent_scalars": 1152,
+      "readout_gates": {
+        "cx": 891,
+        "ry": 764,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 170181
+    },
+    {
+      "blocks": 128,
+      "n": 256,
+      "P": 768,
+      "stored_tangent_scalars": 2304,
+      "readout_gates": {
+        "cx": 1787,
+        "ry": 1532,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 684421
+    },
+    {
+      "blocks": 256,
+      "n": 512,
+      "P": 1536,
+      "stored_tangent_scalars": 4608,
+      "readout_gates": {
+        "cx": 3579,
+        "ry": 3068,
+        "x": 2,
+        "h": 1
+      },
+      "CNOT_only_common_response_crossover": 2745093
+    }
+  ],
+  "decision": "Feasible exact-optimum compiler for the existing flat one-layer subfamily. No new end-to-end scaling separation or price winners claimed."
+}

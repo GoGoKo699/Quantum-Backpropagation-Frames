@@ -1,0 +1,14 @@
+{
+  "scope": "Completed local audit packet; excludes manifest, preliminary check, START and remote receipts. Prior sources unchanged.",
+  "sha256": {
+    "CLAIM_DISPOSITIONS.json": "c00f12c32b8b888319b5b96b2268bd8699473bc5e6d7cd4b61682df68c2e4022",
+    "DECISION.md": "8ba3402705eac3751a52d423fb1b5063ef5404a0c1ee7e626835ca48b21e595d",
+    "INPUTS.json": "5f349fafa7ea92623a67e659cac18ddae336252161e860c4271e4094822728f0",
+    "PROOF_AUDIT.md": "0732778d5909d070fb337c2b24b3c9475346e3fd31c2b4023d8aa0cf7ab46981",
+    "REPORT.md": "159c592160c360b8e9f652e2886f02cb95b622689baef0da0dbc04ad49189929",
+    "REPRODUCE.md": "7c742c60b9f554ea8995ec0bdb28abaaa402115e16b65a526a6024ef2223ec61",
+    "SOURCE_AUDIT.md": "505089e2a79e09ce1479bcff6c22805a33c5459da2a4570b4e1a921b1f1bd557",
+    "audit.py": "3567e0e846863de09bed2405f25cc3ece8d2389d9b21707f9eb6ca7b6db923cb",
+    "diagnostics.json": "aa02032aa19c4c8d26b95a8b1a007d974f555c9ba96a83c58f265a49fb806e40"
+  }
+}

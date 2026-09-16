@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "baseline": "a70b840c321ecfbea2f26fd40a459aef7153b068",
+  "input_sha256": "7abcdb16c3db62c69a2d420369cb30afa6d720bdcae6f02d7e1e14bd1cf895cd",
+  "input_source_hashes": {
+    "study.py": "43f5ca1d30d0ce390fa04505c69f6e5a301c409d4c67a3921b8d60e413795faf",
+    "compiler.py": "e72813edd9883240e9f1efe903aafc7dee86404eaae9ea2349501174738b6efa"
+  },
+  "environment": {
+    "python": "3.13.5"
+  },
+  "analysis_tests": 8,
+  "small_points": 30,
+  "compiler_points": 10,
+  "small_results": {
+    "reference_lower_than_no_mask": 30,
+    "reference_lower_than_full": 22,
+    "reference_equal_to_full_numerically": 8,
+    "reference_larger_than_full": 0,
+    "maximum_no_mask_over_reference": 1.500000000000001,
+    "maximum_full_over_reference": 1.5
+  },
+  "equal_budget_cases": 10,
+  "profiles_searched": 0,
+  "new_circuit_cases": 0,
+  "quantum_projection_note": "Existing PF-02 gate_weighted gate/measurement prices only. Classical costs, memory and compilation remain explicit variables; no total winner is selected.",
+  "total_work_decision": "No strongest-method end-to-end advantage established. Quantum-only crossovers are not acceptance wins.",
+  "scope_decision": "FREEZE exploratory expansion; exact finite real globally-unbiased theorem plus attaining measurement and existing local realization are the candidate Letter core.",
+  "not_submission_ready": [
+    "Exact-result novelty not cleared",
+    "Human expert significance/assumption review pending",
+    "Original end-to-end advantage milestone remains unmet"
+  ],
+  "evidence_boundary": "Reanalysis of fixed verified PF-07 output, not a new gate simulator or proof audit. Existing diagnostics may be rerun separately.",
+  "source_sha256": "72bbd5a2aae39c98b9f86615c3fbe2b6cf4ba72a5e4e0d0cd690b3c6ba9da03e"
+}

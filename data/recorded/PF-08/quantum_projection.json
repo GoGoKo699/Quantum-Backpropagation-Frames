@@ -1,0 +1,632 @@
+[
+  {
+    "case": {
+      "n": 3,
+      "depth": 1,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 22.5,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 31.79999999999992
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 27.299999999999997
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 3,
+      "depth": 1,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 22.5,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 38.16232589586646
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 45.774603369324424
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 3,
+      "depth": 2,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 35.7,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 152.1
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 143.1
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 3,
+      "depth": 2,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 35.7,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 158.82617617786107
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 2827.7813957413973
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 3,
+      "depth": 3,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 35.7,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 246.00000000000003
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 232.50000000000003
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 3,
+      "depth": 3,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 35.7,
+      "no_mask": 4.4,
+      "full_direct": 5.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 180.56959090463687
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 4701.550824450034
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 1,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 34.3,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 138.5
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 120.5
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 1,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 34.3,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 138.7512292732902
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 163.05959463488347
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 2,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 73.9,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 541.7
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 514.7
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 2,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 73.9,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 233.68408998368034
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 4708.800000000001
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 3,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 73.9,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 952.1000000000001
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 907.1000000000001
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 4,
+      "depth": 3,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 73.9,
+      "no_mask": 5.5,
+      "full_direct": 8.5
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 256.8787516488828
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 7847.999999999998
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 1,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 41.7,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 168.89999999999938
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 138.89999999999998
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 1,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 41.7,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 162.57047309533854
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 178.62602595437787
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 2,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 94.5,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 960.2999999999914
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 900.3
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 2,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 94.5,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 440.4727423544412
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 7958.4000000000015
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 3,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 147.3,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 2385.299999999966
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 2295.3
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 5,
+      "depth": 3,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 147.3,
+      "no_mask": 6.6000000000000005,
+      "full_direct": 11.600000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 995.7171265048507
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 19540.800000000014
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 1,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 53.5,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 358.7
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 291.2
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 1,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 53.5,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 271.14149203408437
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 468.76193798840853
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 2,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 132.7,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 1742.2999999999997
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 1629.7999999999997
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 2,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 132.7,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 650.2933070784939
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 14100.000000000002
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 3,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 291.1,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 6510.5
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 6330.5
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 6,
+      "depth": 3,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 291.1,
+      "no_mask": 7.700000000000001,
+      "full_direct": 15.200000000000001
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 602.4985999856079
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 52972.80000000007
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 1,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 72.7,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 680.9000000000001
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 512.9000000000001
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 1,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 72.7,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 356.89022336662634
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 1061.0598538996546
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 2,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 191.5,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 3622.1
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 3328.1
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 2,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 191.5,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 574.4425221989286
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 28156.80000000001
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 3,
+      "angles": "zero"
+    },
+    "quantum_cost_projection": {
+      "reference": 508.3,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 15938.9
+    },
+    "versus_full_direct": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 15476.9
+    },
+    "not_total_work": true
+  },
+  {
+    "case": {
+      "n": 8,
+      "depth": 3,
+      "angles": "seeded"
+    },
+    "quantum_cost_projection": {
+      "reference": 508.3,
+      "no_mask": 9.9,
+      "full_direct": 23.9
+    },
+    "versus_no_mask": {
+      "type": "reference_below_projection_when_C_greater",
+      "C_boundary": 3639.7546063241975
+    },
+    "versus_full_direct": {
+      "type": "response_cost_cancels",
+      "reference_minus_comparator": 127881.60000000012
+    },
+    "not_total_work": true
+  }
+]

@@ -1,50 +1,58 @@
-# Research workspace instructions
+# Repository working rules
 
-Read README.md, docs/SCOPE.md, docs/STATUS.md, docs/CLAIMS.md, and
-work_orders/CURRENT.md before work. These files provide project context;
-explicit current user instructions take precedence.
+Read README.md, docs/SCOPE.md, docs/THEORY.md, docs/COMPARISONS.md,
+docs/EVIDENCE.md, and work_orders/CURRENT.md before changing this repository.
+Explicit current user instructions take precedence.
 
-## Scientific discipline
+## Scientific boundary
 
-Keep the complete classical gradient and the stated error norm fixed during
-comparisons. Do not silently weaken assumptions, change parameter normalization,
-replace whole-vector accuracy by coordinatewise variance, or supply preprocessing
-or oracle access for free. Separate algebra, finite computation, asymptotics,
-novelty, logical cost, and hardware claims.
+Preserve the freeze adopted in PF-08: the exact real pure single-copy universal-
+unbiasedness theorem, its sparse attaining POVM, and existing charged local
+realizations. No automatic new research workstream, broader sweep, manuscript,
+release, registry publication, or submission follows from successful checks.
+The strongest-method end-to-end advantage goal remains unmet; novelty is not
+finally cleared. Disclose substantive errors and contain them before extending
+or changing the theorem's assumptions.
 
-The source packets are working evidence, not blanket proof certificates.
-Results must be self-contained: state their assumptions and cite the scientific
-sources actually used. Do not frame the project as an extension of, or contrast
-with, another ansatz merely because that work inspired the discussion.
-Earlier conversation-level claims have not all been imported. Do not invent
-missing files, tests, source matches, external review, or remote operations.
+Keep original coordinate normalization, complete classical output, access,
+error norm, and confidence fixed in comparisons. Separate the all-POVM theorem
+from conditional-unbiasedness frame/Walsh results; separate trace variance from
+exact confidence complexity. Charge preprocessing, physical bits, storage or
+regeneration, finite precision, and output. Numerical residuals are not proofs,
+novelty certificates, hardware timings, or external peer review.
 
-## Files and reproducibility
+## Evidence and implementation
 
-- Preserve provenance/input_archives and the imported research directories
-  byte-for-byte. Their hashes are recorded in provenance/INPUTS.json.
-- Reproduce imported scripts through tools/reproduce.py, which uses isolated
-  copies. Never overwrite imported validation.json files with a rerun.
-- Put new scientific changes on a descriptive branch. Preserve interim reports,
-  source versions, seeds, commands, and negative results. Do not force-push.
-- New experiments belong in a new explicit workstream directory. A later
-  migration to a shared package needs a file map and equivalence checks.
-- Run the integrity and repository tests before reporting completion.
-- A local test is not a GitHub Actions run. A small residual is not an interval
-  proof or novelty check. Inspect logs and outputs, not just process exit codes.
+Preserve research/, results/PF-01 through results/PF-08, existing provenance
+records and input ZIPs, validation snapshots, and historical manifests byte for
+byte. The migration map is maintenance/repository-polish/MIGRATION.json.
+Original run paths, dates, and hashes must not be rewritten as current runs.
+Use isolated layouts for archived programs. New execution output belongs in a
+fresh ignored runs/ directory; never overwrite historical results.
 
-## Authority and work bounds
+Use qbp_frames for supported imports. Changes copied from fixtures require an
+explicit source map and equivalence tests. Do not weaken tests, tolerances, or
+negative results to obtain green checks. Dense diagnostic paths and scalable
+compiler paths must be distinguished.
 
-Work only in the repository and branch authorized for the current task. No public release, tag,
-license selection, or manuscript is implied by this import. Execute the current
-bounded work order and report its status rather than expanding into unrelated
-research. For requested remote changes, confirm real repository and branch
-state through the available connection; never infer successful writes.
+## Validation and integration
 
-## Reporting style
+Run python tools/check_docs.py for reader changes and the bounded full gate
+python tools/validate.py --mode full --output runs/<new-name> for relevant code,
+data, and final integration. Inspect outputs and logs. A local run is not
+GitHub CI; validate the actual PR head and merged tree. CI remains read-only,
+uses standard hosted runners, and never persists write credentials.
 
-State the task, concrete result, evidence, limitation, and next decision. Explain
-operations before abstract labels when it improves understanding. Preserve all
-scientific qualifications. Use standard GitHub math blocks in new documents;
-avoid fragile math in headings. Do not rewrite unchanged source artifacts merely
-to make their style uniform.
+Use a working branch and reversible commits. Preserve remote source branches
+and history; never force-push. Merge only under explicit task authority and
+passing required checks. The repository-furnishing task authorizes its own
+reviewed merge; it does not authorize new science or a release.
+
+## Reader experience
+
+Lead with the physical task, example, theorem, measurement, realization, and
+limitations. Keep full arguments in canonical Markdown. Use GitHub math blocks,
+short equations, stable relative links, and no math in headings. Keep engineering
+migration details and AI assistance disclosure in methods/provenance routes.
+Do not insert approvals, chat checkpoints, journal targets, or model handoffs
+into the primary scientific route.

@@ -1,0 +1,382 @@
+{
+  "status": "passed",
+  "seed": 2026091581,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "audit_source_sha256": "3567e0e846863de09bed2405f25cc3ece8d2389d9b21707f9eb6ca7b6db923cb",
+  "imports_prior_formula_code": false,
+  "tolerance": 2e-09,
+  "checks": {
+    "sparse_Born": {
+      "cases": 384,
+      "max_residual": 9.947598300641403e-14
+    },
+    "sparse_operator_contract": {
+      "cases": 48,
+      "max_residual": 1.3322676295501878e-15
+    },
+    "character_comparison": {
+      "cases": 384,
+      "max_residual": 7.105427357601002e-14
+    },
+    "nuisance_and_null_outputs": {
+      "cases": 16,
+      "max_residual": 3.552713678800501e-15
+    },
+    "arbitrary_redundant_POVMs": {
+      "cases": 16,
+      "max_residual": 8.281569874313277e-15
+    },
+    "complex_effect_realification": {
+      "cases": 16,
+      "max_residual": 3.552713678800501e-15
+    },
+    "explicit_dilation": {
+      "cases": 32,
+      "max_residual": 1.3322676295501878e-15
+    },
+    "contract_boundaries": {
+      "cases": 9,
+      "max_residual": 5.329070518200751e-15
+    },
+    "local_Fisher_contrast": {
+      "cases": 3,
+      "max_residual": 3.552713678800501e-15
+    },
+    "same_family_stability": {
+      "cases": 40,
+      "max_residual": 1.3882763985076042e-18,
+      "minimum_singular_bound_margin": 0.20589063692125809
+    }
+  },
+  "exact_risk_table": [
+    {
+      "rank": 1,
+      "minimax_risk": 1.9999999999999993,
+      "sparse_outcomes": 3,
+      "character_outcomes": 3,
+      "frame_walsh_risk": 4
+    },
+    {
+      "rank": 2,
+      "minimax_risk": 3.9999999999999996,
+      "sparse_outcomes": 5,
+      "character_outcomes": 5,
+      "frame_walsh_risk": 8
+    },
+    {
+      "rank": 3,
+      "minimax_risk": 8.000000000000002,
+      "sparse_outcomes": 7,
+      "character_outcomes": 9,
+      "frame_walsh_risk": 12
+    },
+    {
+      "rank": 4,
+      "minimax_risk": 12.0,
+      "sparse_outcomes": 9,
+      "character_outcomes": 9,
+      "frame_walsh_risk": 16
+    },
+    {
+      "rank": 5,
+      "minimax_risk": 16.000000000000007,
+      "sparse_outcomes": 11,
+      "character_outcomes": 17,
+      "frame_walsh_risk": 20
+    },
+    {
+      "rank": 6,
+      "minimax_risk": 20.000000000000007,
+      "sparse_outcomes": 13,
+      "character_outcomes": 17,
+      "frame_walsh_risk": 24
+    },
+    {
+      "rank": 7,
+      "minimax_risk": 24.00000000000001,
+      "sparse_outcomes": 15,
+      "character_outcomes": 17,
+      "frame_walsh_risk": 28
+    },
+    {
+      "rank": 8,
+      "minimax_risk": 28.000000000000004,
+      "sparse_outcomes": 17,
+      "character_outcomes": 17,
+      "frame_walsh_risk": 32
+    },
+    {
+      "rank": 9,
+      "minimax_risk": 32.0,
+      "sparse_outcomes": 19,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 36
+    },
+    {
+      "rank": 10,
+      "minimax_risk": 36.0,
+      "sparse_outcomes": 21,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 40
+    },
+    {
+      "rank": 11,
+      "minimax_risk": 40.0,
+      "sparse_outcomes": 23,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 44
+    },
+    {
+      "rank": 12,
+      "minimax_risk": 43.99999999999999,
+      "sparse_outcomes": 25,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 48
+    },
+    {
+      "rank": 13,
+      "minimax_risk": 47.99999999999999,
+      "sparse_outcomes": 27,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 52
+    },
+    {
+      "rank": 14,
+      "minimax_risk": 51.99999999999996,
+      "sparse_outcomes": 29,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 56
+    },
+    {
+      "rank": 15,
+      "minimax_risk": 55.999999999999986,
+      "sparse_outcomes": 31,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 60
+    },
+    {
+      "rank": 16,
+      "minimax_risk": 60.00000000000001,
+      "sparse_outcomes": 33,
+      "character_outcomes": 33,
+      "frame_walsh_risk": 64
+    }
+  ],
+  "renormalization_contrasts": [
+    {
+      "rank": 1,
+      "active_probability": 0.6249999999999998,
+      "renormalized_bias_norm": 0.6000000000000004
+    },
+    {
+      "rank": 2,
+      "active_probability": 0.6249999999999997,
+      "renormalized_bias_norm": 0.6000000000000003
+    },
+    {
+      "rank": 3,
+      "active_probability": 0.6249999999999999,
+      "renormalized_bias_norm": 0.6
+    },
+    {
+      "rank": 4,
+      "active_probability": 0.6249999999999998,
+      "renormalized_bias_norm": 0.6000000000000004
+    },
+    {
+      "rank": 5,
+      "active_probability": 0.6249999999999999,
+      "renormalized_bias_norm": 0.6000000000000003
+    },
+    {
+      "rank": 6,
+      "active_probability": 0.625,
+      "renormalized_bias_norm": 0.6
+    },
+    {
+      "rank": 7,
+      "active_probability": 0.625,
+      "renormalized_bias_norm": 0.6000000000000004
+    },
+    {
+      "rank": 8,
+      "active_probability": 0.6249999999999999,
+      "renormalized_bias_norm": 0.6000000000000004
+    }
+  ],
+  "lower_bound_slacks": [
+    {
+      "N": 2,
+      "rank": 1,
+      "reference_lower_slack": 13.54987438614762,
+      "axis_average_lower_slack": 12.536386327871622
+    },
+    {
+      "N": 2,
+      "rank": 1,
+      "reference_lower_slack": 21.51344979893708,
+      "axis_average_lower_slack": 15.551328259049782
+    },
+    {
+      "N": 2,
+      "rank": 1,
+      "reference_lower_slack": 9.411320224244678,
+      "axis_average_lower_slack": 8.325499436886565
+    },
+    {
+      "N": 2,
+      "rank": 1,
+      "reference_lower_slack": 7.005876839895951,
+      "axis_average_lower_slack": 6.594213780984109
+    },
+    {
+      "N": 3,
+      "rank": 1,
+      "reference_lower_slack": 7.632570671698765,
+      "axis_average_lower_slack": 10.819204054460858
+    },
+    {
+      "N": 3,
+      "rank": 1,
+      "reference_lower_slack": 10.64841750330379,
+      "axis_average_lower_slack": 13.42388927885047
+    },
+    {
+      "N": 3,
+      "rank": 2,
+      "reference_lower_slack": 22.6567281629993,
+      "axis_average_lower_slack": 20.19034762087611
+    },
+    {
+      "N": 3,
+      "rank": 2,
+      "reference_lower_slack": 28.905301332124523,
+      "axis_average_lower_slack": 26.833185729308987
+    },
+    {
+      "N": 4,
+      "rank": 1,
+      "reference_lower_slack": 11.813837150599962,
+      "axis_average_lower_slack": 14.172381599738465
+    },
+    {
+      "N": 4,
+      "rank": 1,
+      "reference_lower_slack": 11.883136373486854,
+      "axis_average_lower_slack": 11.466878203745381
+    },
+    {
+      "N": 4,
+      "rank": 3,
+      "reference_lower_slack": 46.81178420070361,
+      "axis_average_lower_slack": 42.966105807800204
+    },
+    {
+      "N": 4,
+      "rank": 3,
+      "reference_lower_slack": 34.098004173351725,
+      "axis_average_lower_slack": 28.93201939050224
+    },
+    {
+      "N": 5,
+      "rank": 1,
+      "reference_lower_slack": 14.874646021017103,
+      "axis_average_lower_slack": 17.73546113464743
+    },
+    {
+      "N": 5,
+      "rank": 1,
+      "reference_lower_slack": 15.826670607682836,
+      "axis_average_lower_slack": 16.122863004560305
+    },
+    {
+      "N": 5,
+      "rank": 4,
+      "reference_lower_slack": 37.64117314176388,
+      "axis_average_lower_slack": 35.71174405654339
+    },
+    {
+      "N": 5,
+      "rank": 4,
+      "reference_lower_slack": 44.62532508386284,
+      "axis_average_lower_slack": 42.115239457593425
+    }
+  ],
+  "out_of_contract": [
+    {
+      "rank": 1,
+      "pure_real_minimax": 2,
+      "imaginary_response_risk": 3.9999999999999973,
+      "axis_mixture_risk": 3.9999999999999973,
+      "biased_zero_worst_MSE": 4.0
+    },
+    {
+      "rank": 2,
+      "pure_real_minimax": 4,
+      "imaginary_response_risk": 8.000000000000005,
+      "axis_mixture_risk": 8.000000000000004,
+      "biased_zero_worst_MSE": 4.0
+    },
+    {
+      "rank": 3,
+      "pure_real_minimax": 8,
+      "imaginary_response_risk": 11.999999999999998,
+      "axis_mixture_risk": 12.000000000000004,
+      "biased_zero_worst_MSE": 4.0
+    },
+    {
+      "rank": 5,
+      "pure_real_minimax": 16,
+      "imaginary_response_risk": 19.999999999999996,
+      "axis_mixture_risk": 20.0,
+      "biased_zero_worst_MSE": 4.0
+    }
+  ],
+  "nonunique_optimal_covariances": {
+    "sparse_covariance": [
+      [
+        2.666666666666668,
+        -1.3333333333333333,
+        -1.3333333333333333
+      ],
+      [
+        -1.3333333333333333,
+        2.666666666666668,
+        -1.3333333333333333
+      ],
+      [
+        -1.3333333333333333,
+        -1.3333333333333333,
+        2.666666666666668
+      ]
+    ],
+    "character_covariance": [
+      [
+        2.666666666666667,
+        1.1102230246251565e-15,
+        1.1102230246251565e-15
+      ],
+      [
+        1.1102230246251565e-15,
+        2.6666666666666665,
+        6.661338147750939e-16
+      ],
+      [
+        1.1102230246251565e-15,
+        6.661338147750939e-16,
+        2.666666666666666
+      ]
+    ]
+  },
+  "local_not_global": {
+    "rank": 3,
+    "pointwise_local_risk": 4.000000000000002,
+    "global_unbiased_minimax": 8.0,
+    "opposite_point_bias": 4.584601784380355
+  },
+  "elapsed_seconds": 0.5992249219999621,
+  "limits": "Independent finite checks, not optimization over all POVMs, an interval proof, external peer review, novelty clearance, hardware implementation or advantage benchmark."
+}

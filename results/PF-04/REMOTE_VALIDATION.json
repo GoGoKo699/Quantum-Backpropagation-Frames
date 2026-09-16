@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "record_type": "Receipt transcribed from inspected completed GitHub job logs; full raw logs and generated run files remain in the named artifact",
+  "source_commit": "7aa35c1b2559276892df43baed52c4448b632bfa",
+  "baseline": "1986fe53a65062120f1be9da14c28fa48b12484d",
+  "branch": "research/PF-04-boundary",
+  "workflow_run_id": 34973342356,
+  "workflow_run_attempt": 1,
+  "job_id": 104394779911,
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "integration": {
+    "status": "passed",
+    "repository_tests": 36,
+    "pf01_diagnostics": "passed",
+    "supplied_parity_validator": "passed",
+    "supplied_matched_validator": "passed",
+    "frozen_files_verified": 109,
+    "scientific_sources_unchanged": true,
+    "clean_checkout_before_and_after": true,
+    "PF02_scenarios_compared": 144,
+    "PF02_candidate_rows_compared": 4320,
+    "PF02_winners": {
+      "full_direct": 96,
+      "full_greedy": 24,
+      "no_mask": 24
+    },
+    "PF02_parity_wins": 0
+  },
+  "pf04": {
+    "status": "passed",
+    "packet_files_hash_verified": 9,
+    "seed": 2026091571,
+    "check_groups": 8,
+    "exact_character_rank_cases": 16,
+    "flat_spectrum_Born_cases": 192,
+    "nonflat_upper_cases": 24,
+    "general_POVM_lower_bound_checks": 15,
+    "full_mask_Born_cases": 24,
+    "local_tangent_comparisons": 288,
+    "zero_angle_blocks": 127,
+    "small_angle_blocks": 40,
+    "growing_depth_cases": 5,
+    "largest_system": 128,
+    "largest_local_width": 8,
+    "largest_system_parameters": 1524,
+    "largest_local_table_entries": 94784,
+    "global_state_constructed_in_growing_tests": false,
+    "max_flat_risk_residual": 3.552713678800501e-14,
+    "max_local_tangent_residual": 1.1102230246251565e-15,
+    "study_source_sha256": "373f76105d7a07ec5604173bbab9a6e3da56dee4908510afe2e346456422df85",
+    "clean_checkout_after_study": true
+  },
+  "workflow_permissions": {
+    "contents": "read",
+    "metadata": "read"
+  },
+  "artifact": {
+    "id": 10398581904,
+    "name": "integration-34973342356-1",
+    "size_in_bytes": 100046,
+    "sha256": "8c7d132352faff76925570c58973295c3537f13f0fa306ee51ea0deff158b8a4",
+    "expires_at": "2026-10-15T13:11:02Z"
+  },
+  "limits": "Internal mathematical derivation with finite diagnostic verification, not external peer review, exhaustive novelty clearance, hardware timing, an implementation-cost separation or merge. Receipt does not claim later code has been executed."
+}

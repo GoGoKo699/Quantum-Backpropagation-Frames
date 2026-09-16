@@ -1,40 +1,25 @@
-# Current status
+# Results and evidence status
 
-## Integration candidate
+[Home](../README.md) · [Evidence index](EVIDENCE.md) · [Comparisons](COMPARISONS.md)
 
-PF-01 is complete with findings on audit/PF-01; PF-02 is complete with findings
-on repair/PF-02. PF-03 is the integration review on review/PF-03-integration.
-Its source baseline is `8781c8fad5de5742b743178268b8e4f0e4b4f089`.
-Main remains unchanged until an explicitly authorized merge.
+The repository presents a frozen mathematical and computational result.
+Complete arguments are in [Theory](THEORY.md) and [Compilers](COMPILERS.md).
+Maintained software and fixed regressions accompany them.
 
-| Layer | Accepted evidence | Limitation |
+| Result | Evidence | Boundary |
 |---|---|---|
-| Algebra | PF-01 retained the restricted reference-frame claims | Not universal POVM, gate, or hardware optimality; novelty open |
-| Maintained implementation | PF-02 real/finite API and exact terminal compilers | Historical direct imports retain their original defects |
-| Cost acceptance | 144 scenarios, 4320 candidate rows; parity wins 0 | Fixed small-instance model and sufficient budgets, not global optimality |
-| Integration corrections | Exact round thresholds and scalar error normalization | Helper correctness, not a new estimator or advantage |
-| Reproducibility | Read-only gate reruns tests, validators and the same PF-02 grid | No new parameter sweep or scientific extension |
+| Exact flat-spectrum one-copy minimax risk | Two lower bounds and a matching POVM | Real pure response; fixed universally unbiased decoder |
+| At most 2r+1 attaining effects | Explicit effects, probabilities, scores, dilation | No minimum-outcome or generic efficient-synthesis claim |
+| Linear-size disjoint realization | Explicit circuit and physical decoder | Existing zero-angle family; additive variance gap |
+| Overlapping-interval readout | Local tables and reference circuit | Width-dependent cost; not generic exact minimax |
+| Parity/Walsh baseline | Restricted proofs and covariance identities | Conditional-unbiasedness class is narrower than all POVMs |
+| Negative matched-cost comparison | 144 scenarios, 4320 candidate rows | Fixed model; zero positive-round parity winners |
+| Fixed overlap cost analysis | 30 small points and 10 compiler cases | Quantum projections do not establish total-work wins |
 
-The historical winners are full_direct: 96, full_greedy: 24, no_mask: 24.
-Read results/PF-03/REPORT.md and DECISION.md for the integration disposition.
-Actual execution evidence is tied to a source commit in the validation artifact;
-results/PF-03/REMOTE_VALIDATION.json records the reviewed run once verified.
+[Reproducibility](REPRODUCIBILITY.md) states current validation commands and
+coverage. Original packets, numerical records, archives, and run receipts remain
+at stable paths. Historical receipts validate the commits they name.
 
-## Source and record policy
-
-Both scientific input ZIPs and all 22 extracted files remain unchanged. PF-01,
-PF-02 and the bootstrap/initialization records are frozen. Their past wording
-and run environments are not rewritten to impersonate current runs.
-
-PACKAGE_MANIFEST.json remains the initialization snapshot. The read-only gate
-verifies frozen file identities against the exact PF-02 commit. New run logs,
-results, source hashes and environment go to a fresh ignored runs/ directory,
-not into existing evidence paths. Retired write-enabled workflows are retained
-as text under results/PF-03/retired_workflows/ and are not executable workflows.
-
-## Research position
-
-Keep the parity compiler as a reproducible baseline. No positive strongest-method
-advantage, novelty clearance, hardware performance, trainability or optimizer
-convergence claim follows from the integration. A new scientific phase needs a
-separately justified work order; no additional sweep is in progress.
+No strongest-method end-to-end advantage, final novelty clearance, external peer
+review, hardware performance, or optimizer-convergence guarantee is claimed.
+Research scope remains [frozen](SCOPE.md#frozen-boundary).

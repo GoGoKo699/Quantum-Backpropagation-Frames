@@ -1,0 +1,13 @@
+test_counterexample_to_quantum_only_ranking (__main__.AlgebraChecks.test_counterexample_to_quantum_only_ranking) ... ok
+test_different_budget_sign (__main__.AlgebraChecks.test_different_budget_sign) ... ok
+test_equal_budget_cancellation (__main__.AlgebraChecks.test_equal_budget_cancellation) ... ok
+test_equal_crossing_not_divide_zero (__main__.AlgebraChecks.test_equal_crossing_not_divide_zero) ... ok
+test_flat_ratio (__main__.AlgebraChecks.test_flat_ratio) ... ok
+test_full_mask_mean (__main__.AlgebraChecks.test_full_mask_mean) ... ok
+test_known_readout_projection (__main__.AlgebraChecks.test_known_readout_projection) ... ok
+test_reject_nonfinite (__main__.AlgebraChecks.test_reject_nonfinite) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

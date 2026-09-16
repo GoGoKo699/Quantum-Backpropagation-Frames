@@ -1,0 +1,17 @@
+{
+  "coverage": "All objects reachable from nine initial remote branch heads and PR 1 head, plus local integration commit; both input ZIPs and decodable bootstrap archives recursively scanned.",
+  "objects": 466,
+  "scanned_payloads": 329,
+  "archives_opened": 2,
+  "patterns": [
+    "private_key",
+    "github_token",
+    "cloud_access_key",
+    "signed_url",
+    "credential_assignment",
+    "slack_token",
+    "openai_token"
+  ],
+  "findings": [],
+  "limitation": "Pattern and contextual review, not a guarantee that all secrets or rights issues are absent."
+}

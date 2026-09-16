@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-16T04:16:35.685368+00:00",
+  "repository": "GoGoKo699/Quantum-Backpropagation-Frames",
+  "pull_request": 2,
+  "run_id": 35054584006,
+  "attempt": 1,
+  "job_id": 104661958048,
+  "run_url": "https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/actions/runs/35054584006",
+  "event": "pull_request",
+  "conclusion": "success",
+  "head_commit": "816ec9ccd260540a4f2c2d58af6afaef12a0e593",
+  "tested_commit": "9b9fb9d1adf33ca6c3b8c179b7a4bb4e318d97a8",
+  "tested_commit_parents": [
+    "40f60b4061d7cd7434552b7947f4d118750daf06",
+    "816ec9ccd260540a4f2c2d58af6afaef12a0e593"
+  ],
+  "head_tree": "905cbc4325909515654a875882cc4c3a9d75f519",
+  "tested_tree": "905cbc4325909515654a875882cc4c3a9d75f519",
+  "tested_tree_matches_head": true,
+  "mode": "full",
+  "artifact": {
+    "id": 10430046808,
+    "bytes": 150162,
+    "sha256": "ae0bfe94627e6d5fb877165c2b2dd19e390ad6060e2cfdec0767df06555ab80a",
+    "digest_verified": true,
+    "member_sha256": {
+      "PF-04.log": "7f82c21a0391e8964ece04895342b6772c9363caea58cedde3dfcc43c3aad885",
+      "PF-05/diagnostics.json": "a4a175efe15aafb461fd4b595fd8c5fba670bccdd3f41f6db4de95af301bb4e2",
+      "PF-04/diagnostics.json": "7f82c21a0391e8964ece04895342b6772c9363caea58cedde3dfcc43c3aad885",
+      "PF-05.log": "a4a175efe15aafb461fd4b595fd8c5fba670bccdd3f41f6db4de95af301bb4e2",
+      "PF-06/diagnostics.json": "e4ef37b5b5c5716adac7b381724d5d2cc27824417fb277d2af7cd451b60f52b5",
+      "PF-06/example_plan.json": "90e455ebd65d03f60582b56318b4ba19701b0ea2abc4ca782c6d67a357757522",
+      "PF-06.log": "e4ef37b5b5c5716adac7b381724d5d2cc27824417fb277d2af7cd451b60f52b5",
+      "PF-07/diagnostics.json": "8a3629773626495e406a4e9939a20db429e412f047f1d5b9866e9b90fee581f2",
+      "PF-07/example_program.json": "95a9e3ca775c969893a7d7ef9df3d6e7feedff77011dcdd50353663bf5f13891",
+      "PF-07.log": "8a3629773626495e406a4e9939a20db429e412f047f1d5b9866e9b90fee581f2",
+      "PF-08/quantum_projection.json": "4ccb969925153128145dfbafd988ebd3105dbdadaa48dcf7fadadb803155e0b0",
+      "PF-08/small_comparison.csv": "23b6182be8310cdd340daef5df44e394137c5443830cbf6acd0ff200c035aeb3",
+      "PF-08/scaling_tradeoff.csv": "2ff6f89c48aa5912595068e01a827b6303edbffadcaace91d8be5a0a4aef417c",
+      "PF-08/summary.json": "88a821745a01e68019fe96de7ca0554ca83f02e0ac2b4ab80f6ca6235c4423c4",
+      "PF-08/tests.log": "1ebe4d1dccc5b8dc145d6ad12697dcb2a38125f3b05951d25f2d92e18f96d95d",
+      "PF-08.log": "88a821745a01e68019fe96de7ca0554ca83f02e0ac2b4ab80f6ca6235c4423c4",
+      "RUN.json": "581e716a95f823a3fb18b340ad44a06ed439746bf43c55aaa1236a24dc67d30f",
+      "example-compile_large.log": "6d059bafffa6bce447e22f157883025535a0a96dd896e88f9b98890c2b2c31ae",
+      "example-flat_readout.log": "5bb8dc561c94b495f4d613ee2daf2167d6b142d7716748f52f7e9466278309e4",
+      "figures/tutorial-readout.json": "9367b7bb789903e768703f75d7736caaf07fc76b2d6fbb3616175642883ce3da",
+      "figures/tutorial-readout.svg": "72e600ad77971259d0fe5cfb6cd70ce1715e7b9a5b926f20c607b2303558904b",
+      "figures.log": "41359984084032cee91153992af0f98d88ea9bfa7832133cf9508e64814f7b3c",
+      "integration/RUN.json": "1b39ed9d2ef725fe2c9a6358d182d8d95a48968294e0cc9ed092b1291d73df23",
+      "integration/acceptance/scenarios.csv": "88033013196947fd8cb32ae92e4cdfcb5b55c9be0ef958b88b2870df6f10cab5",
+      "integration/acceptance/candidates.csv": "f399f4d19254415285b237b6b5dbde512608271708ac950bf6459cbd8a59dd8a",
+      "integration/acceptance/summary.json": "ccafe20bb03a7e398ba8bde3bc5f085025beb498857d715407421c239d9e8903",
+      "integration/acceptance.log": "629a4cd6366c75bc471c7f93c6e0a36f81ec10fa7b7e2f329f771ad107d5df60",
+      "integration/frozen-files.json": "178fc5f6a0084f20a13d0fef4611d4ada24c30ec5ee830b84ecac279dddf210d",
+      "integration/integrity-before.log": "ddb8a6f62adbbaef03e1d7501d2f5310423ff04aca0930030a04249b3b31c2c7",
+      "integration/integrity-after.log": "ddb8a6f62adbbaef03e1d7501d2f5310423ff04aca0930030a04249b3b31c2c7",
+      "integration/matched/01-validate.log": "1f9152dca3235684155532a752194da79dc1cb1ecdc77c58955fc44bee667dc0",
+      "integration/matched/run.json": "5ab203dfcf081ca759f5d7b5726c431b1915e4c13b7ef88c8fa916b613f5d3cd",
+      "integration/matched.log": "518d84d2c6e72d0dedf7ebb72fdeba8431295395adf706cb5950148d90d49d36",
+      "integration/matched/validation.json": "1f9152dca3235684155532a752194da79dc1cb1ecdc77c58955fc44bee667dc0",
+      "integration/parity/01-validate.log": "20b2c3ce0d34f3b23ea26b9ee1d10cdb93cced04d49b31040aaec3211ed1dba9",
+      "integration/parity/run.json": "45eb8268d72decb9ef636508c15e774af7bbed691d6f93472c14ffa6e319d280",
+      "integration/parity/validation.json": "c380b41d53b734017a42d7f4e9b7a3d9896852bbed8562cc7a521294e2b50718",
+      "integration/parity.log": "21c4bed468ac65ef77ddd059b2e085b43942f6de1cc646046acb02c5c11dd962",
+      "integration/pf01-diagnostics.json": "27214fc3194f6bd29ef7ab693dac501c10b48e68f4b6bc7b6704d0f82778e0ef",
+      "integration/pf01.log": "27214fc3194f6bd29ef7ab693dac501c10b48e68f4b6bc7b6704d0f82778e0ef",
+      "integration/tests.log": "98b6f5d0a810d524c748954a678334f9cca249e05d206d561561094686fd3a6e",
+      "integration.log": "1b39ed9d2ef725fe2c9a6358d182d8d95a48968294e0cc9ed092b1291d73df23"
+    }
+  },
+  "job_log_sha256": "9556eb7798243a643a75695b96f26eda818dd9a9dc72e13eebac60f7048bd450",
+  "checks": {
+    "repository_tests": 53,
+    "individual_ok_test_lines": 53,
+    "test_terminal_result": "OK",
+    "documentation": {
+      "status": "passed",
+      "active_pages": 21,
+      "links_checked": 218,
+      "license": "MIT",
+      "citation": "CFF 1.2.0 required fields checked",
+      "scope": "Active Markdown source and local targets; no visual or external-URL claim."
+    },
+    "integrity": {
+      "preserved_files_verified": 187,
+      "migration_manifest_sha256": "24ac3960ad8602e0cc9a23c6799156650dabaa640aef861a79ff058e65d10b46",
+      "guidance_copies_verified": 12,
+      "maintained_code_maps_verified": 4,
+      "original_packet_manifests": {
+        "PF-04": 9,
+        "PF-05": 9,
+        "PF-06": 12,
+        "PF-07": 11,
+        "PF-08": 8
+      }
+    },
+    "inherited_frozen_files": 109,
+    "acceptance": {
+      "rows_compared": {
+        "scenarios.csv": 144,
+        "candidates.csv": 4320
+      },
+      "winners": {
+        "full_direct": 96,
+        "no_mask": 24,
+        "full_greedy": 24
+      },
+      "parity_wins": 0,
+      "matches_PF02": true,
+      "comparison_tolerance": "1e-12 relative and absolute; categories exact"
+    },
+    "packets": {
+      "PF-04": {
+        "status": "passed",
+        "check_groups": 8
+      },
+      "PF-05": {
+        "status": "passed",
+        "check_groups": 10
+      },
+      "PF-06": {
+        "status": "passed",
+        "check_groups": 17
+      },
+      "PF-07": {
+        "status": "passed",
+        "check_groups": 26
+      },
+      "PF-08": {
+        "status": "passed",
+        "analysis_tests": 8,
+        "small_points": 30,
+        "compiler_points": 10,
+        "profiles_searched": 0,
+        "new_circuit_cases": 0
+      }
+    },
+    "examples": {
+      "example-flat_readout.log": {
+        "system_qubits": 2,
+        "original_coordinates": 6,
+        "target_gradient": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "physical_outcome_order": [
+          "000",
+          "001",
+          "010",
+          "011",
+          "100",
+          "101",
+          "110",
+          "111"
+        ],
+        "probabilities": [
+          0.1875,
+          0.290170900631,
+          0.083333333333,
+          0.083333333333,
+          0.1875,
+          0.001495766036,
+          0.083333333333,
+          0.083333333333
+        ],
+        "zero_score_probability": 0.375,
+        "one_copy_trace_risk_at_this_response": 13.0,
+        "minimax_trace_risk": 16.0,
+        "no_mask_worst_trace_risk": 24,
+        "illustrative_record_counts": [
+          3,
+          7,
+          1,
+          1,
+          3,
+          0,
+          1,
+          0
+        ],
+        "total_records": 16,
+        "sample_gradient": [
+          0.0,
+          1.515544456623,
+          0.216506350946,
+          0.216506350946,
+          0.0,
+          1.515544456623
+        ],
+        "readout_gate_counts": {
+          "cx": 9,
+          "ry": 8,
+          "x": 2,
+          "h": 1
+        },
+        "checks": "passed"
+      },
+      "example-compile_large.log": {
+        "mode": "compiler only; no Born simulation",
+        "system_qubits": 128,
+        "original_coordinates": 384,
+        "rank_at_zero": 192,
+        "tangent_scalars_stored": 1152,
+        "row_energy_scalars_stored": 192,
+        "program_gates_retained": 1658,
+        "readout_gate_counts": {
+          "cx": 891,
+          "ry": 764,
+          "x": 2,
+          "h": 1
+        },
+        "physical_bits_per_record": 129,
+        "flat_minimax_trace_risk": 1528.0,
+        "no_mask_worst_trace_risk": 1536,
+        "full_output_length": 384,
+        "global_state_allocated": false,
+        "checks": "passed"
+      }
+    },
+    "deterministic_figure_hashes": {
+      "tutorial-readout.svg": "72e600ad77971259d0fe5cfb6cd70ce1715e7b9a5b926f20c607b2303558904b",
+      "tutorial-readout.json": "9367b7bb789903e768703f75d7736caaf07fc76b2d6fbb3616175642883ce3da"
+    },
+    "all_command_returncodes_zero": true,
+    "clean_checkout_before_and_after": true
+  },
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "commands_executed_in_ci": [
+    [
+      "tools/integration_check.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/integration"
+    ],
+    [
+      "results/PF-04/study.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-04"
+    ],
+    [
+      "results/PF-05/audit.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-05"
+    ],
+    [
+      "results/PF-06/study.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-06"
+    ],
+    [
+      "results/PF-07/study.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-07"
+    ],
+    [
+      "results/PF-08/compare.py",
+      "--input",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-07/diagnostics.json",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/PF-08"
+    ],
+    [
+      "figures/generate_tutorial.py",
+      "--output",
+      "/home/runner/work/Quantum-Backpropagation-Frames/Quantum-Backpropagation-Frames/runs/validation/figures"
+    ],
+    [
+      "examples/flat_readout.py"
+    ],
+    [
+      "examples/compile_large.py"
+    ]
+  ],
+  "warnings": {
+    "material": [],
+    "nonblocking": [
+      "GitHub actions dependencies emitted Node.js punycode/url.parse deprecation warnings and a Node 20-to-24 migration notice. No scientific test failure or skipped validation step was found."
+    ]
+  },
+  "limitations": [
+    "This receipt verifies the named GitHub pull-request merge candidate and identical head tree, not any later edited tree or final main commit.",
+    "Documentation checks validate Markdown source/local targets; this CI run does not perform GitHub visual rendering."
+  ],
+  "remote_mutations_performed": false
+}

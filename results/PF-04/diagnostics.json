@@ -1,0 +1,221 @@
+{
+  "status": "passed",
+  "seed": 2026091571,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "source_sha256": {
+    "results/PF-04/study.py": "373f76105d7a07ec5604173bbab9a6e3da56dee4908510afe2e346456422df85",
+    "research/matched_readout/core.py": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01"
+  },
+  "checks": {
+    "character_moments": {
+      "cases": 16,
+      "failures": 0,
+      "max_rank": 16
+    },
+    "flat_spectrum_povm": {
+      "cases": 192,
+      "max_errors": {
+        "completeness": 4.440892098500626e-16,
+        "positivity": 1.15057064336631e-15,
+        "mean": 1.7763568394002505e-15,
+        "risk": 4.263256414560601e-14,
+        "moment_operator": 6.661338147750939e-16,
+        "kadison": 4.825400872336937e-15
+      }
+    },
+    "anisotropic_upper_only": {
+      "cases": 24,
+      "max_error": 2.6645352591003757e-15
+    },
+    "general_povm_bounds": {
+      "cases": 15,
+      "minimum_reference_gap": 4.920562456727575,
+      "minimum_axis_average_gap": 7.8296982008663125,
+      "max_unbiased_operator_residual": 9.769962616701378e-15
+    },
+    "full_mask_born_check": {
+      "cases": 24,
+      "max_error": 1.4210854715202004e-14
+    },
+    "local_compiler_equivalence": {
+      "cases": 288,
+      "max_error": 1.1102230246251565e-15,
+      "max_norm_error": 2.220446049250313e-15,
+      "max_reference_amplitude": 2.463307335887066e-16
+    },
+    "same_family_flat_and_open_box": {
+      "zero_angle_blocks": 127,
+      "small_angle_blocks": 40,
+      "max_zero_spectrum_error": 0.0,
+      "minimum_box_margin": 0.03799181793667383
+    },
+    "growing_depth_compilation": {
+      "cases": 5,
+      "largest_system": 128,
+      "max_width": 8,
+      "full_state_constructed": false
+    }
+  },
+  "exact_flat_spectrum_risks": [
+    {
+      "rank": 1,
+      "all_povm_minimax": 2.0,
+      "frame_walsh_minimax": 4,
+      "outcomes": 3
+    },
+    {
+      "rank": 2,
+      "all_povm_minimax": 4.0,
+      "frame_walsh_minimax": 8,
+      "outcomes": 5
+    },
+    {
+      "rank": 3,
+      "all_povm_minimax": 8.0,
+      "frame_walsh_minimax": 12,
+      "outcomes": 9
+    },
+    {
+      "rank": 4,
+      "all_povm_minimax": 12.0,
+      "frame_walsh_minimax": 16,
+      "outcomes": 9
+    },
+    {
+      "rank": 5,
+      "all_povm_minimax": 16.0,
+      "frame_walsh_minimax": 20,
+      "outcomes": 17
+    },
+    {
+      "rank": 6,
+      "all_povm_minimax": 20.0,
+      "frame_walsh_minimax": 24,
+      "outcomes": 17
+    },
+    {
+      "rank": 7,
+      "all_povm_minimax": 24.0,
+      "frame_walsh_minimax": 28,
+      "outcomes": 17
+    },
+    {
+      "rank": 8,
+      "all_povm_minimax": 28.0,
+      "frame_walsh_minimax": 32,
+      "outcomes": 17
+    }
+  ],
+  "growing_regime": [
+    {
+      "n": 8,
+      "depth": 2,
+      "P": 42,
+      "w": 4,
+      "table_scalar_entries": 296,
+      "local_gate_visits": 278,
+      "amplitude_kernel_entries": 6984,
+      "full_state_entries_not_allocated": "256",
+      "full_state_constructed": false,
+      "eta": 0.125,
+      "beta_upper_bound": 16,
+      "conservative_parity_rounds": 3,
+      "clean_parity_expected_cnot": 48,
+      "terminal_parity_expected_cnot": 24,
+      "parity_cz": 3,
+      "direct_full_expected_cz": 14.0,
+      "shifted_lookup_terms_per_gradient": 2688,
+      "gray_accumulator_entries_upper": 80,
+      "note": "Operation sizes, not total runtime or a winning-method claim. Independent centered local tables are fully materialized."
+    },
+    {
+      "n": 16,
+      "depth": 2,
+      "P": 90,
+      "w": 4,
+      "table_scalar_entries": 664,
+      "local_gate_visits": 630,
+      "amplitude_kernel_entries": 16120,
+      "full_state_entries_not_allocated": "65536",
+      "full_state_constructed": false,
+      "eta": 0.125,
+      "beta_upper_bound": 16,
+      "conservative_parity_rounds": 3,
+      "clean_parity_expected_cnot": 96,
+      "terminal_parity_expected_cnot": 48,
+      "parity_cz": 3,
+      "direct_full_expected_cz": 60.0,
+      "shifted_lookup_terms_per_gradient": 5760,
+      "gray_accumulator_entries_upper": 176,
+      "note": "Operation sizes, not total runtime or a winning-method claim. Independent centered local tables are fully materialized."
+    },
+    {
+      "n": 32,
+      "depth": 3,
+      "P": 282,
+      "w": 6,
+      "table_scalar_entries": 5600,
+      "local_gate_visits": 3934,
+      "amplitude_kernel_entries": 301600,
+      "full_state_entries_not_allocated": "4294967296",
+      "full_state_constructed": false,
+      "eta": 0.125,
+      "beta_upper_bound": 64,
+      "conservative_parity_rounds": 4,
+      "clean_parity_expected_cnot": 256,
+      "terminal_parity_expected_cnot": 128,
+      "parity_cz": 4,
+      "direct_full_expected_cz": 248.0,
+      "shifted_lookup_terms_per_gradient": 72192,
+      "gray_accumulator_entries_upper": 1264,
+      "note": "Operation sizes, not total runtime or a winning-method claim. Independent centered local tables are fully materialized."
+    },
+    {
+      "n": 64,
+      "depth": 3,
+      "P": 570,
+      "w": 6,
+      "table_scalar_entries": 11680,
+      "local_gate_visits": 8062,
+      "amplitude_kernel_entries": 635616,
+      "full_state_entries_not_allocated": "18446744073709551616",
+      "full_state_constructed": false,
+      "eta": 0.125,
+      "beta_upper_bound": 64,
+      "conservative_parity_rounds": 4,
+      "clean_parity_expected_cnot": 512,
+      "terminal_parity_expected_cnot": 256,
+      "parity_cz": 4,
+      "direct_full_expected_cz": 1008.0,
+      "shifted_lookup_terms_per_gradient": 145920,
+      "gray_accumulator_entries_upper": 2672,
+      "note": "Operation sizes, not total runtime or a winning-method claim. Independent centered local tables are fully materialized."
+    },
+    {
+      "n": 128,
+      "depth": 4,
+      "P": 1524,
+      "w": 8,
+      "table_scalar_entries": 94784,
+      "local_gate_visits": 35224,
+      "amplitude_kernel_entries": 9177472,
+      "full_state_entries_not_allocated": "340282366920938463463374607431768211456",
+      "full_state_constructed": false,
+      "eta": 0.125,
+      "beta_upper_bound": 256,
+      "conservative_parity_rounds": 5,
+      "clean_parity_expected_cnot": 1280,
+      "terminal_parity_expected_cnot": 640,
+      "parity_cz": 5,
+      "direct_full_expected_cz": 4064.0,
+      "shifted_lookup_terms_per_gradient": 1560576,
+      "gray_accumulator_entries_upper": 21104,
+      "note": "Operation sizes, not total runtime or a winning-method claim. Independent centered local tables are fully materialized."
+    }
+  ],
+  "elapsed_seconds": 3.3309894230000054,
+  "limits": "Finite logical diagnostics and local compiler operation sizes; no optimized-POVM numerical search, noise/hardware timing, external review, novelty certificate or strongest-method advantage."
+}
