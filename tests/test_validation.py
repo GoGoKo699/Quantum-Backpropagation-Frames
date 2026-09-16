@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from check_docs import check_link, destinations, heading_ids, prose
+from check_docs import check_link, destinations, heading_ids, prose, check_math, math_fragments
 from validate import docs_only
 import validate
 
@@ -46,6 +46,32 @@ class ValidationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             destinations("[Proof][missing]")
         self.assertEqual(destinations("[Proof][source]\n[source]: proof.md#result\n"), ["proof.md#result"])
+
+    def test_math_guard_catches_prefix_notation_in_all_rendered_forms(self):
+        # Both forms below caused actual GitHub math-renderer errors: the
+        # prefix subscript in COMPILERS and operatorname in the source proof.
+        for expression in ("U_{b,<j}", "U_{b,< j}", "x < y"):
+            for wrapped in ("```math\n" + expression + "\n```", "$" + expression + "$",
+                            "$`" + expression + "`$", "$$\n" + expression + "\n$$",
+                            r"\(" + expression + r"\)"):
+                with self.subTest(source=wrapped), self.assertRaisesRegex(ValueError, r"use \\lt"):
+                    check_math(wrapped)
+        for wrapped in ("```math\n\\operatorname{rank}(T)\n```", r"$`\operatorname{rank}(T)`$"):
+            with self.subTest(source=wrapped), self.assertRaisesRegex(ValueError, "operatorname"):
+                check_math(wrapped)
+
+    def test_math_guard_preserves_protected_math_and_excludes_literal_code(self):
+        good = "```math\nU_{b,\\lt j}\\in\\{U,V\\}\n```\n" + r"$`x \lt y`$ and $z\lt 3$"
+        self.assertEqual(check_math(good), 3)
+        literal = '```python\ns = r"$\\operatorname{rank}(T) < j$"\n```\n'
+        literal += r'`$U_{b,<j}$` and \$not-math < j\$ and <a id="proof"></a>'
+        self.assertEqual(check_math(literal), 0)
+        # An escaped dollar inside protected math is part of its body; it
+        # cannot prematurely terminate the math or hide the later bad token.
+        protected = r"$`\text{\$} + U_{b,<j}`$"
+        self.assertEqual(math_fragments(protected)[0][1], r"\text{\$} + U_{b,<j}")
+        with self.assertRaisesRegex(ValueError, r"use \\lt"):
+            check_math(protected)
 
     def test_migration_hashes_reject_changed_evidence_and_copied_guidance(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(validate, "PACKET_COUNTS", {}):

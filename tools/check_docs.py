@@ -59,6 +59,101 @@ def prose(source: str) -> str:
     return "\n".join(lines)
 
 
+def _escaped(text: str, position: int) -> bool:
+    """Whether a delimiter is preceded by an odd number of backslashes."""
+    start = position
+    while start and text[start - 1] == "\\":
+        start -= 1
+    return (position - start) % 2 == 1
+
+
+def math_fragments(source: str) -> list[tuple[int, str]]:
+    """Extract rendered math, including GitHub's protected $`...`$ form.
+
+    Ordinary code fences and inline code are excluded. Backslash-escaped dollar
+    signs are literal text. This is a source guard, not a Markdown/TeX renderer.
+    """
+    fragments, outside, body = [], [], []
+    marker, language, start_line = None, None, 0
+    for number, line in enumerate(source.splitlines(), 1):
+        if marker is not None:
+            if re.fullmatch(r"\s{0,3}" + re.escape(marker[0]) + "{" + str(len(marker)) + r",}\s*", line):
+                if language == "math":
+                    fragments.append((start_line, "\n".join(body)))
+                marker, language, body = None, None, []
+            elif language == "math":
+                body.append(line)
+            outside.append("")
+            continue
+        opening = re.match(r"^\s{0,3}(`{3,}|~{3,})(.*)$", line)
+        if opening:
+            marker, language = opening.group(1), opening.group(2).strip().lower()
+            start_line = number + 1
+            outside.append("")
+        else:
+            outside.append(line)
+    if marker is not None:
+        raise ValueError("Unclosed fenced code block")
+    text = "\n".join(outside)
+
+    def closing(delimiter: str, offset: int) -> int:
+        while True:
+            position = text.find(delimiter, offset)
+            if position < 0:
+                return -1
+            if not _escaped(text, position):
+                if delimiter != "$" or not (
+                    (position and text[position - 1] == "$") or
+                    text[position + 1:position + 2] == "$"
+                ):
+                    return position
+            offset = position + len(delimiter)
+
+    position = 0
+    while position < len(text):
+        if _escaped(text, position):
+            position += 1
+            continue
+        # A protected math span must be recognized before its inner backticks
+        # could be mistaken for ordinary inline code.
+        if text.startswith("$`", position):
+            ticks = re.match(r"`+", text[position + 1:]).group()
+            begin = position + 1 + len(ticks)
+            end = text.find(ticks + "$", begin)
+            if end >= 0:
+                fragments.append((text.count("\n", 0, position) + 1, text[begin:end]))
+                position = end + len(ticks) + 1
+                continue
+        if text[position] == "`":
+            ticks = re.match(r"`+", text[position:]).group()
+            end = re.search(r"(?<!`)" + re.escape(ticks) + r"(?!`)", text[position + len(ticks):])
+            if end:
+                position += len(ticks) + end.end()
+                continue
+        delimiter = next((token for token in ("$$", "$", r"\(", r"\[") if text.startswith(token, position)), None)
+        if delimiter is not None:
+            end_token = {r"\(": r"\)", r"\[": r"\]"}.get(delimiter, delimiter)
+            begin = position + len(delimiter)
+            end = closing(end_token, begin)
+            if end >= 0:
+                fragments.append((text.count("\n", 0, position) + 1, text[begin:end]))
+                position = end + len(end_token)
+                continue
+        position += 1
+    return fragments
+
+
+def check_math(source: str) -> int:
+    fragments = math_fragments(source)
+    for line, fragment in fragments:
+        if "<" in fragment:
+            raise ValueError(f"Line {line}: literal '<' in rendered math; use \\lt followed by a space")
+        for command in re.finditer(r"\\operatorname\b", fragment):
+            if not _escaped(fragment, command.start()):
+                raise ValueError(f"Line {line}: unsupported \\operatorname in rendered math; use plain notation or \\mathrm")
+    return len(fragments)
+
+
 def heading_ids(source: str) -> set[str]:
     text = prose(source)
     result = set(re.findall(r'<a\s+(?:name|id)=[\"\']([^\"\']+)', text))
@@ -150,11 +245,14 @@ def check_citation(path: Path) -> None:
 
 
 def check(root: Path = ROOT) -> dict:
+    from render_source_readings import check_source_readings
+
     # Normalize only whitespace, allowing standard MIT line wrapping.
     if " ".join((root / "LICENSE").read_text().split()) != " ".join(MIT.split()):
         raise ValueError("LICENSE differs from standard MIT text and approved copyright")
     check_citation(root / "CITATION.cff")
-    pages, links = active_pages(root), 0
+    source_readings = check_source_readings(root)
+    pages, links, math_count = active_pages(root), 0, 0
     for path in pages:
         source = path.read_text(encoding="utf-8")
         try:
@@ -162,8 +260,7 @@ def check(root: Path = ROOT) -> dict:
             for heading in re.findall(r"^#{1,6}\s+(.+)$", text, re.MULTILINE):
                 if "$" in heading or r"\(" in heading:
                     raise ValueError("Math in a heading makes navigation fragile")
-            if r"\operatorname" in text:
-                raise ValueError("Use plain math notation instead of fragile operatorname macro")
+            math_count += check_math(source)
             if sum(line.strip() == "$$" for line in text.splitlines()) % 2:
                 raise ValueError("Unpaired display-math delimiter")
             for destination in destinations(source):
@@ -172,6 +269,7 @@ def check(root: Path = ROOT) -> dict:
         except ValueError as exc:
             raise ValueError(f"{path.relative_to(root)}: {exc}") from exc
     return {"status": "passed", "active_pages": len(pages), "links_checked": links,
+            "math_fragments_checked": math_count, "source_readings": source_readings,
             "license": "MIT", "citation": "CFF 1.2.0 required fields checked",
             "scope": "Active Markdown source and local targets; no visual or external-URL claim."}
 
