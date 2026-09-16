@@ -193,3 +193,26 @@ validation commits. Main has no branch-protection rule or ruleset at inspection;
 the task nevertheless requires passing the current validation job before merge.
 Subsequent exact-head and merged-tree checks are associated with that PR and
 GitHub commit statuses; earlier receipts never stand in for a changed tree.
+
+## Main verification and inline-math repair
+
+PR 2 merged normally as a5f0f69a0fa7e6a6fad792ae5ad01939b699bdbd, tree
+002e7388cefaae4d7ec648ccc8c0553a698933a1. Its independent main-push run
+[35055668821](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/actions/runs/35055668821)
+passed the full gate: 53 tests, all inherited diagnostics and fixed-data
+analysis, the 144/4320 acceptance record, examples, and deterministic figures.
+Logs and outputs were inspected; downloaded artifact 10430572819 was 150228
+bytes with verified SHA-256
+32993bd46f26deb9f4e659ee513a6126782b101078911b4bf73385c4e3061948.
+The checkout remained clean, actual visibility was public, MIT was recognized,
+and all eight original non-main branch heads were unchanged.
+
+The final main-page screenshot exposed a second Markdown interaction: escaped
+punctuation in inline TeX could lose its backslash, rendering a spacing command
+as a comma and altering brace or norm delimiters. The bounded follow-up uses
+[GitHub's protected inline-math syntax](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+for the 20 affected expressions in README, theory, compilers, and comparisons.
+The TeX expressions themselves are byte-identical. No scientific code, formula,
+data, or archived evidence changes. The follow-up receives the documentation
+gate and direct GitHub rendering inspection; the full main run above remains
+the validation of its unchanged executable and scientific-data tree.

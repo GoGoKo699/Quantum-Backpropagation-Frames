@@ -18,7 +18,7 @@ negative and supporting results teach.
 | A circuit producing a gradient state or one directional derivative | Different output from the complete classical coordinate vector |
 
 For rank $r$ and common nonzero eigenvalue $\lambda$, the exact all-POVM risk is
-$\lambda\max\{2r,4(r-1)\}$. The older restricted frame/Walsh benchmark is
+$`\lambda\max\{2r,4(r-1)\}`$. The older restricted frame/Walsh benchmark is
 $4r\lambda$. For $r\ge3$ their ratio is $r/(r-1)$ and tends to one. This compares
 single-copy worst-response variance in the stated models. It is not a general
 impossibility result for quantum backpropagation.
@@ -140,7 +140,7 @@ and stronger mask synthesis still matter.
 See [the fixed-data analysis](../results/PF-08/REPORT.md) and
 [resource contract](../results/PF-07/RESOURCES.md). The interval construction
 removes a compiler obstruction but retains exponential width dependence.
-Coordinate-row support need not equal tangent span, so its $4\,\mathrm{tr}(G)$
+Coordinate-row support need not equal tangent span, so its $`4\,\mathrm{tr}(G)`$
 bound does not make it a generic exact minimax implementation.
 
 ## Novelty and stopping point

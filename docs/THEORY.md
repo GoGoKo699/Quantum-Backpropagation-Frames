@@ -271,7 +271,7 @@ Combining both mechanisms proves
 
 ## Sparse measurement attaining the bound
 
-For each $i\in\{1,\ldots,r\}$ and $\sigma\in\{-1,+1\}$ define
+For each $`i\in\{1,\ldots,r\}`$ and $`\sigma\in\{-1,+1\}`$ define
 
 ```math
 |\phi_{i,\sigma}\rangle
@@ -309,14 +309,14 @@ p(i,\sigma\mid q)=\frac{(1+\sigma\sqrt r\,z_i)^2}{4r},
 
 Since $p(i,+\mid q)-p(i,-\mid q)=z_i/\sqrt r$, summing scores yields
 $\mathbb E_q Z=2\sqrt\lambda Vz=g(q)$. The active probability is
-$(1+\|z\|_2^2)/2$, and each active score has squared norm $4r\lambda$. Subtracting
+$`(1+\|z\|_2^2)/2`$, and each active score has squared norm $4r\lambda$. Subtracting
 the squared mean gives the pointwise risk
 
 ```math
 \mathcal R(q)=2r\lambda+(2r-4)\lambda\|L^{\mathsf T}q\|_2^2.
 ```
 
-Both endpoints of $\|L^{\mathsf T}q\|_2^2\in[0,1]$ are possible: take
+Both endpoints of $`\|L^{\mathsf T}q\|_2^2\in[0,1]`$ are possible: take
 $q=e_0$ or $q=u_1$. The maximum is $2\lambda$ for $r=1$, $4\lambda$ for $r=2$,
 and $4(r-1)\lambda$ for $r\ge3$. This matches the lower bound and proves the
 theorem.
@@ -324,7 +324,7 @@ theorem.
 **Zero outcomes count.** For $K$ trials, divide the sum of all scores by $K$,
 including trials with score zero. Discarding complementary outcomes and
 renormalizing divides the mean by the unknown active probability and generally
-introduces bias. For example, if $\|z\|_2^2=1/4$, that probability is $5/8$.
+introduces bias. For example, if $`\|z\|_2^2=1/4`$, that probability is $5/8$.
 
 A decoder may accumulate $r$ signed channel counts $C_i=N_{i,+}-N_{i,-}$ and
 then return

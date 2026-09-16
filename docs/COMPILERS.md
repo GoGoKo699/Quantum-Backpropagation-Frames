@@ -34,7 +34,7 @@ reference-one branch unchanged. A Hadamard on the reference then gives
              +|1\rangle(|c\rangle-|q\rangle)\right).
 ```
 
-Measure all physical bits. For reference result $b\in\{0,1\}$ and system
+Measure all physical bits. For reference result $`b\in\{0,1\}`$ and system
 address $x$, the probability and score on a nonzero row are
 
 ```math
@@ -45,9 +45,9 @@ Z(b,x)=2(-1)^b\frac{k_x}{c_x}.
 For a zero row return the zero vector. Include these records in the trial count.
 Since $p(0,x)-p(1,x)=c_xq_x$, summing signed scores proves
 $\mathbb E_q Z=2T^{\mathsf T}q$ for every real unit response. Every active score
-has norm $2\sqrt s$. Let $S=\{x:d_x>0\}$, and let $\Pi_S$ project onto its
+has norm $2\sqrt s$. Let $`S=\{x:d_x>0\}`$, and let $\Pi_S$ project onto its
 computational coordinate states. The active probability is
-$(1+\|\Pi_Sq\|_2^2)/2$, so
+$`(1+\|\Pi_Sq\|_2^2)/2`$, so
 
 ```math
 \mathcal R(q)=2s(1+\|\Pi_Sq\|_2^2)
@@ -128,8 +128,8 @@ The exact theorem therefore gives
 ```
 
 The no-mask all-X benchmark at this point has pointwise risk
-$4P-\|g(q)\|_2^2$ and worst-case risk $4P$. The row-norm risk is smaller by
-$2P(1-\|\Pi_Sq\|_2^2)$ pointwise. Its worst-case improvement is the constant
+$`4P-\|g(q)\|_2^2`$ and worst-case risk $4P$. The row-norm risk is smaller by
+$`2P(1-\|\Pi_Sq\|_2^2)`$ pointwise. Its worst-case improvement is the constant
 $8$, with ratio $4P/(4P-8)$ tending to one. This is no asymptotic runtime
 advantage.
 
@@ -174,7 +174,7 @@ block markers. The exchange between successive markers has full angle
 \theta_b=\mathrm{atan2}(\sqrt{R_{b+1}},\sqrt{w_b}),
 ```
 
-and sends $10$ to $\cos\theta_b\,10+\sin\theta_b\,01$, leaving $00$ and $11$
+and sends $10$ to $`\cos\theta_b\,10+\sin\theta_b\,01`$, leaving $00$ and $11$
 fixed. Induction along the chain leaves marker $b$ with amplitude
 $\sqrt{w_b/s}$. The ideal block mass is six; using the computed masses preserves
 the weighted construction in floating arithmetic.
@@ -233,7 +233,7 @@ lose derivatives. The retained diagnostic includes such a four-qubit case.
 The nearby-spectrum comparison is also preserved. If all six block angles
 have magnitude at most $h$, column $j$, indexed from zero, changes from its
 zero-angle value by at most $2jh$. The bound follows from the two occurrences
-of the orthogonal prefix and $\|U_{b,<j}-I\|\le jh$. Summing column squares gives
+of the orthogonal prefix and $`\|U_{b,<j}-I\|\le jh`$. Summing column squares gives
 
 ```math
 \|K_b-K_b(0)\|\le\sqrt{220}\,h.
@@ -261,7 +261,7 @@ $L_{\mathrm{tab}}=\sum_j2^{|I_j|}$. This input is charged, including its
 construction when derived from a circuit.
 
 **Constructive theorem.** From these tables one can compile a reference-zero
-preparation of $c_x=\|k_x\|_2/\sqrt s$ using $O(n2^w)$ CNOTs and arbitrary
+preparation of $`c_x=\|k_x\|_2/\sqrt s`$ using $O(n2^w)$ CNOTs and arbitrary
 one-qubit rotations, no extra work qubits, and no global support-address union
 or tangent eigendecomposition. The response-one branch is unchanged. The
 sparse original-coordinate decoder is universally unbiased and has trace
@@ -376,7 +376,7 @@ are computed with a fast Walsh transform in $O(k2^k)$ arithmetic, rather than
 forming a dense Walsh matrix. In particular, a two-control multiplexor costs
 four CNOTs and four rotations, as used for each controlled exchange.
 
-Let $A=\{a:\mu_a>0\}$ and
+Let $`A=\{a:\mu_a>0\}`$ and
 
 ```math
 F=\sum_{a\in A}4(2^{\ell_a}-1).
@@ -429,7 +429,7 @@ supports have different hypotheses.
 
 ### Decoder, source tables and program memory
 
-Let $\nu=\max_a\#\{j:a\in I_j\}$. Once the local tables are supplied, the
+Let $`\nu=\max_a\#\{j:a\in I_j\}`$. Once the local tables are supplied, the
 classical compiler takes
 
 ```math
@@ -450,7 +450,7 @@ To decode a physical result, first scan its $n$ system bits for the first and
 last ones, $a$ and $z$. Only intervals containing $a$ can contribute. Reject any
 that end before the last one; use the substring in each remaining interval to
 read its tangent entry. These entries give $k_x$ and its norm. Update the original
-parameter indices by $2(-1)^b\sqrt s\,k_x/\|k_x\|_2$, where $b$ is the reference
+parameter indices by $`2(-1)^b\sqrt s\,k_x/\|k_x\|_2`$, where $b$ is the reference
 bit, or make no update when the row is zero. The reference bit must not be
 confused with the position of the last system one.
 
@@ -483,7 +483,7 @@ for each original coordinate or an infinity-norm gradient guarantee.
 If the implemented readout unitary differs from its ideal by operator norm
 at most $\zeta$, the outcome distributions differ in L1 norm by at most
 $2\zeta$. Scores have norm at most $2\sqrt s$, so the resulting mean error is
-at most $4\sqrt s\,\zeta$. For $G_{\mathrm{gates}}$ elementary gates, bounding
+at most $`4\sqrt s\,\zeta`$. For $G_{\mathrm{gates}}$ elementary gates, bounding
 each gate's operator error by
 
 ```math
