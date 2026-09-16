@@ -38,7 +38,7 @@ Original project code and associated documentation use the [MIT License](../LICE
 Copyright (c) 2026 Ruge Lin. This includes original material retained in the
 source archives. Applicable third-party notices remain effective; dependency
 licenses are separate. Scientific papers are cited, not redistributed or
-relicensed by those citations. See [licensing details](../LICENSE_STATUS.md).
+relicensed by those citations. See [licensing details](LICENSING.md).
 
 The [primary-source map](../literature/README.md) distinguishes established
 estimation and compilation ingredients from this repository's particular

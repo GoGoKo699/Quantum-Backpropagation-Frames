@@ -63,7 +63,7 @@ member. Original scientific packets, ZIP bytes, numerical records, manifests,
 retired workflow text, and substantive negative results remain at their existing
 paths. Historical paths, timestamps, and hashes are not rewritten.
 
-Twelve active guidance files were copied byte-for-byte before replacement.
+Thirteen active guidance files were copied byte-for-byte before replacement.
 Their original relative links remain historical; current navigation uses the
 canonical docs. Journal-specific planning remains in those archived sources
 but is removed from active guidance. The scientific freeze is unchanged.
@@ -102,3 +102,11 @@ settings write for description/topics. Suggested description:
 Suggested topics: quantum-information, quantum-computing, quantum-gradients,
 quantum-estimation, quantum-measurements, reproducible-research, python.
 No journal target or unsupported advantage claim is included.
+
+The current licensing explanation moved from LICENSE_STATUS.md to docs/LICENSING.md
+to avoid GitHub detecting it as a second license. Its original bytes remain in
+the guidance archive; the operative MIT text is unchanged.
+
+The maintained disjoint histogram decoder now validates raw integer entries
+before binary64 conversion and sums absolute counts exactly. Regression probes
+cover oversized and summed counts at 2^53; valid endpoints remain accepted.

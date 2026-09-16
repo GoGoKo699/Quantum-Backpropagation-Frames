@@ -309,6 +309,12 @@
       "preserved_copy": "maintenance/repository-polish/previous_guidance/qbp_frames/README.md",
       "sha256": "b1a8299ca2390e0aeb5b1d0fd160a2408a56eb1e13d2be98c41cfa4c67e6328c",
       "source_commit": "2322b03c6c53b85be189f68d96f6b60e0389c668"
+    },
+    {
+      "old_path": "LICENSE_STATUS.md",
+      "preserved_copy": "maintenance/repository-polish/previous_guidance/LICENSE_STATUS.md",
+      "sha256": "70ce0aea3e7e39a6795edc297f496fe255ad60bd89f3d91b3278097b78468423",
+      "source_commit": "2322b03c6c53b85be189f68d96f6b60e0389c668"
     }
   ],
   "maintained_code_copies": [
@@ -400,6 +406,13 @@
       "artifact_id": 10425249412,
       "artifact_sha256": "5c0510bff23b750bb4cd8eb9c775f4ed605c328c66d6cd82cc437fb8bc7667fc",
       "original_member": "pf07-study/diagnostics.json"
+    }
+  ],
+  "relocated_current_pages": [
+    {
+      "old_path": "LICENSE_STATUS.md",
+      "new_path": "docs/LICENSING.md",
+      "reason": "Avoid duplicate automatic GitHub license tabs; original exact bytes in guidance copy; only relative license link changes."
     }
   ]
 }
