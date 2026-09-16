@@ -1,0 +1,11 @@
+{
+  "repository": "GoGoKo699/Quantum-Backpropagation-Frames",
+  "main_at_start": "1986fe53a65062120f1be9da14c28fa48b12484d",
+  "scientific_baseline": "996d60ab06e872ec44a0ab447917f2e198b4241b",
+  "input_archive": "Quantum-Backpropagation-Frames-PF-04-20260915.zip",
+  "archive_sha256": "0d5b7c910a563d9f0ebbf5908945cdd93d725cc3b8c45b4eb33fa6e5c2eaaf41",
+  "verified_PF04_manifest_entries": 9,
+  "verified_PF04_proof_sha256": "d6a98b5ee7284f211b4045765fcb8ebedf10757d1f2f366ba724573f8972738d",
+  "local_execution": "Uploaded archive plus independent new source, not a full authenticated checkout.",
+  "audit_formula_imports": []
+}

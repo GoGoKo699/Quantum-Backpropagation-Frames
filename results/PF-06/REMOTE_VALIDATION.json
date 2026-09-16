@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "record_type": "Final-code workflow steps and downloaded complete artifact inspected; actual generated JSON/logs parsed and archive SHA-256 verified.",
+  "baseline": "070b2728dbdc022d35b9bb9a36bf8938e8bd9408",
+  "source_commit": "664d1a1db95a20d6a8bd356acbedd296869fcf5e",
+  "branch": "research/PF-06-sparse-compiler",
+  "workflow_run_id": 34990914564,
+  "workflow_run_attempt": 1,
+  "job_id": 104455018629,
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "integration": {
+    "repository_tests": 36,
+    "frozen_files_verified": 109,
+    "prior_diagnostics_and_validators": "passed",
+    "acceptance": {
+      "rows_compared": {
+        "scenarios.csv": 144,
+        "candidates.csv": 4320
+      },
+      "winners": {
+        "full_direct": 96,
+        "no_mask": 24,
+        "full_greedy": 24
+      },
+      "parity_wins": 0,
+      "matches_PF02": true,
+      "comparison_tolerance": "1e-12 relative and absolute; categories exact"
+    },
+    "clean_checkout_before_and_after": true
+  },
+  "previous_packets": {
+    "PF04_hashes": 9,
+    "PF04_groups": 8,
+    "PF05_hashes": 9,
+    "PF05_groups": 10,
+    "unchanged_and_passed": true
+  },
+  "PF06": {
+    "packet_hashes_verified": 12,
+    "diagnostic_groups_passed": 17,
+    "seed": 2026091591,
+    "small_parameter_points": 20,
+    "gate_Born_cases": 135,
+    "finite_difference_coordinates": 75,
+    "compiler_only_sizes": 9,
+    "largest_system_qubits": 512,
+    "largest_parameters": 1536,
+    "stored_tangent_scalars_at_largest_size": 4608,
+    "maximum_full_Born_system_qubits": 8,
+    "extra_work_qubits": 0,
+    "checks_identical_to_previous_remote_run": true,
+    "finite_shot_results_identical": true,
+    "max_gradient_mean_residual": 4.218847493575595e-15,
+    "max_trace_risk_residual": 1.4210854715202004e-13,
+    "max_finite_difference_residual": 2.0878165862825426e-10,
+    "source_sha256": {
+      "study.py": "0bfa82be9aba552b4cfb1ddba1e7b4bcb3c144a2111123394d60356829448453",
+      "compiler.py": "456083f4545fe5832c56546793b5cffb817ed003da46522520215f5deffc5528"
+    },
+    "overlap_counterexample_gradient_norm": 2.7639718921748453
+  },
+  "preservation": {
+    "prior_scientific_and_implementation_paths_unchanged": true,
+    "clean_checkout_after_all_checks": true,
+    "repository_write_permission": false
+  },
+  "artifact": {
+    "id": 10405976011,
+    "name": "integration-34990914564-1",
+    "size_in_bytes": 110994,
+    "sha256": "64fb940c50b4c5ee52f1f3956716f4bf1280a98a81de5299e458a89b8a33299d",
+    "expires_at": "2026-10-15T15:49:06Z",
+    "downloaded_and_hash_verified": true,
+    "delivery_copy": "remote_evidence/PF-06-remote-verification-34990914564.zip"
+  },
+  "earlier_run": {
+    "id": 34989964380,
+    "receipt_preserved_at": "96fdb65a8d15853af333acb0654aacd6cca62374",
+    "reason_for_new_run": "Final linear physical-outcome scan; no change to estimators, circuit, or numerical results."
+  },
+  "limits": "Real one-layer exact logical compiler; finite diagnostics, not hardware, generic overlapping-support compilation, novelty clearance, or a strongest-method scaling advantage. No merge. Receipt applies only to the stated scientific-code commit."
+}

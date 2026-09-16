@@ -1,0 +1,13 @@
+{
+  "scope": "PF-08 fixed analysis packet; excludes manifest, START and remote receipt; prior packets unchanged.",
+  "sha256": {
+    "CORE_RESULT.md": "8b295cfaee8eae0d50b4143faaad968f064e3a00a639c98170e8b410417f4405",
+    "DECISION.md": "2a5fbf6cd67d50540451d963cb80521b275fee63ca1578fdfcf639ff567bfc56",
+    "INPUTS.json": "bf9b7fd9f0fd6d0580ed67148a4ef23be3ffe26be2284494e5a2e41abe8f29a3",
+    "LOCAL_VALIDATION.json": "63b23044cfd0855625b4a2d20321a17b0cf843be794092f4e0b2254d8f35461b",
+    "REPORT.md": "a7697e819136249428ddb50e20cda5318fd508116ba97e9ef605327c0531fe6b",
+    "REPRODUCE.md": "9bb9de4b7fb41e0f2eb006768f9b62534ef7449c0a269ae757ce922b15cb1476",
+    "SOURCES.md": "7b41e75840a2da8fe199bdad5623a52d0a6b7379f32144c85f17e350efd08c51",
+    "compare.py": "72bbd5a2aae39c98b9f86615c3fbe2b6cf4ba72a5e4e0d0cd690b3c6ba9da03e"
+  }
+}

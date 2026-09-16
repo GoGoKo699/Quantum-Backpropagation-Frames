@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "seed": 2026091591,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "checks": {
+    "uniformly_controlled_rotation": {
+      "cases": 24,
+      "max_residual": 3.3306690738754696e-16
+    },
+    "controlled_exchange": {
+      "cases": 4,
+      "max_residual": 2.220446049250313e-16
+    },
+    "existing_family_tangents": {
+      "cases": 20,
+      "max_residual": 1.5543122344752192e-15
+    },
+    "reference_preparation": {
+      "cases": 20,
+      "max_residual": 3.885780586188048e-16
+    },
+    "response_branch_identity": {
+      "cases": 135,
+      "max_residual": 9.992007221626409e-16
+    },
+    "gate_Born_distribution": {
+      "cases": 135,
+      "max_residual": 2.220446049250313e-15
+    },
+    "whole_gradient_mean": {
+      "cases": 135,
+      "max_residual": 4.218847493575595e-15
+    },
+    "trace_risk_identity": {
+      "cases": 135,
+      "max_residual": 1.4210854715202004e-13
+    },
+    "risk_upper_bound": {
+      "cases": 135,
+      "max_residual": 0.0
+    },
+    "occupied_POVM": {
+      "cases": 20,
+      "max_residual": 2.220446049250313e-16
+    },
+    "aggregate_decoder": {
+      "cases": 20,
+      "max_residual": 4.440892098500626e-16
+    },
+    "finite_differences": {
+      "cases": 75,
+      "max_residual": 2.065309173682195e-10
+    },
+    "zero_flat_optimum": {
+      "cases": 4,
+      "max_residual": 0.0
+    },
+    "scalable_compiler": {
+      "cases": 9,
+      "max_residual": 1.1102230246251565e-16
+    },
+    "overlap_scope_counterexample": {
+      "cases": 1,
+      "max_residual": 0.0
+    },
+    "invalid_domain_rejected": {
+      "cases": 4,
+      "max_residual": 0.0
+    },
+    "finite_shot_MSE": {
+      "cases": 3,
+      "max_residual": 0.0
+    }
+  },
+  "source_sha256": {
+    "study.py": "0bfa82be9aba552b4cfb1ddba1e7b4bcb3c144a2111123394d60356829448453",
+    "compiler.py": "0cdf26a402b0c2b44cceb69b32072ba5a6dda69b5ebed949336e37d0b978db00"
+  },
+  "fixture_sha256": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01",
+  "overlap_boundary": {
+    "n": 4,
+    "depth": 2,
+    "P": 18,
+    "coordinate": 14,
+    "missing_gradient_norm": 2.7639718921748453,
+    "explanation": "A two-layer tangent lies outside the exactly-one-active-disjoint-block sector. This compiler is not valid for it."
+  },
+  "finite_shot_checks": [
+    {
+      "shots": 64,
+      "replicates": 5000,
+      "gradient_norm": 2.8284271247461903,
+      "predicted_MSE": 0.625,
+      "observed_MSE": 0.6172838362397434,
+      "standard_error": 0.006704031635476898
+    },
+    {
+      "shots": 256,
+      "replicates": 5000,
+      "gradient_norm": 2.8284271247461903,
+      "predicted_MSE": 0.15625,
+      "observed_MSE": 0.15524039755599098,
+      "standard_error": 0.0017060655388751343
+    },
+    {
+      "shots": 1024,
+      "replicates": 5000,
+      "gradient_norm": 2.8284271247461903,
+      "predicted_MSE": 0.0390625,
+      "observed_MSE": 0.03838686059998364,
+      "standard_error": 0.00042722976616582967
+    }
+  ],
+  "limits": "Real logical one-layer implementation. No general tangent-basis compiler, noise/hardware timing, price-winner search, novelty clearance or merge.",
+  "record": "Summary of executed local diagnostics; complete generated diagnostics and example gate plan retained in the delivery and reproducible by study.py.",
+  "compiler_maximum": {
+    "blocks": 256,
+    "n": 512,
+    "P": 1536,
+    "rank_at_zero": 768,
+    "stored_tangent_scalars": 4608,
+    "row_energies": 768,
+    "readout_gates": {
+      "cx": 3579,
+      "ry": 3068,
+      "x": 2,
+      "h": 1
+    },
+    "physical_measurements": 513,
+    "extra_work_qubits": 0,
+    "worst_outcome_block_scan": 256,
+    "signed_count_bins": 768,
+    "output_scalars": 1536,
+    "final_contraction_multiplies": 4608,
+    "final_contraction_additions": 3072,
+    "other_final_multiplications": 768,
+    "other_final_divisions": 2304,
+    "other_final_square_roots": 769,
+    "all_X_flat_variance": 6144,
+    "sparse_flat_variance": 6136,
+    "flat_max_variance_ratio": 1.001303780964798,
+    "CNOT_only_common_response_crossover": 2745093,
+    "notes": "Counts for explicit arbitrary-angle logical gates, not optimal synthesis or seconds. No global state allocated."
+  }
+}

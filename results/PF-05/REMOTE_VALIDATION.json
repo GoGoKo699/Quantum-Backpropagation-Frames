@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "record_type": "Reviewed receipt from completed GitHub job logs; raw logs and generated results remain in the named artifact.",
+  "baseline": "996d60ab06e872ec44a0ab447917f2e198b4241b",
+  "source_commit": "e589d9efbab9ac32639cdafba32b3a9d5a337ae7",
+  "branch": "audit/PF-05-optimal-readout",
+  "workflow_run_id": 34982605443,
+  "workflow_run_attempt": 1,
+  "job_id": 104426472940,
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "integration": {
+    "status": "passed",
+    "repository_tests": 36,
+    "PF01_diagnostics": "passed",
+    "supplied_parity_validator": "passed",
+    "supplied_matched_validator": "passed",
+    "frozen_files_verified": 109,
+    "PF02_scenarios_compared": 144,
+    "PF02_candidate_rows_compared": 4320,
+    "PF02_matches_saved_result": true,
+    "PF02_winners": {
+      "full_direct": 96,
+      "full_greedy": 24,
+      "no_mask": 24
+    },
+    "PF02_parity_wins": 0
+  },
+  "PF04": {
+    "packet_hashes_verified": 9,
+    "original_study": "passed",
+    "check_groups": 8
+  },
+  "PF05": {
+    "packet_hashes_verified": 9,
+    "audit": "passed",
+    "check_groups": 10,
+    "seed": 2026091581,
+    "audit_source_sha256": "3567e0e846863de09bed2405f25cc3ece8d2389d9b21707f9eb6ca7b6db923cb",
+    "sparse_Born_cases": 384,
+    "sparse_operator_contracts": 48,
+    "character_comparisons": 384,
+    "nuisance_and_null_cases": 16,
+    "redundant_POVM_cases": 16,
+    "complex_realification_cases": 16,
+    "dilation_cases": 32,
+    "contract_boundary_cases": 9,
+    "local_Fisher_cases": 3,
+    "small_angle_blocks": 40,
+    "maximum_sparse_risk_residual": 9.947598300641403e-14,
+    "maximum_operator_contract_residual": 1.3322676295501878e-15,
+    "imports_prior_formula_code": false
+  },
+  "preservation": {
+    "prior_scientific_and_implementation_paths_unchanged": true,
+    "clean_checkout_after_all_checks": true,
+    "compared_paths": [
+      "research",
+      "provenance",
+      "qbp_frames",
+      "tests",
+      "tools",
+      "validation",
+      "results/PF-01",
+      "results/PF-02",
+      "results/PF-03",
+      "results/PF-04"
+    ]
+  },
+  "workflow_permissions": {
+    "contents": "read",
+    "metadata": "read"
+  },
+  "artifact": {
+    "id": 10401993467,
+    "name": "integration-34982605443-1",
+    "size_in_bytes": 104112,
+    "sha256": "8479ab79a186f412b0b7c8a0c03127c08fcb4afed49fc344fe74da596bb14e51",
+    "expires_at": "2026-10-15T14:35:16Z"
+  },
+  "scope": "Internal proof/source audit and finite diagnostics. Not external peer review, exhaustive novelty clearance, hardware timing, efficient generic compilation, quantum advantage, or a merge. Later metadata receipts do not claim later code was run."
+}

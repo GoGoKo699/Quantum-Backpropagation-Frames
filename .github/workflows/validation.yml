@@ -1,7 +1,7 @@
 name: Integration and evidence checks
 on:
   push:
-    branches: [main, 'review/**']
+    branches: [main, 'review/**', 'research/PF-04-boundary', 'audit/PF-05-optimal-readout', 'research/PF-06-sparse-compiler', 'research/PF-07-overlap-reference']
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -30,10 +30,44 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python tools/integration_check.py --output runs/integration
+      - name: Verify all prior scientific packets and frozen paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code a70b840c321ecfbea2f26fd40a459aef7153b068 -- research provenance qbp_frames tests tools validation PACKAGE_MANIFEST.json results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06 results/PF-07
+          python - <<'PYCHECK'
+          from pathlib import Path
+          import hashlib, json
+          for packet, count in [('PF-04',9),('PF-05',9),('PF-06',12),('PF-07',11),('PF-08',8)]:
+              root = Path('results')/packet
+              entries = json.loads((root/'MANIFEST.json').read_text())['sha256']
+              if len(entries) != count:
+                  raise SystemExit(f'{packet}: unexpected manifest coverage')
+              for name, expected in entries.items():
+                  if hashlib.sha256((root/name).read_bytes()).hexdigest() != expected:
+                      raise SystemExit(f'{packet} identity mismatch: {name}')
+              print(f'{packet}: all {count} file hashes verified')
+          PYCHECK
+      - name: Rerun the unchanged PF-04 through PF-07 diagnostics
+        shell: bash
+        run: |
+          set -euo pipefail
+          python results/PF-04/study.py --output runs/pf04-study | tee runs/pf04-study.log
+          python results/PF-05/audit.py --output runs/pf05-audit | tee runs/pf05-audit.log
+          python results/PF-06/study.py --output runs/pf06-study | tee runs/pf06-study.log
+          python results/PF-07/study.py --output runs/pf07-study | tee runs/pf07-study.log
+      - name: Execute the final fixed-data comparison
+        shell: bash
+        run: |
+          set -euo pipefail
+          python results/PF-08/compare.py --input runs/pf07-study/diagnostics.json --output runs/pf08-final | tee runs/pf08-final.log
+          git diff --exit-code a70b840c321ecfbea2f26fd40a459aef7153b068 -- research provenance qbp_frames tests tools validation PACKAGE_MANIFEST.json results/PF-01 results/PF-02 results/PF-03 results/PF-04 results/PF-05 results/PF-06 results/PF-07
+          git diff --exit-code
+          test -z "$(git status --porcelain --untracked-files=all)"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: integration-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runs/integration/
+          path: runs/
           if-no-files-found: error
           retention-days: 30

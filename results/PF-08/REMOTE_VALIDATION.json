@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "record_type": "Completed GitHub job steps inspected; full artifact downloaded, SHA-256 checked and actual generated JSON/logs parsed.",
+  "date": "2026-09-16",
+  "baseline": "a70b840c321ecfbea2f26fd40a459aef7153b068",
+  "source_commit": "a16593730f570a33fb6c2ee6da6fd94ad4ac7500",
+  "branch": "review/PF-08-paper-scope",
+  "workflow_run_id": 35042241177,
+  "job_id": 104624394714,
+  "attempt": 1,
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.3.5"
+  },
+  "integration": {
+    "repository_tests": 36,
+    "frozen_files_verified": 109,
+    "scientific_sources_unchanged": true,
+    "clean_checkout_before_and_after": true,
+    "acceptance": {
+      "rows_compared": {
+        "scenarios.csv": 144,
+        "candidates.csv": 4320
+      },
+      "winners": {
+        "full_direct": 96,
+        "no_mask": 24,
+        "full_greedy": 24
+      },
+      "parity_wins": 0,
+      "matches_PF02": true,
+      "comparison_tolerance": "1e-12 relative and absolute; categories exact"
+    }
+  },
+  "prior_packet_groups_passed": {
+    "PF04": 8,
+    "PF05": 10,
+    "PF06": 17,
+    "PF07": 26
+  },
+  "PF08": {
+    "manifest_files_verified": 8,
+    "analysis_tests": 8,
+    "small_points": 30,
+    "compiler_only_points": 10,
+    "small_results": {
+      "reference_lower_than_no_mask": 30,
+      "reference_lower_than_full": 22,
+      "reference_equal_to_full_numerically": 8,
+      "reference_larger_than_full": 0,
+      "maximum_no_mask_over_reference": 1.500000000000001,
+      "maximum_full_over_reference": 1.5
+    },
+    "new_circuit_cases": 0,
+    "price_searches": 0,
+    "source_sha256": "72bbd5a2aae39c98b9f86615c3fbe2b6cf4ba72a5e4e0d0cd690b3c6ba9da03e",
+    "regenerated_input_sha256": "f2da6a7609a684d4773d45d58ff373be32d51a1b5a08e89dd36bb64dd28dcd3b",
+    "total_work_advantage_established": false
+  },
+  "artifact": {
+    "id": 10425249412,
+    "name": "integration-35042241177-1",
+    "size_in_bytes": 126362,
+    "sha256": "5c0510bff23b750bb4cd8eb9c775f4ed605c328c66d6cd82cc437fb8bc7667fc",
+    "expires_at": "2026-10-16T01:00:00Z",
+    "downloaded_and_hash_verified": true
+  },
+  "preservation": "Workflow diff verified unchanged research/provenance/maintained code/tests/tools/previous results through PF07; no repository write permission; final checkout clean.",
+  "scope_decision": "Exploratory expansion frozen. Central exact theorem, attainer and existing local realization only; publication-critical closure remains. No next study dispatched.",
+  "limits": "Fixed-data analysis, not a new POVM proof, fully priced runtime comparison, novelty certificate, submission GO or merge. Receipt applies to stated source commit; later metadata does not change tested code."
+}

@@ -1,0 +1,55 @@
+{
+  "baseline": "996d60ab06e872ec44a0ab447917f2e198b4241b",
+  "dispositions": [
+    {
+      "claim": "Equal-spectrum all-POVM minimax",
+      "decision": "KEEP",
+      "boundary": "Fixed one-copy, real q, universally unbiased complete vector, finite second moments."
+    },
+    {
+      "claim": "General 2s lower-bound machinery",
+      "decision": "ALREADY-KNOWN",
+      "boundary": "Direct application of established operator moment inequalities."
+    },
+    {
+      "claim": "Parameter-independent Fisher-optimal real-state measurements",
+      "decision": "ALREADY-KNOWN",
+      "boundary": "Not the same as a single globally unbiased finite-copy decoder."
+    },
+    {
+      "claim": "Original character attainer",
+      "decision": "KEEP",
+      "boundary": "Trace-risk optimal; not necessarily covariance-matrix optimal or minimal-outcome."
+    },
+    {
+      "claim": "Sparse 2r+1-outcome attainer",
+      "decision": "KEEP-AS-AUDIT-CONSTRUCTION",
+      "boundary": "Explicit effects and dilation; no minimality, generic efficient circuit or novelty certificate."
+    },
+    {
+      "claim": "Same-family flat/near-flat corollary",
+      "decision": "KEEP",
+      "boundary": "Original circuit and stated perturbation region only."
+    },
+    {
+      "claim": "Extension to arbitrary complex response or mixtures",
+      "decision": "NOT-ESTABLISHED",
+      "boundary": "Explicit out-of-contract examples have larger risk; no extension inferred."
+    },
+    {
+      "claim": "Exact high-confidence or all-estimator sample optimum",
+      "decision": "NOT-ESTABLISHED",
+      "boundary": "One-copy trace risk is not a high-confidence or biased-estimator optimum."
+    },
+    {
+      "claim": "Novelty of exact specialization",
+      "decision": "OPEN",
+      "boundary": "No identical formula in inspected source contracts; absence is not novelty proof."
+    },
+    {
+      "claim": "End-to-end advantage",
+      "decision": "OPEN",
+      "boundary": "Tangent-basis synthesis and generic output map are not free."
+    }
+  ]
+}

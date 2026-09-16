@@ -1,0 +1,14 @@
+{
+  "baseline": "070b2728dbdc022d35b9bb9a36bf8938e8bd9408",
+  "main_at_start": "1986fe53a65062120f1be9da14c28fa48b12484d",
+  "branch": "research/PF-06-sparse-compiler",
+  "local_checkout": false,
+  "reason": "github.com DNS resolution failed; supplied archives used for local execution.",
+  "inputs": {
+    "Quantum-Backpropagation-Frames-PF-04-20260915.zip": "0d5b7c910a563d9f0ebbf5908945cdd93d725cc3b8c45b4eb33fa6e5c2eaaf41",
+    "Quantum-Backpropagation-Frames-PF-05-20260915.zip": "d8fb53d1445b3ee039793baa503bd85c6bc77de98650a12443599f0a249749ac"
+  },
+  "PF04_verified_manifest_entries": 9,
+  "PF05_verified_manifest_entries": 9,
+  "fixture_sha256": "d6eb8552943e6d6db0fe4137ea4ed8003f2b4ccc4257c4378a12338912597a01"
+}

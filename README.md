@@ -1,101 +1,70 @@
 # Quantum Backpropagation Frames
 
-Research on converting known ansatz tangent queries into shared quantum
-measurements for a complete classical gradient, with explicit quantum,
-statistical, classical-processing, memory, and output costs.
+Finite-copy measurement limits and explicit readout circuits for complete
+classical quantum gradients, with quantum and classical costs kept separate.
 
-## Current conclusion
+## Current research focus
 
-The parity-frame algebra is retained **within its audited real-response,
-phase-calibrated, conditionally unbiased frame/Walsh setting**. Its restricted
-variance benchmark is not universal measurement optimality, and its phase-rank
-witness is not a general gate-count lower bound.
-
-PF-02 provides a maintained input interface and exact terminal-readout
-compilers. In its 144 declared small-system cost scenarios, positive-round
-parity won **zero** scenarios. Full direct masking won 96, greedy full masking
-24, and no mask 24. These are outcomes of specified sufficient budgets and a
-normalized work model, not measured hardware runtimes or an impossibility
-result. Keep parity as a baseline, not an established flagship advantage.
-
-PF-03 reviews these changes for integration. It adds exact round-threshold
-selection, consistent scalar errors, and read-only regression CI. The audit and
-repair branches remain preserved; integration does not re-audit novelty or
-establish the project's end-to-end advantage goal.
-
-## The task
-
-At a fixed parameter point, the current real-response packet studies
+**Exploratory expansion is frozen for the candidate Letter.** The central result
+is the exact real-response, single-copy, universally unbiased gradient-readout
+limit when the nonzero tangent sensitivities are equal, together with its sparse
+attaining measurement and an explicit local-circuit realization.
 
 ```math
-g=2T^{\mathsf T}q,\qquad T=U^{\mathsf T}J,\qquad
-q=U^{\mathsf T}OU|0\rangle.
+\mathcal V(T)=\lambda\max\{2r,4(r-1)\},
+\qquad g(q)=2T^{\mathsf T}q.
 ```
 
-The output is all raw coordinate-gradient entries, with explicit whole-vector
-error and confidence. Access, parameter normalization, unbiasedness, and
-coordinatewise versus whole-vector accuracy must not be silently interchanged.
-See [Scope](docs/SCOPE.md) for the project contract.
+The measurement uses at most 2r+1 outcomes. Circuit implementation is supplied
+for the existing local family rather than assumed as free basis access.
+An overlapping-interval extension supplies bounded-risk readout with explicit
+width-dependent cost. These are internally checked results, not externally
+reviewed novelty claims. Statistical optimality is not a runtime advantage.
 
-## Reader and workspace routes
+The original end-to-end improvement milestone remains unmet. The preserved
+PF-02 comparison has zero positive-round parity winners. This repository does
+not present a failed comparison as a success or a universal impossibility.
 
-| Purpose | Start here |
+## Reading routes
+
+| Purpose | Document |
 |---|---|
-| Current evidence and limitations | [Status](docs/STATUS.md) |
-| Claim dispositions | [Claim register](docs/CLAIMS.md) |
-| Supported numerical API and compiler contract | [Maintained interface](qbp_frames/README.md) |
-| Independent restricted-proof/source audit | [PF-01 report](results/PF-01/REPORT.md) |
-| Input repair and negative cost result | [PF-02 report](results/PF-02/REPORT.md) |
-| Integration review and corrections | [PF-03 report](results/PF-03/REPORT.md) |
-| Reproduce tests and the same acceptance grid | [Reproducibility](REPRODUCIBILITY.md) |
-| Work boundary and next decision | [Current work order](work_orders/CURRENT.md) |
-| Candidate proof, unchanged as supplied | [Parity proof](research/parity_frames/PROOF.md) |
-| Baselines and imported comparison evidence | [Matched-readout packet](research/matched_readout/README.md) |
-| Sources and earlier directions | [Literature](literature/README.md), [research map](docs/RESEARCH_MAP.md) |
-| Workspace rules | [AGENTS.md](AGENTS.md) |
+| Fixed question, main-paper content and stopping rule | [Paper scope](docs/PAPER_SCOPE.md) |
+| Compact technical result and assumptions | [Core result](results/PF-08/CORE_RESULT.md) |
+| Last cost comparison and decision | [PF-08 report](results/PF-08/REPORT.md) |
+| Full exact-limit proof and independent internal audit | [PF-04](results/PF-04/PROOF.md), [PF-05](results/PF-05/REPORT.md) |
+| Explicit optimal-readout implementation | [PF-06](results/PF-06/PROOF.md) |
+| Overlapping interval implementation | [PF-07](results/PF-07/PROOF.md) |
+| Original scope and current status | [Scope](docs/SCOPE.md), [status](docs/STATUS.md) |
+| Maintained numerical API and original repair evidence | [API](qbp_frames/README.md), [PF-02](results/PF-02/REPORT.md) |
+| Work boundary | [Current work order](work_orders/CURRENT.md) |
+| Reproduction and workspace instructions | [Reproducibility](REPRODUCIBILITY.md), [AGENTS.md](AGENTS.md) |
 
-## Run
+## Checks
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 python -m pip install -r requirements.txt
 python tools/verify_inputs.py
 python -m unittest discover -s tests -v
-# Clean full Git checkout required; output directory must be new.
-python tools/integration_check.py --output runs/integration-01
+# Clean full checkout required; outputs must be new.
+python tools/integration_check.py --output runs/integration
+python results/PF-07/study.py --output runs/pf07-fixed
+python results/PF-08/compare.py --input runs/pf07-fixed/diagnostics.json --output runs/pf08-final
 ```
 
-Use the maintained interface:
+Current CI is read-only and publishes run-specific artifacts. Prior scientific
+packets and their negative results are preserved. PACKAGE_MANIFEST.json remains
+the historical initialization snapshot, not a current tree inventory. New
+numerical work should use the maintained API where applicable, not assume that
+historical fixture code provides a validated public interface.
 
-```python
-from qbp_frames import parity
-```
-
-Do not directly import the historical parity core for new input handling. Its
-original invalid-input behavior is intentionally preserved for reproducibility.
-The maintained interface rejects unsupported complex and nonfinite inputs. Its
-realness and numerical tolerance contracts are documented in the API guide.
-
-## Evidence and permissions
-
-`research/`, `provenance/`, PF-01/PF-02 results, and initialization records are
-preserved. `PACKAGE_MANIFEST.json` is the historical initialization snapshot,
-not a current-file manifest. CI verifies the frozen history against the pinned
-PF-02 commit and writes fresh logs only under `runs/`, uploaded as artifacts.
-CI has read-only repository permissions and never pushes generated results.
-
-Numerical residuals are not proofs, source-novelty certificates, or hardware
-benchmarks. Earlier exploratory spectral/coherence claims are not adopted by
-this integration. The project is self-contained; historical inspiration is not
-a result dependency.
+No new research phase follows automatically from an interesting open question.
+Only correction and publication-critical assessment of the frozen contribution
+remain in scope. No manuscript, merge, public release or license selection is
+implied. See [license status](LICENSE_STATUS.md).
 
 ## License
 
 Original code and associated documentation are available under the
 [MIT License](LICENSE). Copyright (c) 2026 Ruge Lin.
-See [licensing details](LICENSE_STATUS.md) for the treatment of preserved
-snapshots and third-party material.
-
-A passing check does not imply journal publication or a versioned release.
-Repository setup is described in [setup](SETUP_GITHUB.md).
+See [licensing details](LICENSE_STATUS.md) for preserved snapshots and third-party material.

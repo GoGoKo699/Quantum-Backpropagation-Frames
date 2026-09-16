@@ -1,40 +1,35 @@
-# Current status
+# Research status
 
-## Integration candidate
+PF-08 closes exploratory expansion for the candidate Letter. See
+[PAPER_SCOPE.md](PAPER_SCOPE.md) for its central claim and hard stopping rule.
+This is not submission readiness or a novelty certificate.
 
-PF-01 is complete with findings on audit/PF-01; PF-02 is complete with findings
-on repair/PF-02. PF-03 is the integration review on review/PF-03-integration.
-Its source baseline is `8781c8fad5de5742b743178268b8e4f0e4b4f089`.
-Main remains unchanged until an explicitly authorized merge.
+| Result | Status and boundary |
+|---|---|
+| PF-01 to PF-03 | Audited baseline integrated into main at 1986fe53a65062120f1be9da14c28fa48b12484d |
+| PF-04/PF-05 | Exact equal-spectrum real one-copy universally unbiased risk; sparse attaining POVM; internally audited, novelty open |
+| PF-06 | Explicit local realization; exact optimality at the existing flat one-layer family; no strongest-method scaling advantage |
+| PF-07 | Overlap reference compiler, O(n2^w) gates, trace risk <=4s; no arbitrary-spectrum optimum |
+| PF-08 | Final fixed-data cost analysis and paper-scope freeze; remote evidence separately recorded |
 
-| Layer | Accepted evidence | Limitation |
-|---|---|---|
-| Algebra | PF-01 retained the restricted reference-frame claims | Not universal POVM, gate, or hardware optimality; novelty open |
-| Maintained implementation | PF-02 real/finite API and exact terminal compilers | Historical direct imports retain their original defects |
-| Cost acceptance | 144 scenarios, 4320 candidate rows; parity wins 0 | Fixed small-instance model and sufficient budgets, not global optimality |
-| Integration corrections | Exact round thresholds and scalar error normalization | Helper correctness, not a new estimator or advantage |
-| Reproducibility | Read-only gate reruns tests, validators and the same PF-02 grid | No new parameter sweep or scientific extension |
+The candidate central claim is the exact limit plus its attaining measurement
+and a charged local realization. Overlap generality and parity compilation are
+supporting results, not reasons to require another algorithmic extension.
 
-The historical winners are full_direct: 96, full_greedy: 24, no_mask: 24.
-Read results/PF-03/REPORT.md and DECISION.md for the integration disposition.
-Actual execution evidence is tied to a source commit in the validation artifact;
-results/PF-03/REMOTE_VALIDATION.json records the reviewed run once verified.
+The original strongest-method end-to-end advantage milestone remains unmet.
+The frozen PF-02 outcomes remain 96 full-direct, 24 full-greedy and 24 no-mask
+winners; zero positive-round parity winners. Later variance improvements are
+not silently promoted to runtime wins.
 
-## Source and record policy
+Allowed remaining work is publication-critical closure of the SAME claim:
+exact source equivalence, physical significance and honest consolidation. No
+new ansatz, price search, hardware campaign, complex/mixed/coherent extension
+or automatic new phase is dispatched. Human author judgment remains necessary.
+No manuscript, merge, release, visibility or licensing change is implied.
 
-Both scientific input ZIPs and all 22 extracted files remain unchanged. PF-01,
-PF-02 and the bootstrap/initialization records are frozen. Their past wording
-and run environments are not rewritten to impersonate current runs.
-
-PACKAGE_MANIFEST.json remains the initialization snapshot. The read-only gate
-verifies frozen file identities against the exact PF-02 commit. New run logs,
-results, source hashes and environment go to a fresh ignored runs/ directory,
-not into existing evidence paths. Retired write-enabled workflows are retained
-as text under results/PF-03/retired_workflows/ and are not executable workflows.
-
-## Research position
-
-Keep the parity compiler as a reproducible baseline. No positive strongest-method
-advantage, novelty clearance, hardware performance, trainability or optimizer
-convergence claim follows from the integration. A new scientific phase needs a
-separately justified work order; no additional sweep is in progress.
+Research packets through PF-07 and prior code/evidence are byte-preserved.
+The research branch includes results beyond main; main and all previous branch
+heads remain unchanged by PF-08. Full read-only CI verifies prior results and
+runs the new analysis on freshly regenerated PF-07 data. The actual executed
+commit and artifact are identified in results/PF-08/REMOTE_VALIDATION.json after
+inspection, rather than inferred from this status text.
