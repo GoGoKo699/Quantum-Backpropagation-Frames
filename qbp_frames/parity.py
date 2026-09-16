@@ -1,25 +1,23 @@
 """Strict real/finite interface to the preserved parity reference implementation.
 
 This module changes input validation, not the estimator. Import the maintained
-API here; research/parity_frames/core.py is an immutable historical fixture.
+API here; its package-local numerical kernel matches the immutable historical
+research/parity_frames/core.py fixture byte-for-byte.
 Zero-imaginary complex arrays are also rejected. No implicit normalization or
 projection of invalid inputs is performed. Dense routines remain diagnostics.
 """
 from __future__ import annotations
 import hashlib
-import importlib.util
 import math
 from numbers import Integral, Real
 from pathlib import Path
 import numpy as np
 
-_SOURCE = Path(__file__).resolve().parents[1] / 'research/parity_frames/core.py'
+_SOURCE = Path(__file__).with_name('_parity_reference.py')
 _SHA = '168d7022dde985ae9373c08cc4dcbce9c2445c24f4fffd875d8366567b86f1f7'
 if hashlib.sha256(_SOURCE.read_bytes()).hexdigest() != _SHA:
     raise RuntimeError('Immutable parity reference hash mismatch')
-_spec = importlib.util.spec_from_file_location('_qbp_parity_reference', _SOURCE)
-_ref = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(_ref)
+from . import _parity_reference as _ref
 
 
 def _integer(value, name, minimum=0):

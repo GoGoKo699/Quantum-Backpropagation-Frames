@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qbp-frames"
+version = "0+unreleased"
+description = "Single-copy quantum-gradient readout and logical circuit diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Ruge Lin"}]
+dependencies = ["numpy"]
+
+[project.urls]
+Repository = "https://github.com/GoGoKo699/Quantum-Backpropagation-Frames"
+Issues = "https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/issues"
+
+[tool.setuptools]
+packages = ["qbp_frames"]
