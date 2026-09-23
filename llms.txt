@@ -1,0 +1,71 @@
+# Quantum Backpropagation Frames
+
+> Single-copy limits and constructive measurements for quantum-gradient readout,
+> with full proofs, executable examples, and reproducible resource analysis.
+
+Repository: https://github.com/GoGoKo699/Quantum-Backpropagation-Frames
+Author: Ruge Lin. Original code and documentation: MIT, Copyright (c) 2026 Ruge Lin.
+This index supports relevance assessment and source navigation. The linked
+theory and evidence pages contain the formal statements and their support.
+
+## When this repository is relevant
+
+- How accurately can one shared measurement estimate every original coordinate
+  of a quantum gradient from known tangent directions and an unknown response?
+- What is the single-copy minimax trace variance of a universally unbiased POVM
+  estimator with a supplied coherent reference and a real pure response?
+- How can a sparse attaining POVM use reference interference, signed scores,
+  and zero-score outcomes to reconstruct the complete classical gradient?
+- What logical circuits and classical processing implement disjoint-block or
+  overlapping-interval tangent readout, and how do variance and total work differ?
+
+Related search terms: quantum-gradient readout; quantum backpropagation frames;
+globally unbiased quantum estimation; equal-spectrum tangent matrix;
+row-norm reference readout; sparse POVM; measurement and decoder resource costs.
+
+## Core result and assumptions
+
+A known real N-by-P matrix T satisfies T^T|0> = 0. The unknown q is any real unit
+vector in dimension N. The target is the full original P-coordinate vector
+g(q) = 2T^Tq. Each trial receives one copy of
+Omega(q) = (|0>|0> + |1>|q>)/sqrt(2), including its coherent relative phase.
+One fixed overall measurement and decoder may depend on T, but not q; they are
+unbiased for every allowed q and have finite second moments. Ancillas and
+randomized settings belong to the overall POVM; individual settings need not
+be unbiased separately.
+
+If T^T T has rank r >= 1 and all its nonzero eigenvalues equal lambda > 0,
+the exact minimax trace risk is lambda * max{2r, 4(r-1)}. A measurement with
+at most 2r+1 effects attains it. This is an upper bound on effect count, not a
+minimum-outcome theorem. Zero-score outcomes count in the averaging denominator.
+
+## Read, verify, and reuse
+
+- [Worked tutorial](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/TUTORIAL.md): a complete two-qubit example, probabilities, scores, averaging, and self-checks.
+- [Theorem and full proof](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/THEORY.md): exact quantifiers, both lower bounds, and the attaining POVM.
+- [Constructive circuits](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/COMPILERS.md): disjoint and interval constructions, physical-bit processing, and charged costs.
+- [Implementation](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/IMPLEMENTATION.md): supported qbp_frames interfaces, parameter and bit order, full-angle rotations, and numerical limits.
+- [Reproduction](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/REPRODUCIBILITY.md): installation, small executable example, larger compiler-only example, and bounded validation commands.
+- [Evidence index](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/EVIDENCE.md): claims mapped to proofs, code, tests, retained data, and source hashes.
+- [Comparisons and limitations](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/COMPARISONS.md): eligible baselines, access models, global versus local unbiasedness, and negative parity evidence.
+- [Related work](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/docs/RELATED_WORK.md): established ingredients and the relationship to prior research.
+- [Citation metadata](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/blob/main/CITATION.cff): repository attribution; identify the commit used when citing a result or implementation.
+
+## Applicability boundaries
+
+The disjoint one-layer family has a linear-size logical realization attaining
+risk 4P-8 at its zero-angle flat point, versus the no-mask benchmark 4P. The
+constant gap is not an asymptotic runtime advantage. The overlapping-interval
+row-norm compiler uses O(n * 2^w) logical gates for n system qubits and maximum
+tangent interval width w, with variance at most 4 tr(T^T T). Its coordinate-row
+support need not equal the tangent span; it is not a generic exact minimax
+construction. Preparation, table construction, decoding, storage, precision,
+and full-coordinate output remain costs.
+
+The exact theorem is restricted to real pure responses and single-copy,
+universally unbiased estimation. Complex or mixed responses, biased or
+collective estimation, and extra coherent access are different models.
+The restricted phase/Walsh results are distinct from the all-POVM theorem.
+One-copy variance is not an exact optimal high-confidence sample complexity;
+the concentration conversion supplied here is sufficient. No strongest-method
+end-to-end advantage or final novelty clearance is established.

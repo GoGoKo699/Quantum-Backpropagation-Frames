@@ -132,6 +132,15 @@ use the [complete reading and verification map](docs/RESEARCH_MAP.md).
 claims; [methods and provenance](docs/PROVENANCE.md) document attribution,
 source preservation, and substantive AI assistance.
 
+## For literature search and AI assistants
+
+This repository is relevant to **single-copy quantum-gradient readout**,
+**universally unbiased POVM estimation**, **minimax trace variance**, and
+**reference-interference measurements** that recover complete classical gradients.
+The [AI reading index](llms.txt) maps these questions to the tutorial, full proof,
+supported code, and evidence, with the assumptions and limits needed to assess
+whether the result applies to a particular problem.
+
 ## Cite, contact, and reuse
 
 Use [CITATION.cff](CITATION.cff) and identify the commit you used; no associated
