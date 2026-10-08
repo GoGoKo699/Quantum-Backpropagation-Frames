@@ -8,8 +8,8 @@ measurement design. Complete-gradient readout supplies the application: the
 known tangent directions specify which signed overlaps must be estimated.
 The [canonical theorem](THEORY.md) starts with a known real query matrix and an
 unknown reference-encoded response, not a particular state parameterization.
-The [research origin](PROVENANCE.md#research-origin-and-related-repository)
-is distinct from the prior work against which the result must be assessed.
+See [research provenance](PROVENANCE.md#research-origin-and-related-repository)
+for its connection to Hopf-QBP.
 
 ## Established input and processing tools
 
@@ -36,8 +36,6 @@ the distinction here is not simply unbiased versus biased processing.
 A differential frame contains state-space tangent vectors. A measurement frame
 contains operators representing observables and their estimators. The two can
 be connected by a readout construction, but they are not interchangeable.
-Neither introducing frames nor assigning reusable unbiased scores is claimed
-as a new principle here.
 
 ## Which optimization problem is different?
 
@@ -57,10 +55,9 @@ optimality within this specified class. These distinctions are explained in
 [Comparisons](COMPARISONS.md#which-optimality-is-proved), with the
 [original source locators](../results/PF-05/SOURCE_AUDIT.md).
 
-In particular, existing real-state Fisher-optimal measurements prevent a claim
-that this is the first unknown-state-independent optimal measurement. Existing
-shadow and dual-frame methods prevent a claim that previous methods must
-reconstruct the full state or use a nonoptimized canonical decoder. The
+Existing real-state Fisher-optimal measurements can also be independent of the
+unknown state. Shadow and dual-frame methods support task-specific readout
+and optimized decoders without reconstructing the full state. The
 [eligible baselines](COMPARISONS.md#eligible-strong-baselines) retain their
 permitted measurement, grouping, and classical-processing optimizations.
 
@@ -74,9 +71,6 @@ state preparation are established ingredients, with attribution in the
 [compiler source notes](../results/PF-06/SOURCE_NOTES.md) and
 [overlap source comparison](../results/PF-07/SOURCE_AUDIT.md).
 
-Novelty is not settled by different terminology or by the absence of an exact
-wording match. An equivalent estimation theorem would remain relevant even if
-it never mentioned gradients. The current source comparisons do not constitute
-final novelty clearance, and the statistical result does not establish a
-general backpropagation or strongest-method end-to-end speedup. This attribution
-map changes neither the theorem's assumptions nor the frozen research scope.
+The [resource comparisons](COMPARISONS.md#variance-confidence-and-total-work)
+separately assess statistical risk and total computational work under matched
+access and output requirements.

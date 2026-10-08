@@ -50,15 +50,12 @@ memory, program storage or regeneration, and $P$ output writes. Logical
 all-to-all arbitrary-rotation counts are not routed hardware timings. Dense
 simulators validate small identities; they are not the scalable compiler path.
 
-## Frozen boundary
+<a id="frozen-boundary"></a>
 
-The current contribution is the exact theorem, sparse attainer, and existing
-charged realizations, with supporting comparisons. No new ansatz,
-arbitrary-spectrum exact optimum, complex or mixed-state extension, coherent
-reuse, optimizer analysis, hardware/noise/routing study, or favorable-price
-search is implied.
+## Contribution
 
-The original goal of a strongest-method end-to-end improvement remains unmet.
-A complete presentation of the theorem does not replace that milestone.
-Novelty is unresolved beyond the bounded source comparisons already recorded.
-Manuscript preparation and submission are separate work.
+The exact theorem, sparse attaining measurement, and charged circuit
+realizations address the statistical and implementation parts of the same
+readout task. [Comparisons](COMPARISONS.md) evaluates their costs against
+eligible baselines, including the fixed negative parity result and the
+width-dependent overlap construction.

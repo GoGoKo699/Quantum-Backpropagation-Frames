@@ -3,7 +3,7 @@
 The authoritative claim-to-proof-to-code-to-data map is the
 [evidence index](EVIDENCE.md). It includes the exact all-measurement theorem,
 sparse attainer, disjoint realization, interval construction, restricted parity
-baseline, negative comparison, and unresolved end-to-end advantage and novelty.
+baseline, and fixed cost comparisons.
 
 [Scope](SCOPE.md) states the shared assumptions. [Comparisons](COMPARISONS.md)
 separates one-copy universal unbiasedness from local estimation, confidence,

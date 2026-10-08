@@ -30,6 +30,5 @@ preserved in the [optimal-readout source audit](../results/PF-05/SOURCE_AUDIT.md
 
 The [preserved parity source notes](../research/parity_frames/SOURCES.md) and
 [matched-readout packet](../research/matched_readout/README.md) give the wider
-attribution record. They are historical source assessments, not a fresh
-exhaustive literature search or a novelty certificate. No cited article is
-redistributed under the repository's MIT license merely by being cited.
+attribution record. Cited articles retain their own licensing terms; see the
+[licensing guide](../docs/LICENSING.md).

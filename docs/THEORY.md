@@ -399,7 +399,9 @@ error grows by at most $\lambda_+$. Taking risks and extrema yields
 This is a comparison bound, not an exact unequal-spectrum solution. Coordinate
 columns need not be independent or orthogonal.
 
-## Repeated copies and what the theorem leaves open
+<a id="repeated-copies-and-what-the-theorem-leaves-open"></a>
+
+## Repeated copies and confidence
 
 For $K$ independent copies measured with the same fixed unbiased protocol,
 $\widehat g=K^{-1}\sum_{k=1}^K Z_k$ has
@@ -424,17 +426,15 @@ adaptive, collective, or extra-coherent-access algorithms. For example, the
 biased zero estimator has worst squared error $4\lambda$ in the equal-spectrum
 model. The all-POVM theorem does not rule it out under a different contract.
 
-The exact result and constructions have internal proofs and regression evidence.
-Final novelty clearance and a strongest-method end-to-end advantage remain
-unestablished. The separate [comparison route](COMPARISONS.md) preserves the
-negative acceptance evidence and the narrower phase/Walsh estimator class.
+The [comparison route](COMPARISONS.md) gives the negative cost-comparison
+evidence and the narrower phase/Walsh estimator class.
 
 ## Sources and evidence
 
 This canonical proof consolidates the unchanged
 [original derivation](../results/PF-04/PROOF.md) and
 [independent internal audit with sparse attainer](../results/PF-05/PROOF_AUDIT.md).
-The [frozen result synopsis](source-readings/core-result.md) specifies its scope.
+The [source result synopsis](source-readings/core-result.md) specifies its scope.
 The [source audit](../results/PF-05/SOURCE_AUDIT.md) records exact primary-source
 versions and the distinction from local quantum estimation. In particular,
 the moment inequality is established estimation machinery; neither it nor

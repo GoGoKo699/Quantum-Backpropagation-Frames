@@ -5,8 +5,7 @@
 The quickstart runs a complete small readout example. The full gate checks the
 supported package, every inherited bounded diagnostic suite, the unchanged
 acceptance grid, preserved evidence identities, and the scientific figure.
-These are numerical and engineering checks alongside the [proof](THEORY.md),
-not independent proof or a novelty certificate.
+These numerical and engineering checks accompany the [proof](THEORY.md).
 
 ## Clean installation and smoke path
 
@@ -38,7 +37,6 @@ state, execute hardware, or establish a runtime advantage.
 
 Python 3.12 is used for local checks and Python 3.13 for the GitHub workflow.
 The recorded environment in each run identifies what actually executed.
-No broad platform or hardware compatibility claim follows from these checks.
 
 ## Full bounded verification
 
@@ -133,8 +131,7 @@ identity checks; executable, data, dependency and workflow changes run the full
 gate. Feature-branch pushes do not duplicate pull-request runs.
 
 The workflow uses a standard hosted runner, a read-only token, no persistent
-write credentials and no automatic commits. Retired write-enabled workflows
-remain historical text. Actions logs are useful receipts but expire: source
+write credentials and no automatic commits. Actions logs expire; source
 packets, original numerical records and compact identity manifests are retained
 in the repository. A local pass and a historical CI pass are not a CI pass for
 a changed tree. See the [engineering record](../maintenance/repository-polish/REPORT.md)

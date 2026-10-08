@@ -16,5 +16,4 @@ scientific papers do not relicense those papers. The repository license does
 not replace the licenses of dependencies installed separately.
 
 Scientific citation is appreciated but is not an additional legal condition
-of the MIT License. Licensing does not assert novelty, external review, or
-journal publication.
+of the MIT License.

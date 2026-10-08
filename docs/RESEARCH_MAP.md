@@ -5,7 +5,7 @@
 The main route is **physical problem → worked example → exact theorem →
 attaining measurement → executable circuits → comparisons**. Read it in that
 order to learn the method, or use the checks below to enter at a particular
-claim. No development history or unfinished manuscript is a prerequisite.
+claim.
 
 ## Learn the result
 
@@ -13,7 +13,7 @@ claim. No development history or unfinished manuscript is a prerequisite.
 |---|---|
 | [Worked tutorial](TUTORIAL.md) | Complete two-qubit probabilities, signed records, averaging, implementation, and self-check answers. |
 | [Scope and assumptions](SCOPE.md) | The supplied state, universal unbiasedness, whole-vector loss, and exact restrictions. |
-| [Relationship to previous research](RELATED_WORK.md) | Established measurement tools versus the particular minimax problem; links to research origin. |
+| [Relationship to previous research](RELATED_WORK.md) | Established measurement tools and the particular minimax problem. |
 | [Primary-source map](../literature/README.md) | Literature organized by scientific relationship, with exact source locators. |
 
 ## Prove, construct, and compare
@@ -30,8 +30,7 @@ The [evidence index](EVIDENCE.md) links each result to its original proof,
 independent diagnostic, implementation, numerical record, and qualification.
 It also routes readers to the [local-tangent derivation](source-readings/local-tangent-structure.md),
 [disjoint proof](source-readings/disjoint-proof.md), and
-[interval proof](source-readings/interval-proof.md). These reading copies preserve
-the source mathematics while fixing markup; the original files remain linked.
+[interval proof](source-readings/interval-proof.md).
 
 ## Run, reproduce, and inspect the evidence
 
@@ -49,23 +48,22 @@ follow the linked data and generating program. The
 [negative parity comparison](COMPARISONS.md#what-the-negative-comparison-establishes)
 and [fixed overlap comparison](COMPARISONS.md#what-the-overlap-comparison-establishes)
 lead to their original reports and tables. The [preserved result packets](../results/)
-and [original research inputs](../research/) are available for deeper inspection,
-not as a substitute for the canonical explanation.
+and [original research inputs](../research/) are available for deeper inspection.
 
-## Status, attribution, and reuse
+## Results, attribution, and reuse
 
-[Current status](STATUS.md) states what is implemented and what remains
-unresolved. [Scope of the current contribution](PAPER_SCOPE.md) records the
-scientific stopping point; it is not a manuscript or publication claim.
+The [results and implementations guide](STATUS.md) summarizes the theorem and
+available code. [Scope of the contribution](PAPER_SCOPE.md) defines the statistical result
+and circuit realizations.
 [Methods and provenance](PROVENANCE.md) cover research origin, the Hopf-QBP link,
 source preservation, and substantive AI assistance. Use [CITATION.cff](../CITATION.cff)
 for attribution and [MIT](../LICENSE) with [licensing details](LICENSING.md) for reuse.
 
 ## For contributors and reproducibility reviewers
 
-The [working rules](../AGENTS.md), [current work boundary](../work_orders/CURRENT.md),
-and [repository setup](../SETUP_GITHUB.md) describe safe maintenance without
-restarting archived studies. The [engineering migration record](../maintenance/repository-polish/REPORT.md)
+The [working rules](../AGENTS.md), [maintenance scope](../work_orders/CURRENT.md),
+and [repository setup](../SETUP_GITHUB.md) describe repository maintenance.
+The [engineering migration record](../maintenance/repository-polish/REPORT.md)
 and [checked migration map](../maintenance/repository-polish/MIGRATION.json)
 record preserved bytes, supported-code copies, and actual validation coverage.
 The [root reproduction entry](../REPRODUCIBILITY.md) points to the same current

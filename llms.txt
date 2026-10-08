@@ -67,5 +67,9 @@ universally unbiased estimation. Complex or mixed responses, biased or
 collective estimation, and extra coherent access are different models.
 The restricted phase/Walsh results are distinct from the all-POVM theorem.
 One-copy variance is not an exact optimal high-confidence sample complexity;
-the concentration conversion supplied here is sufficient. No strongest-method
-end-to-end advantage or final novelty clearance is established.
+the concentration conversion supplied here is sufficient. The fixed cost
+comparisons do not establish a strongest-method end-to-end advantage.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
