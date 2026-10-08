@@ -2,9 +2,8 @@
 
 [Home](../README.md) · [Tutorial](TUTORIAL.md) · [Proof](THEORY.md) · [Reproduction](REPRODUCIBILITY.md)
 
-The canonical proof route is self-contained. Original packets below are retained
-for checking source identity, independent derivations, and numerical records;
-their development labels are not prerequisites for reading the result.
+The canonical proof route is self-contained. The source packets below provide
+independent derivations, numerical records, and source identities.
 
 Where an original packet uses math markup that GitHub cannot render, its proof
 link opens a faithful reading copy. These copies change mathematical markup
@@ -24,7 +23,7 @@ it. This is not a minimum-outcome theorem or optimal confidence law.
   and [recorded diagnostics](../results/PF-05/diagnostics.json).
 - Maintained realization: [disjoint compiler](../qbp_frames/disjoint.py),
   [worked executable](../examples/flat_readout.py), and
-  [migration/equivalence tests](../tests/test_supported.py).
+  [implementation equivalence tests](../tests/test_supported.py).
 - Boundaries: [model comparisons](COMPARISONS.md#which-optimality-is-proved).
 
 ## Explicit disjoint realization
@@ -81,7 +80,9 @@ Neither statement is a universal circuit lower bound or a total-work advantage.
   [exact round-threshold tests](../tests/test_pf03.py), and the
   [unchanged integration runner](../tools/integration_check.py).
 
-## Fixed cost analysis and unmet advantage goal
+<a id="fixed-cost-analysis-and-unmet-advantage-goal"></a>
+
+## Fixed cost analysis
 
 **Claim.** Existing small-point variance improvements and quantum-only operation
 projections do not establish a strongest-method total-work separation.
@@ -115,6 +116,5 @@ expected coverage, and failure behavior. The [engineering record](../maintenance
 distinguishes local tests, GitHub CI, and actual rendering inspection.
 
 [Methods and provenance](PROVENANCE.md) describes substantive AI assistance and
-source handling. [Primary sources](../literature/README.md) retain attribution
-and exact audit locators. Final novelty clearance and external peer review are
-not inferred from internal tests or repeated source comparisons.
+source handling. [Primary sources](../literature/README.md) gives attribution
+and exact source locators.

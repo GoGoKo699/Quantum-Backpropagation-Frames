@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from urllib.parse import unquote, urlsplit
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -90,8 +91,9 @@ class RepositoryTests(unittest.TestCase):
     def test_readme_local_links(self):
         text = (ROOT / 'README.md').read_text()
         for link in re.findall(r'\]\(([^)]+)\)', text):
-            if '://' not in link:
-                self.assertTrue((ROOT / link.split('#')[0]).exists(), link)
+            target = urlsplit(link)
+            if not target.scheme and not target.netloc:
+                self.assertTrue((ROOT / unquote(target.path)).exists(), link)
 
 if __name__ == '__main__':
     unittest.main()

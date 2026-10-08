@@ -143,16 +143,12 @@ removes a compiler obstruction but retains exponential width dependence.
 Coordinate-row support need not equal tangent span, so its $`4\,\mathrm{tr}(G)`$
 bound does not make it a generic exact minimax implementation.
 
-## Novelty and stopping point
+<a id="novelty-and-stopping-point"></a>
+
+## Relationship to prior work
 
 The [primary-source map](../literature/README.md) credits operator-moment bounds,
 real-state Fisher compatibility, dual-frame estimation, measurement dilation,
-reference interference, and state-preparation ingredients. The finite universal-
-unbiasedness theorem is presented with its exact contract. The bounded source
-audits do not provide final novelty clearance; internal checks are not external
-peer review.
-
-The repository therefore establishes an exact statistical result and explicit
-constructive realizations, with reproducible limitations. It does not establish
-the original strongest-method end-to-end advantage goal. That qualification
-remains part of the result rather than a reason to expand the frozen research.
+reference interference, and state-preparation ingredients. The
+[related-work guide](RELATED_WORK.md) compares the theorem's quantifiers
+with those of the cited estimation results.

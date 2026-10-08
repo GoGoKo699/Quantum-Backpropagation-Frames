@@ -16,11 +16,8 @@ studies a separate reference-response estimation problem. Its theorem and
 compiler arguments are stated here without assuming the Hopf parameterization
 or results from an accompanying manuscript.
 
-The link records research provenance, not a publication claim or a prerequisite
-for understanding, verifying, or using this work. The
-[relationship to established measurement and estimation research](RELATED_WORK.md)
-is assessed through the actual tasks, assumptions, and costs, rather than the
-history of the project.
+The [related-work guide](RELATED_WORK.md) compares established measurement
+and estimation results through their tasks, assumptions, and costs.
 
 ## Scientific sources and records
 
@@ -41,11 +38,9 @@ current instruction to repeat old studies.
 
 This project was developed with substantive OpenAI ChatGPT/Codex assistance in
 mathematical derivation and checking, source comparison, software development,
-numerical diagnostics, and writing. The repository consolidation also used AI
-assistance for documentation, packaging, and validation. Separate agent passes
+numerical diagnostics, writing, packaging, and validation. Separate agent passes
 are internal checks, not independent external peer review. Ruge Lin is the
-repository author; AI systems are not authors. The evidence records do not
-establish that every line has received independent human verification.
+repository author; AI systems are not authors.
 
 ## Attribution and licensing
 
@@ -57,4 +52,4 @@ relicensed by those citations. See [licensing details](LICENSING.md).
 
 The [primary-source map](../literature/README.md) distinguishes established
 estimation and compilation ingredients from this repository's particular
-finite universal-unbiasedness theorem. Final novelty clearance remains open.
+finite universal-unbiasedness theorem.

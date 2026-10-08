@@ -330,8 +330,7 @@ E_{i,\sigma}=\frac1{2r}
 ```
 
 Their sum is the projector onto `span{a,b₁,…,bᵣ}`. One complementary positive
-effect completes the identity and returns zero. This is at most `2r+1` effects;
-no assertion that this outcome count is minimal is needed.
+effect completes the identity and returns zero, giving at most `2r+1` effects.
 
 Return `Zᵢ,σ=2σ√(rλ)Veᵢ`, where `eᵢ` selects the `i`th coordinate in `r`
 dimensions. For `z=Lᵀq`, the probabilities are
@@ -403,7 +402,9 @@ a dense statevector solely for verification. The larger demonstration in
 [reproduction](../REPRODUCIBILITY.md) compiles structured inputs without
 materializing a global response vector.
 
-## 9. What extends, and what remains outside the claim
+<a id="9-what-extends-and-what-remains-outside-the-claim"></a>
+
+## 9. General tangents and implementation costs
 
 For more general known tangents, let `kₓ` again be row `x` of `T` and let
 `s=‖T‖²_F=tr(TᵀT)`. Preparing the **row-norm reference**
@@ -422,22 +423,14 @@ the tangent span. Consequently this compiler is not a generic exact minimax
 measurement. Its width-dependent cost is also real: a small tangent rank alone
 does not make all preparation or decoding efficient.
 
-Keep four further boundaries in mind:
+Implementation also requires budgets for gate synthesis, classical table
+errors, state preparation, and noise. The software checks numerical residuals;
+it does not certify them by interval arithmetic.
 
-- The exact theorem assumes a **real pure response**, a supplied phase reference,
-  one copy per experiment, and overall universal unbiasedness. Complex or mixed
-  responses, biased estimators, collective measurements on several copies, and
-  additional coherent access are different problems.
-- Exact logical gates and unbiased formulas do not remove finite-precision
-  errors. Gate synthesis, classical table errors, state preparation, and noise
-  need their own budgets; the software's numerical checks are not interval
-  certificates.
-- The phase/Walsh measurement family has a narrower measurement and decoder contract
-  than arbitrary POVMs. A bound for that family is not an all-measurement bound.
-- No strongest-method end-to-end advantage or final novelty clearance is
-  established. The retained parity comparison found no accepted positive-round
-  parity winners in its fixed model. Statistical optimality does not erase that
-  negative evidence.
+The phase/Walsh measurement family has a narrower measurement and decoder
+contract than arbitrary POVMs. Its fixed cost comparison found no accepted
+positive-round parity winners, illustrating why a statistical improvement
+alone need not reduce total work.
 
 Use [comparisons and limitations](COMPARISONS.md) for the precise eligible
 benchmarks, and the [evidence index](EVIDENCE.md) to trace claims to their proofs,

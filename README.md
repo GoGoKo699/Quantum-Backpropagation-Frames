@@ -29,8 +29,7 @@ The question grew out of [Hopf-QBP](https://github.com/GoGoKo699/Hopf-QBP), whic
 uses the geometry of a particular state parameterization for gradient readout.
 Here the focus shifts to a measurement question: **given known tangent queries,
 what error is unavoidable, and which measurement attains it?** The theorem and
-implementations stand on their own; no Hopf parameterization or accompanying
-manuscript is required.
+implementations are self-contained.
 
 The scientific setting is **finite-copy quantum estimation and task-specific
 measurement design**. Reference interference, reusable classical-shadow records,
@@ -71,12 +70,10 @@ A separate overlapping-interval compiler has size $O(n2^w)$ and variance at
 most $`4\,\mathrm{tr}(T^{\mathsf T}T)`$, where $n$ is the number of system qubits
 and $w$ is maximum tangent interval width; it is not a generic minimax compiler.
 
-**Boundary.** This is a real pure-response, universally unbiased, single-copy
-variance result—not an optimum for biased or collective estimation, an exact
-high-confidence sample complexity, or a strongest-method end-to-end speedup.
-Novelty is not finally cleared. The [scope](docs/SCOPE.md),
-[full proof](docs/THEORY.md), and [comparisons](docs/COMPARISONS.md) state the
-quantifiers, resource assumptions, and retained negative evidence.
+The [scope](docs/SCOPE.md), [full proof](docs/THEORY.md), and
+[comparisons](docs/COMPARISONS.md) give the exact statistical contract,
+resource assumptions, and negative comparison results. Statistical optimality
+and end-to-end computational cost are assessed separately.
 
 ## Follow the tutorial
 
@@ -89,7 +86,7 @@ quantum estimation. Start at the beginning, or enter at the step you need:
 | **1. Set up the task** | [The experiment](docs/TUTORIAL.md#1-the-experiment-and-the-question) and [two-qubit example](docs/TUTORIAL.md#2-a-complete-two-qubit-example): why six parameters give six output entries despite only three independent tangent directions. |
 | **2. Follow one record** | [Reference interference](docs/TUTORIAL.md#3-make-the-reference-interfere-with-the-response) and [signed decoding](docs/TUTORIAL.md#4-turn-the-bits-into-a-six-entry-record): calculate every outcome probability and see why zero records still count. |
 | **3. Understand the limit** | [Error and averaging](docs/TUTORIAL.md#5-quantify-the-error-before-discussing-optimality), [the theorem](docs/TUTORIAL.md#6-the-exact-theorem-and-its-assumptions), and [the attaining measurement](docs/TUTORIAL.md#7-the-attaining-measurement-in-any-equal-spectrum-model): distinguish one-response risk, worst-case optimality, and confidence. |
-| **4. Run and check** | [Execute the example](docs/TUTORIAL.md#8-run-the-same-example), read [what extends](docs/TUTORIAL.md#9-what-extends-and-what-remains-outside-the-claim), then answer the [self-check](docs/TUTORIAL.md#10-self-check), with solutions. |
+| **4. Run and check** | [Execute the example](docs/TUTORIAL.md#8-run-the-same-example), read [general tangents and implementation costs](docs/TUTORIAL.md#9-general-tangents-and-implementation-costs), then answer the [self-check](docs/TUTORIAL.md#10-self-check), with solutions. |
 
 After the tutorial, follow **[proof](docs/THEORY.md) →
 [circuit construction](docs/COMPILERS.md) →
@@ -128,8 +125,8 @@ larger implementation without allocating a global quantum state.
 
 For secondary guides, data provenance, preserved records, and contributor checks,
 use the [complete reading and verification map](docs/RESEARCH_MAP.md).
-[Current status](docs/STATUS.md) distinguishes available results from unresolved
-claims; [methods and provenance](docs/PROVENANCE.md) document attribution,
+[Results at a glance](docs/STATUS.md) summarizes the evidence;
+[methods and provenance](docs/PROVENANCE.md) document attribution,
 source preservation, and substantive AI assistance.
 
 ## For literature search and AI assistants
@@ -141,10 +138,13 @@ The [AI reading index](llms.txt) maps these questions to the tutorial, full proo
 supported code, and evidence, with the assumptions and limits needed to assess
 whether the result applies to a particular problem.
 
-## Cite, contact, and reuse
+## Purpose and contact
 
-Use [CITATION.cff](CITATION.cff) and identify the commit you used; no associated
-release or article is asserted. Questions and corrections belong in
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
+## Cite and reuse
+
+Use [CITATION.cff](CITATION.cff) and identify the commit you used. Corrections can be reported through
 [GitHub Issues](https://github.com/GoGoKo699/Quantum-Backpropagation-Frames/issues).
 
 Original code and associated documentation use the [MIT License](LICENSE),
